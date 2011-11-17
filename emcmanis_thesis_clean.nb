@@ -1,0 +1,1054 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     37620,       1045]
+NotebookOptionsPosition[     30599,        848]
+NotebookOutlinePosition[     30977,        865]
+CellTagsIndexPosition[     30934,        862]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindEigenvalues", "[", "\[Lambda]_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "H", ",", "d\[Rho]", ",", "\[Rho]inf", ",", "nn", ",", "vals", ",", 
+      "neg", ",", "i"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"d\[Rho]", "=", "0.1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Rho]inf", "=", 
+      RowBox[{"\[Lambda]", "*", "20"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"nn", "=", 
+      RowBox[{"Round", "[", 
+       RowBox[{"\[Rho]inf", "/", "d\[Rho]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"H", "=", 
+      RowBox[{"SparseArray", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"n_", ",", "n_"}], "}"}], "\[Rule]", 
+           RowBox[{
+            FractionBox["2.", 
+             SuperscriptBox["d\[Rho]", "2"]], "-", 
+            RowBox[{
+             FractionBox["2.", 
+              RowBox[{"n", "*", "d\[Rho]"}]], 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "n"}], "*", 
+               RowBox[{"d\[Rho]", "/", "\[Lambda]"}]}]]}]}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"n_", ",", " ", "m_"}], "}"}], "/;", " ", 
+            RowBox[{
+             RowBox[{"Abs", "[", 
+              RowBox[{"n", "-", "m"}], "]"}], " ", "\[Equal]", " ", "1"}]}], 
+           " ", "\[Rule]", " ", 
+           FractionBox[
+            RowBox[{"-", "1."}], 
+            SuperscriptBox["d\[Rho]", "2"]]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"nn", ",", "nn"}], "}"}], ",", " ", "0."}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"vals", "=", 
+      RowBox[{"Sort", "[", 
+       RowBox[{"Eigenvalues", "[", 
+        RowBox[{"H", ",", 
+         RowBox[{"-", "100"}]}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"neg", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", " ", 
+       RowBox[{
+        RowBox[{"vals", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "<", "0"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"neg", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<Found eigenvalues for \[Lambda]=\>\"", "<>", 
+       RowBox[{"ToString", "[", "\[Lambda]", "]"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"vals", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], ",", "neg"}], "}"}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.529877318284605*^9, 3.529877325181333*^9}, {
+  3.529877800698813*^9, 3.529877820849668*^9}, {3.529878049612541*^9, 
+  3.529878053734543*^9}, {3.529932370199123*^9, 3.529932372252636*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"res", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"val", "=", 
+   RowBox[{"FindEigenvalues", "[", "10", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vaf", "=", 
+   RowBox[{"FindEigenvalues", "[", "1000", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.5298773038915977`*^9, 3.529877309024835*^9}, {
+  3.529878025602882*^9, 3.5298780704840384`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindLs", "[", 
+   RowBox[{"l0_", ",", "lf_", ",", "val_", ",", "vaf_", ",", "range_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"mid", ",", "vam"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"mid", "=", 
+      RowBox[{"l0", "+", 
+       FractionBox[
+        RowBox[{"lf", "-", "l0"}], "2"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vam", "=", 
+      RowBox[{"FindEigenvalues", "[", "mid", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"lf", "-", "l0"}], ">", "range"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"val", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+            RowBox[{"vam", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], " ", "||", 
+           RowBox[{
+            RowBox[{"val", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "<", 
+            RowBox[{"vam", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"FindLs", "[", 
+            RowBox[{"l0", ",", "mid", ",", "val", ",", "vam", ",", "range"}], 
+            "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"vam", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+            RowBox[{"vaf", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], " ", "||", " ", 
+           RowBox[{
+            RowBox[{"vam", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], " ", "<", " ", 
+            RowBox[{"vaf", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"FindLs", "[", 
+            RowBox[{"mid", ",", "lf", ",", "vam", ",", "vaf", ",", "range"}], 
+            "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"res", "=", 
+         RowBox[{"Append", "[", 
+          RowBox[{"res", ",", 
+           RowBox[{"{", 
+            RowBox[{"l0", ",", "lf"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Print", "[", "\"\<Found one!\>\"", "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5298773112758713`*^9, 3.529877313824687*^9}, {
+  3.5298773530721283`*^9, 3.52987754011907*^9}, {3.529877656682411*^9, 
+  3.529877765611841*^9}, {3.529877945059149*^9, 3.529878020427849*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FindLs", "[", 
+  RowBox[{"10.", ",", "1000.", ",", "val", ",", "vaf", ",", "1"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.529877769555125*^9, 3.529877780661104*^9}, {
+  3.529877848719784*^9, 3.529877849583371*^9}, {3.5298782497112093`*^9, 
+  3.529878256164495*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878395368721*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878397364497*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878400654194*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298784114964323`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298784242805*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878435112789*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298784688287773`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878487431613*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878527196074*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878598906323*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298786086769333`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878668855194*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298787076201982`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529878793864215*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.52987887515167*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298790261262503`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298791250637083`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529879145228176*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298792818440447`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529879400709461*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298795865573397`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529879726937109*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529879906529646*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529880068621236*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529880169411235*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529880526626474*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529880564724061*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529880817224927*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529881125450103*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298813593138657`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529881648657918*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529882078532073*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529882348066204*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529882688777763*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529882987401349*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529883424920559*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529883820672574*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529884160114002*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529884955143669*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529885175993128*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529885730782621*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.52988581068121*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529886326070229*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529886673494018*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298874308812437`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.52988781115701*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529888528930828*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529889164349338*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529890204995803*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529890778502627*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529891498956586*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529892382915368*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529893165121117*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.5298942812809973`*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529895129513034*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529896173566223*^9}],
+
+Cell[BoxData["\<\"Found one!\"\>"], "Print",
+ CellChangeTimes->{3.529896928498604*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sort", "[", "res", "]"}]], "Input",
+ CellChangeTimes->{{3.529877914524397*^9, 3.529877914645852*^9}, {
+  3.5299322238003893`*^9, 3.52993222682229*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"12.900390625`", ",", "13.8671875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15.80078125`", ",", "16.767578125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"19.66796875`", ",", "20.634765625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"28.369140625`", ",", "29.3359375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"35.13671875`", ",", "36.103515625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"39.00390625`", ",", "39.970703125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"50.60546875`", ",", "51.572265625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"55.439453125`", ",", "56.40625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"64.140625`", ",", "65.107421875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"77.67578125`", ",", "78.642578125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"78.642578125`", ",", "79.609375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"96.044921875`", ",", "97.01171875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"101.845703125`", ",", "102.8125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"113.447265625`", ",", "114.4140625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"127.94921875`", ",", "128.916015625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"133.75`", ",", "134.716796875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"155.01953125`", ",", "155.986328125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"155.986328125`", ",", "156.953125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"178.22265625`", ",", "179.189453125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"184.990234375`", ",", "185.95703125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"202.392578125`", ",", "203.359375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"215.927734375`", ",", "216.89453125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"228.49609375`", ",", "229.462890625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"249.765625`", ",", "250.732421875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"255.56640625`", ",", "256.533203125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"284.5703125`", ",", "285.537109375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"285.537109375`", ",", "286.50390625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"315.5078125`", ",", "316.474609375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"320.341796875`", ",", "321.30859375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"348.37890625`", ",", "349.345703125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"359.013671875`", ",", "359.98046875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"382.216796875`", ",", "383.18359375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"398.65234375`", ",", "399.619140625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"417.98828125`", ",", "418.955078125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"440.224609375`", ",", "441.19140625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"454.7265625`", ",", "455.693359375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"483.73046875`", ",", "484.697265625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"493.3984375`", ",", "494.365234375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"529.169921875`", ",", "530.13671875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"533.037109375`", ",", "534.00390625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"574.609375`", ",", "575.576171875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"575.576171875`", ",", "576.54296875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"618.115234375`", ",", "619.08203125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"623.916015625`", ",", "624.8828125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"663.5546875`", ",", "664.521484375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"674.189453125`", ",", "675.15625`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"709.9609375`", ",", "710.927734375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"726.396484375`", ",", "727.36328125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"757.333984375`", ",", "758.30078125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"779.5703125`", ",", "780.537109375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"807.607421875`", ",", "808.57421875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"834.677734375`", ",", "835.64453125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"858.84765625`", ",", "859.814453125`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"891.71875`", ",", "892.685546875`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"911.0546875`", ",", "912.021484375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"949.7265625`", ",", "950.693359375`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"965.1953125`", ",", "966.162109375`"}], "}"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.529932227967073*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "res", "]"}]], "Input",
+ CellChangeTimes->{{3.529932277113492*^9, 3.5299322918463373`*^9}}],
+
+Cell[BoxData["57"], "Output",
+ CellChangeTimes->{{3.5299322798385468`*^9, 3.529932292479739*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"thing", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"FindEigenvalues", "[", 
+       RowBox[{"res", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+      RowBox[{"FindEigenvalues", "[", 
+       RowBox[{"res", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "2"}], "]"}], "]"}], "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", 
+      RowBox[{"Length", "[", "res", "]"}]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5299323105164623`*^9, 3.5299323570993433`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=12.9004\"\>"], "Print",
+ CellChangeTimes->{3.529932398584114*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=13.8672\"\>"], "Print",
+ CellChangeTimes->{3.5299323991510677`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=15.8008\"\>"], "Print",
+ CellChangeTimes->{3.529932399721512*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=16.7676\"\>"], "Print",
+ CellChangeTimes->{3.5299324005334063`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=19.668\"\>"], "Print",
+ CellChangeTimes->{3.5299324012142687`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=20.6348\"\>"], "Print",
+ CellChangeTimes->{3.529932402123783*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=28.3691\"\>"], "Print",
+ CellChangeTimes->{3.529932403950513*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=29.3359\"\>"], "Print",
+ CellChangeTimes->{3.52993240610431*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=35.1367\"\>"], "Print",
+ CellChangeTimes->{3.529932409127488*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=36.1035\"\>"], "Print",
+ CellChangeTimes->{3.529932412543606*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=39.0039\"\>"], "Print",
+ CellChangeTimes->{3.529932415914061*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=39.9707\"\>"], "Print",
+ CellChangeTimes->{3.529932419694646*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=50.6055\"\>"], "Print",
+ CellChangeTimes->{3.5299324250057707`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=51.5723\"\>"], "Print",
+ CellChangeTimes->{3.529932430584114*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=55.4395\"\>"], "Print",
+ CellChangeTimes->{3.529932436930681*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=56.4063\"\>"], "Print",
+ CellChangeTimes->{3.529932443670088*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=64.1406\"\>"], "Print",
+ CellChangeTimes->{3.529932451674662*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=65.1074\"\>"], "Print",
+ CellChangeTimes->{3.529932461366487*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=77.6758\"\>"], "Print",
+ CellChangeTimes->{3.529932471978796*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=78.6426\"\>"], "Print",
+ CellChangeTimes->{3.5299324818787117`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=78.6426\"\>"], "Print",
+ CellChangeTimes->{3.529932491764861*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=79.6094\"\>"], "Print",
+ CellChangeTimes->{3.529932502109219*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=96.0449\"\>"], "Print",
+ CellChangeTimes->{3.529932514356318*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=97.0117\"\>"], "Print",
+ CellChangeTimes->{3.529932526770652*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=101.846\"\>"], "Print",
+ CellChangeTimes->{3.529932540374339*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=102.813\"\>"], "Print",
+ CellChangeTimes->{3.529932553873209*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=113.447\"\>"], "Print",
+ CellChangeTimes->{3.529932569093028*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=114.414\"\>"], "Print",
+ CellChangeTimes->{3.5299325836309443`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=127.949\"\>"], "Print",
+ CellChangeTimes->{3.5299326007287893`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=128.916\"\>"], "Print",
+ CellChangeTimes->{3.529932618031436*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=133.75\"\>"], "Print",
+ CellChangeTimes->{3.529932635354443*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=134.717\"\>"], "Print",
+ CellChangeTimes->{3.529932652538681*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=155.02\"\>"], "Print",
+ CellChangeTimes->{3.529932672517003*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=155.986\"\>"], "Print",
+ CellChangeTimes->{3.529932692832204*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=155.986\"\>"], "Print",
+ CellChangeTimes->{3.529932714312059*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=156.953\"\>"], "Print",
+ CellChangeTimes->{3.529932736264143*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=178.223\"\>"], "Print",
+ CellChangeTimes->{3.529932762997864*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=179.189\"\>"], "Print",
+ CellChangeTimes->{3.529932793554113*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=184.99\"\>"], "Print",
+ CellChangeTimes->{3.529932829549835*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=185.957\"\>"], "Print",
+ CellChangeTimes->{3.52993285619985*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=202.393\"\>"], "Print",
+ CellChangeTimes->{3.5299328853169622`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=203.359\"\>"], "Print",
+ CellChangeTimes->{3.529932915438464*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=215.928\"\>"], "Print",
+ CellChangeTimes->{3.529932947616694*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=216.895\"\>"], "Print",
+ CellChangeTimes->{3.529932979182056*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=228.496\"\>"], "Print",
+ CellChangeTimes->{3.5299330110973043`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=229.463\"\>"], "Print",
+ CellChangeTimes->{3.529933042908386*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=249.766\"\>"], "Print",
+ CellChangeTimes->{3.529933078654727*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=250.732\"\>"], "Print",
+ CellChangeTimes->{3.529933117574439*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=255.566\"\>"], "Print",
+ CellChangeTimes->{3.529933156815874*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=256.533\"\>"], "Print",
+ CellChangeTimes->{3.529933190118328*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=284.57\"\>"], "Print",
+ CellChangeTimes->{3.5299332293036127`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=285.537\"\>"], "Print",
+ CellChangeTimes->{3.5299332714030657`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=285.537\"\>"], "Print",
+ CellChangeTimes->{3.529933310128797*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=286.504\"\>"], "Print",
+ CellChangeTimes->{3.5299333493387337`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=315.508\"\>"], "Print",
+ CellChangeTimes->{3.529933391726345*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=316.475\"\>"], "Print",
+ CellChangeTimes->{3.529933433717143*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=320.342\"\>"], "Print",
+ CellChangeTimes->{3.529933476472803*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=321.309\"\>"], "Print",
+ CellChangeTimes->{3.529933523593367*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=348.379\"\>"], "Print",
+ CellChangeTimes->{3.5299335695295057`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=349.346\"\>"], "Print",
+ CellChangeTimes->{3.529933617953871*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=359.014\"\>"], "Print",
+ CellChangeTimes->{3.529933664585326*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=359.98\"\>"], "Print",
+ CellChangeTimes->{3.529933712169443*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=382.217\"\>"], "Print",
+ CellChangeTimes->{3.5299337625886383`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=383.184\"\>"], "Print",
+ CellChangeTimes->{3.529933814865341*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=398.652\"\>"], "Print",
+ CellChangeTimes->{3.5299338678873777`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=399.619\"\>"], "Print",
+ CellChangeTimes->{3.529933922265687*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=417.988\"\>"], "Print",
+ CellChangeTimes->{3.5299339812942*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=418.955\"\>"], "Print",
+ CellChangeTimes->{3.5299340391037283`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=440.225\"\>"], "Print",
+ CellChangeTimes->{3.5299341029111767`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=441.191\"\>"], "Print",
+ CellChangeTimes->{3.529934165262442*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=454.727\"\>"], "Print",
+ CellChangeTimes->{3.529934232154972*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=455.693\"\>"], "Print",
+ CellChangeTimes->{3.5299343112065783`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=483.73\"\>"], "Print",
+ CellChangeTimes->{3.529934377781495*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=484.697\"\>"], "Print",
+ CellChangeTimes->{3.529934448875012*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=493.398\"\>"], "Print",
+ CellChangeTimes->{3.529934525596855*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=494.365\"\>"], "Print",
+ CellChangeTimes->{3.529934601345809*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=529.17\"\>"], "Print",
+ CellChangeTimes->{3.5299346759923077`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=530.137\"\>"], "Print",
+ CellChangeTimes->{3.5299347814697027`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=533.037\"\>"], "Print",
+ CellChangeTimes->{3.529934869439055*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=534.004\"\>"], "Print",
+ CellChangeTimes->{3.529934957719191*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=574.609\"\>"], "Print",
+ CellChangeTimes->{3.529935052602756*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=575.576\"\>"], "Print",
+ CellChangeTimes->{3.5299351347929153`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=575.576\"\>"], "Print",
+ CellChangeTimes->{3.529935228115522*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=576.543\"\>"], "Print",
+ CellChangeTimes->{3.529935316973521*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=618.115\"\>"], "Print",
+ CellChangeTimes->{3.529935410592366*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=619.082\"\>"], "Print",
+ CellChangeTimes->{3.529935508525309*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=623.916\"\>"], "Print",
+ CellChangeTimes->{3.5299356136842327`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=624.883\"\>"], "Print",
+ CellChangeTimes->{3.52993572068337*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=663.555\"\>"], "Print",
+ CellChangeTimes->{3.529935834091618*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=664.521\"\>"], "Print",
+ CellChangeTimes->{3.52993594669258*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=674.189\"\>"], "Print",
+ CellChangeTimes->{3.529936056544742*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=675.156\"\>"], "Print",
+ CellChangeTimes->{3.529936167248283*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=709.961\"\>"], "Print",
+ CellChangeTimes->{3.5299362887044163`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=710.928\"\>"], "Print",
+ CellChangeTimes->{3.529936398777998*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=726.396\"\>"], "Print",
+ CellChangeTimes->{3.529936510857483*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=727.363\"\>"], "Print",
+ CellChangeTimes->{3.529936624682064*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=757.334\"\>"], "Print",
+ CellChangeTimes->{3.529936742946591*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=758.301\"\>"], "Print",
+ CellChangeTimes->{3.529936862756727*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=779.57\"\>"], "Print",
+ CellChangeTimes->{3.529936991752861*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=780.537\"\>"], "Print",
+ CellChangeTimes->{3.529937120889452*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=807.607\"\>"], "Print",
+ CellChangeTimes->{3.529937254203244*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=808.574\"\>"], "Print",
+ CellChangeTimes->{3.529937395330975*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=834.678\"\>"], "Print",
+ CellChangeTimes->{3.5299375353944817`*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=835.645\"\>"], "Print",
+ CellChangeTimes->{3.529937673173608*^9}],
+
+Cell[BoxData["\<\"Found eigenvalues for \[Lambda]=858.848\"\>"], "Print",
+ CellChangeTimes->{3.529937828860281*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{15, Automatic}, {Automatic, 69}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2997, 77, 281, "Input"],
+Cell[3557, 99, 442, 12, 58, "Input"],
+Cell[4002, 113, 2740, 70, 265, "Input"],
+Cell[CellGroupData[{
+Cell[6767, 187, 291, 6, 27, "Input"],
+Cell[CellGroupData[{
+Cell[7083, 197, 86, 1, 20, "Print"],
+Cell[7172, 200, 86, 1, 20, "Print"],
+Cell[7261, 203, 86, 1, 20, "Print"],
+Cell[7350, 206, 88, 1, 20, "Print"],
+Cell[7441, 209, 84, 1, 20, "Print"],
+Cell[7528, 212, 86, 1, 20, "Print"],
+Cell[7617, 215, 88, 1, 20, "Print"],
+Cell[7708, 218, 86, 1, 20, "Print"],
+Cell[7797, 221, 86, 1, 20, "Print"],
+Cell[7886, 224, 86, 1, 20, "Print"],
+Cell[7975, 227, 88, 1, 20, "Print"],
+Cell[8066, 230, 86, 1, 20, "Print"],
+Cell[8155, 233, 88, 1, 20, "Print"],
+Cell[8246, 236, 86, 1, 20, "Print"],
+Cell[8335, 239, 85, 1, 20, "Print"],
+Cell[8423, 242, 88, 1, 20, "Print"],
+Cell[8514, 245, 88, 1, 20, "Print"],
+Cell[8605, 248, 86, 1, 20, "Print"],
+Cell[8694, 251, 88, 1, 20, "Print"],
+Cell[8785, 254, 86, 1, 20, "Print"],
+Cell[8874, 257, 88, 1, 20, "Print"],
+Cell[8965, 260, 86, 1, 20, "Print"],
+Cell[9054, 263, 86, 1, 20, "Print"],
+Cell[9143, 266, 86, 1, 20, "Print"],
+Cell[9232, 269, 86, 1, 20, "Print"],
+Cell[9321, 272, 86, 1, 20, "Print"],
+Cell[9410, 275, 86, 1, 20, "Print"],
+Cell[9499, 278, 86, 1, 20, "Print"],
+Cell[9588, 281, 86, 1, 20, "Print"],
+Cell[9677, 284, 88, 1, 20, "Print"],
+Cell[9768, 287, 86, 1, 20, "Print"],
+Cell[9857, 290, 86, 1, 20, "Print"],
+Cell[9946, 293, 86, 1, 20, "Print"],
+Cell[10035, 296, 86, 1, 20, "Print"],
+Cell[10124, 299, 86, 1, 20, "Print"],
+Cell[10213, 302, 86, 1, 20, "Print"],
+Cell[10302, 305, 86, 1, 20, "Print"],
+Cell[10391, 308, 86, 1, 20, "Print"],
+Cell[10480, 311, 86, 1, 20, "Print"],
+Cell[10569, 314, 86, 1, 20, "Print"],
+Cell[10658, 317, 86, 1, 20, "Print"],
+Cell[10747, 320, 85, 1, 20, "Print"],
+Cell[10835, 323, 86, 1, 20, "Print"],
+Cell[10924, 326, 86, 1, 20, "Print"],
+Cell[11013, 329, 88, 1, 20, "Print"],
+Cell[11104, 332, 85, 1, 20, "Print"],
+Cell[11192, 335, 86, 1, 20, "Print"],
+Cell[11281, 338, 86, 1, 20, "Print"],
+Cell[11370, 341, 86, 1, 20, "Print"],
+Cell[11459, 344, 86, 1, 20, "Print"],
+Cell[11548, 347, 86, 1, 20, "Print"],
+Cell[11637, 350, 86, 1, 20, "Print"],
+Cell[11726, 353, 86, 1, 20, "Print"],
+Cell[11815, 356, 88, 1, 20, "Print"],
+Cell[11906, 359, 86, 1, 20, "Print"],
+Cell[11995, 362, 86, 1, 20, "Print"],
+Cell[12084, 365, 86, 1, 20, "Print"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12219, 372, 175, 3, 21, "Input"],
+Cell[12397, 377, 4816, 118, 238, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17250, 500, 129, 2, 27, "Input"],
+Cell[17382, 504, 97, 1, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17516, 510, 610, 17, 43, "Input"],
+Cell[CellGroupData[{
+Cell[18151, 531, 115, 1, 20, "Print"],
+Cell[18269, 534, 117, 1, 20, "Print"],
+Cell[18389, 537, 115, 1, 20, "Print"],
+Cell[18507, 540, 117, 1, 20, "Print"],
+Cell[18627, 543, 116, 1, 20, "Print"],
+Cell[18746, 546, 115, 1, 20, "Print"],
+Cell[18864, 549, 115, 1, 20, "Print"],
+Cell[18982, 552, 114, 1, 20, "Print"],
+Cell[19099, 555, 115, 1, 20, "Print"],
+Cell[19217, 558, 115, 1, 20, "Print"],
+Cell[19335, 561, 115, 1, 20, "Print"],
+Cell[19453, 564, 115, 1, 20, "Print"],
+Cell[19571, 567, 117, 1, 20, "Print"],
+Cell[19691, 570, 115, 1, 20, "Print"],
+Cell[19809, 573, 115, 1, 20, "Print"],
+Cell[19927, 576, 115, 1, 20, "Print"],
+Cell[20045, 579, 115, 1, 20, "Print"],
+Cell[20163, 582, 115, 1, 20, "Print"],
+Cell[20281, 585, 115, 1, 20, "Print"],
+Cell[20399, 588, 117, 1, 20, "Print"],
+Cell[20519, 591, 115, 1, 20, "Print"],
+Cell[20637, 594, 115, 1, 20, "Print"],
+Cell[20755, 597, 115, 1, 20, "Print"],
+Cell[20873, 600, 115, 1, 20, "Print"],
+Cell[20991, 603, 115, 1, 20, "Print"],
+Cell[21109, 606, 115, 1, 20, "Print"],
+Cell[21227, 609, 115, 1, 20, "Print"],
+Cell[21345, 612, 117, 1, 20, "Print"],
+Cell[21465, 615, 117, 1, 20, "Print"],
+Cell[21585, 618, 115, 1, 20, "Print"],
+Cell[21703, 621, 114, 1, 20, "Print"],
+Cell[21820, 624, 115, 1, 20, "Print"],
+Cell[21938, 627, 114, 1, 20, "Print"],
+Cell[22055, 630, 115, 1, 20, "Print"],
+Cell[22173, 633, 115, 1, 20, "Print"],
+Cell[22291, 636, 115, 1, 20, "Print"],
+Cell[22409, 639, 115, 1, 20, "Print"],
+Cell[22527, 642, 115, 1, 20, "Print"],
+Cell[22645, 645, 114, 1, 20, "Print"],
+Cell[22762, 648, 114, 1, 20, "Print"],
+Cell[22879, 651, 117, 1, 20, "Print"],
+Cell[22999, 654, 115, 1, 20, "Print"],
+Cell[23117, 657, 115, 1, 20, "Print"],
+Cell[23235, 660, 115, 1, 20, "Print"],
+Cell[23353, 663, 117, 1, 20, "Print"],
+Cell[23473, 666, 115, 1, 20, "Print"],
+Cell[23591, 669, 115, 1, 20, "Print"],
+Cell[23709, 672, 115, 1, 20, "Print"],
+Cell[23827, 675, 115, 1, 20, "Print"],
+Cell[23945, 678, 115, 1, 20, "Print"],
+Cell[24063, 681, 116, 1, 20, "Print"],
+Cell[24182, 684, 117, 1, 20, "Print"],
+Cell[24302, 687, 115, 1, 20, "Print"],
+Cell[24420, 690, 117, 1, 20, "Print"],
+Cell[24540, 693, 115, 1, 20, "Print"],
+Cell[24658, 696, 115, 1, 20, "Print"],
+Cell[24776, 699, 115, 1, 20, "Print"],
+Cell[24894, 702, 115, 1, 20, "Print"],
+Cell[25012, 705, 117, 1, 20, "Print"],
+Cell[25132, 708, 115, 1, 20, "Print"],
+Cell[25250, 711, 115, 1, 20, "Print"],
+Cell[25368, 714, 114, 1, 20, "Print"],
+Cell[25485, 717, 117, 1, 20, "Print"],
+Cell[25605, 720, 115, 1, 20, "Print"],
+Cell[25723, 723, 117, 1, 20, "Print"],
+Cell[25843, 726, 115, 1, 20, "Print"],
+Cell[25961, 729, 113, 1, 20, "Print"],
+Cell[26077, 732, 117, 1, 20, "Print"],
+Cell[26197, 735, 117, 1, 20, "Print"],
+Cell[26317, 738, 115, 1, 20, "Print"],
+Cell[26435, 741, 115, 1, 20, "Print"],
+Cell[26553, 744, 117, 1, 20, "Print"],
+Cell[26673, 747, 114, 1, 20, "Print"],
+Cell[26790, 750, 115, 1, 20, "Print"],
+Cell[26908, 753, 115, 1, 20, "Print"],
+Cell[27026, 756, 115, 1, 20, "Print"],
+Cell[27144, 759, 116, 1, 20, "Print"],
+Cell[27263, 762, 117, 1, 20, "Print"],
+Cell[27383, 765, 115, 1, 20, "Print"],
+Cell[27501, 768, 115, 1, 20, "Print"],
+Cell[27619, 771, 115, 1, 20, "Print"],
+Cell[27737, 774, 117, 1, 20, "Print"],
+Cell[27857, 777, 115, 1, 20, "Print"],
+Cell[27975, 780, 115, 1, 20, "Print"],
+Cell[28093, 783, 115, 1, 20, "Print"],
+Cell[28211, 786, 115, 1, 20, "Print"],
+Cell[28329, 789, 117, 1, 20, "Print"],
+Cell[28449, 792, 114, 1, 20, "Print"],
+Cell[28566, 795, 115, 1, 20, "Print"],
+Cell[28684, 798, 114, 1, 20, "Print"],
+Cell[28801, 801, 115, 1, 20, "Print"],
+Cell[28919, 804, 115, 1, 20, "Print"],
+Cell[29037, 807, 117, 1, 20, "Print"],
+Cell[29157, 810, 115, 1, 20, "Print"],
+Cell[29275, 813, 115, 1, 20, "Print"],
+Cell[29393, 816, 115, 1, 20, "Print"],
+Cell[29511, 819, 115, 1, 20, "Print"],
+Cell[29629, 822, 115, 1, 20, "Print"],
+Cell[29747, 825, 114, 1, 20, "Print"],
+Cell[29864, 828, 115, 1, 20, "Print"],
+Cell[29982, 831, 115, 1, 20, "Print"],
+Cell[30100, 834, 115, 1, 20, "Print"],
+Cell[30218, 837, 117, 1, 20, "Print"],
+Cell[30338, 840, 115, 1, 20, "Print"],
+Cell[30456, 843, 115, 1, 20, "Print"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

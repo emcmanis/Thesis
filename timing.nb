@@ -1,0 +1,106 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2770,         97]
+NotebookOptionsPosition[      2212,         72]
+NotebookOutlinePosition[      2588,         89]
+CellTagsIndexPosition[      2545,         86]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Log", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{
+    RowBox[{"10.", "^", 
+     RowBox[{"(", "6", ")"}]}], "*", "1.5"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.530287879399206*^9, 3.530287896527268*^9}, {
+  3.5302881214998827`*^9, 3.530288122493205*^9}}],
+
+Cell[BoxData["20.516531070045332`"], "Output",
+ CellChangeTimes->{{3.53028789014459*^9, 3.5302878974333487`*^9}, 
+   3.530288123338545*^9}]
+}, Open  ]],
+
+Cell["\<\
+There are 21 bisections per 1.5 distance.\
+\>", "Text",
+ CellChangeTimes->{{3.530287905264655*^9, 3.5302879456454268`*^9}, {
+  3.530288127098514*^9, 3.530288131187375*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Log", "[", 
+  RowBox[{"2", ",", 
+   RowBox[{
+    RowBox[{"10.", "^", 
+     RowBox[{"(", "6", ")"}]}], "*", "3"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.530287947153364*^9, 3.530287978176176*^9}, 
+   3.530288102828414*^9}],
+
+Cell[BoxData["21.516531070045332`"], "Output",
+ CellChangeTimes->{3.530287979018659*^9, 3.5302881032226553`*^9}]
+}, Open  ]],
+
+Cell["\<\
+So 22 bisections for 3, and 23 bisections for 5. \
+\>", "Text",
+ CellChangeTimes->{{3.530288135756024*^9, 3.5302881427227077`*^9}, {
+  3.530288299486803*^9, 3.530288299662718*^9}}],
+
+Cell["\<\
+Each bisections calls Critical[\[Lambda],consts] twice. Therefore, the timing \
+of the whole thing will be equal to the no. of bisections * 2 * \
+timing[critical], which is system dependent. Add 2*timing[critical] for the \
+beginning check, too. Timing of critical is O(N), but exactly what that looks \
+like is system-dependent.\
+\>", "Text",
+ CellChangeTimes->{{3.530288163302705*^9, 3.530288290366528*^9}}]
+},
+WindowSize->{740, 867},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 275, 7, 27, "Input"],
+Cell[857, 31, 139, 2, 27, "Output"]
+}, Open  ]],
+Cell[1011, 36, 182, 4, 26, "Text"],
+Cell[CellGroupData[{
+Cell[1218, 44, 248, 7, 27, "Input"],
+Cell[1469, 53, 112, 1, 27, "Output"]
+}, Open  ]],
+Cell[1596, 57, 190, 4, 26, "Text"],
+Cell[1789, 63, 419, 7, 56, "Text"]
+}
+]
+*)
+
+(* End of internal cache information *)
