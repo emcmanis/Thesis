@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage{graphicx,amsmath}
+
+\title{Non-dimensionalization}
+
+\begin{document}
+\maketitle
+The energy of a particle moving under the influence of the Yukawa potential is
+\begin{equation}
+E = \frac{1}{2}m\dot{r}^2+\frac{1}{2}\frac{L^2}{mr^2}-\frac{c}{r}e^{-r/l}\mbox{.}
+\label{eq:energy}
+\end{equation}
+To non-dimensionalize this expression for further treatment this year, we first define a length scale
+\begin{equation}
+\alpha \equiv \frac{\hbar^2}{cm}\mbox{.}
+\label{eq:lengthscale}
+\end{equation}
+This serves the same function in this problem as the Bohr radius does in the Coulomb problem. We then use this to nondimensionalize $r$, defining
+\begin{equation}
+\rho \equiv \frac{r}{\alpha}\mbox{.}
+\label{eq:rho}
+\end{equation}
+Finally, we define a time scale
+\begin{equation}
+\beta \equiv \frac{c^2m}{\hbar^3}\mbox{.}
+\label{eq:beta}
+\end{equation}
+
+We can now substitute in $\rho$, $\alpha$, and $\tau = \beta t$:
+\begin{align}
+E &= \frac{1}{2}m\left(\frac{d\rho}{d \tau}\alpha \beta\right)^2+\frac{1}{2}\frac{c}{\rho^2 \alpha}(n^2-\rho e^{-(\rho \alpha)/l}) \\
+&= \frac{1}{2}\frac{c}{\alpha}\rho'^2 + \frac{1}{2}\frac{c}{\alpha}\frac{1}{\rho^2}(n^2-\rho e^{-(\rho \alpha)/l}) \\
+\frac{2\alpha}{c}E = e &= \rho'^2 +\frac{1}{\rho^2}(n^2 - \rho e^{-\rho/ \lambda})
+\end{align}
+In the last line, we have used $\lambda = \frac{l}{\alpha}$, relating the strength of the force and the length scale of the problem.
+
+\end{document} 

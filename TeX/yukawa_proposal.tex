@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\title{Quantum Mechanical Bound States of the Yukawa Potential}
+\author{Ellen McManis}
+
+\begin{document}
+\maketitle
+\section{Motivation}
+The Yukawa Potential\cite{ER},
+\begin{equation}
+V(r)=\frac{-c}{r}e^{-r/l}\mbox{,}
+\label{yukawa}
+\end{equation}
+governs the interaction between nucleons in the nucleus of atoms. The simplest nucleus for discussion of the Yukawa potential is that of deuterium. Because deuterium has only two nucleons (a neutron and a proton), it can be represented as a single reduced mass orbiting the center of mass under the influence of the potential. When put like this, the system becomes remarkably similar to that of the electron orbiting the hydrogen nucleus, suggesting a starting point for a quantum mechanical analysis.
+
+I have already looked at the potential classically, for the final project in my Classical Mechanics course. It was exciting to look at a problem that was not
+as cut and dried and not as tractable as the problems we had been doing on
+our problem sets. This thesis would allow me to continue working on the same
+problem, giving me the chance to do a more in-depth investigation.
+
+Because the Coulomb potential extends to infinity, an electron can orbit the hydrogen nucleus at theoretically any radius, giving it an infinite number of bound states. In contrast, the Yukawa potential drops off extremely rapidly as soon as $r$ exceeds $l$, due to the exponential term. This is what makes it interesting. I propose to explore the quantum mechanical bound states of this potential. 
+\section{Methods}
+Under the direction of Nelia Mann, I will first find the relationship between the number of $\vec{l}=0$ bound states and the size of the length scale ($l$ in \eqref{yukawa}). I will look at this semi-classically, via the Bohr model\cite{ER}, which should give decent qualitative results. I will then numerically solve the Schrodinger Wave Equation\cite{griffiths} with the Yukawa potential using the finite difference method\cite{scicomp}.
+
+From that point, many additional directions of inquiry are possible. I can add angular momentum and see how that changes the number and location of bound states. I can also find the energies of these bound states to produce a diagram like the familiar energy ladder for bound states in hydrogen. Lastly, I can compare these results to actual experimental data for deuterium, and see how well the model matches up to reality.
+
+\bibliographystyle{plain}
+\bibliography{yukawa_proposal}
+\end{document}

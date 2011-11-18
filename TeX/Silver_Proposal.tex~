@@ -1,0 +1,26 @@
+\documentclass{article}
+
+\usepackage{graphicx,amsmath}
+
+\title{Resonance Self-Shielding in Silver}
+\author{Ellen McManis}
+
+\begin{document}
+\maketitle
+
+\section{Motivation}
+Neutron Activation Analysis (NAA) is a versatile method for non-destructive elemental analysis of samples. A sample of some kind is bombarded with neutrons, which are absorbed by the nuclei in the sample, making it radioactive. Because most %(common?)
+nuclides give off characteristic gamma rays when they decay, the sample's composition can now be determined with a gamma spectrometer. Activity is related to the number of atoms in the sample by the equation
+\begin{equation}
+A = [N\sigma \Phi(1-e^{-\lambda t})]e^{-\lambda t'}\mbox{.}
+\end{equation}
+Here, $N$ is the number of atoms in the sample, $\Phi$ is the neutron flux, $\lambda$ is the decay constant (a property of the nuclide), $t$ is the irradiation time and $t'$ is the decay time before the samples is counted. However, this equation doesn't tell the full story -- the cross section, $\sigma$, is represented as a constant. In fact, it is a function of the neutron energies. While the integral over all likely energies usually suffices for experimental purposes, in some elements it obscures the large peaks in cross section found at certain neutron energies. Silver has a great many of these peaks, producing an effect known as self-shielding. In this, given sufficient density of silver atoms in a sample, it is possible for the silver atoms along the outside to shield the inner atoms. When this happens, the relationship between concentration and activity changes radically. The experimenter can no longer be certain if they have a sample with 40\% silver or 75\%. 
+
+In this thesis, I will determine the concentration at which silver begins to shield itself. I will then investigate changing parameters such as sample preparation to work around the self-shielding effect in order to maximize the ability of NAA to properly analyze samples containing silver.
+
+\section{Methods}
+Before beginning the experimental part of the thesis, I will attempt to build a rough model of the absorption interaction in the silver nucleus, starting with the hard sphere model and moving to the nuclear shell model. I will then use this to predict one of the absorption peaks, and confirm my predictions experimentally. 
+
+The experimental portion of the thesis will be performed in the Reed Research Reactor (RRR), a 250 kWt \smallcaps{triga} Mk. I nuclear research reactor. I will use data on $\sigma(E)$ for silver as well as the energy spectrum in the RRR to generate exact predictions for activity. I will then prepare a number of silver samples at different concentrations to find the self-shielding effect. Once this is found, I will test different methods of sample preparation and irradiation to see how the effect can be minimized.
+
+\end{document}

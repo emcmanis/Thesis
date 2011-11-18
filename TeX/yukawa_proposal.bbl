@@ -1,0 +1,20 @@
+\begin{thebibliography}{1}
+
+\bibitem{ER}
+Robert Eisberg and Robert Resnick.
+\newblock {\em Quantum Physics of Atoms, Molecules, Solids, Nuclei, and
+  Particles}.
+\newblock Wiley, 2nd edition, 1985.
+
+\bibitem{scicomp}
+Joel Franklin.
+\newblock Scientific computation class notes.
+\newblock Contains an explanation of the finite difference method, February
+  2011.
+
+\bibitem{griffiths}
+David Griffiths.
+\newblock {\em Introduction to Quantum Mechanics}.
+\newblock Pearson Education, 2nd edition, 2005.
+
+\end{thebibliography}

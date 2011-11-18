@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage{graphicx, amsmath}
+
+\newcommand{\expo}{e^{-\rho/\lambda}}
+
+\title{Critical Points}
+\begin{document}
+\maketitle
+
+We start with the nondimensionalized effective potential, 
+\begin{equation}
+V_{eff} = \frac{1}{\rho^2}\left( n^2 - 2\rho e^{-\rho/\lambda} \right)
+\label{veff}
+\end{equation}
+and attempt to find the points at which the minimum of the effective potential is 0 and where the minimum of the effective potential no longer exists.
+
+For the first, we start by taking the derivative of \eqref{veff} and setting it to 0, obtaining
+\begin{align}
+\frac{dV}{d\rho_0} &= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda} \\
+0 &= -2n^2 + 2\rho_0 e^{-\rho_0/\lambda} + 2\frac{\rho_0^2}{\lambda} e^{-\rho_0/\lambda}
+\label{vmin}
+\end{align}
+where $\rho_0$ is the value of $\rho$ when $V_{eff}$ is minimized. This equation has no general solution, but we can find one for the specific case where $V_{eff}(\rho_0) = 0$ by solving the equation
+\begin{align}
+V_{eff}(\rho_0)=0 &= n^2 - 2\rho_0 e^{-\rho_0/\lambda} \\
+n^2 &= 2 \rho_0 e^{-\rho_0/\lambda}
+\end{align}
+and plugging it in to the previous, obtaining
+\begin{align}
+0 &= -2n^2 + n^2 +n^2 \frac{\rho_0}{\lambda} \\
+&= -1 + \frac{\rho_0}{\lambda} \\
+\rho_0 &= \lambda \mbox{.}
+\end{align}
+Plugging this back into the equation for $V_{eff}(\rho_0)$ gives us
+\begin{equation}
+\mbox{$n = \sqrt{\frac{2}{e}}\sqrt{\lambda}$}
+\end{equation}
+which is pretty close to the naive $n = \sqrt{\lambda}$. 
+
+For the second critical point, the one where $V_{eff}$ has no minimum, we rewrite \eqref{vmin} to be
+\begin{equation}
+n^2 = \left( \rho + \frac{\rho^2}{\lambda} \right) e^{-\rho/\lambda}
+\end{equation}
+The right side of this equation will have some maximum, which will be the last point for which the equation can be solved -- after that, the value of $n^2$ will just plain be bigger than the right side. To find this, we differentiate with respect to $\rho$ and set to 0, obtaining
+\begin{align}
+0 &= (1+2\frac{\rho}{\lambda})\expo - \frac{1}{\lambda}(\rho + \frac{\rho^2}{\lambda})\expo \\
+&= 1 + \frac{\rho}{\lambda} + \frac{\rho^2}{\lambda^2}\mbox{.}
+\end{align}
+This is a quadratic in $\rho$ and can be solved using the quadratic formula:
+\begin{align}
+\rho &= \frac{-\frac{1}{\lambda} \pm \sqrt{\left(\frac{1}{\lambda}\right)^2+4\frac{1}{\lambda^2}}}{-\frac{2}{\lambda^2}} \\
+&= \frac{\lambda}{2} \mp \frac{\lambda \sqrt{5}}{2}
+\end{align}
+As $\rho$ is a real physical quantity that can't be negative, we can discard one solution, obtaining
+\begin{equation}
+\rho = \frac{\lambda}{2}(1+\sqrt{5})
+\end{equation}
+We can plug this in to \eqref{vmin} to find the relationship between $\lambda$ and $n$:
+\begin{equation}
+n^2 = \lambda(1+\sqrt{5})\left(\frac{3+\sqrt{5}}{4}\right)e^{-(1+\sqrt{5})/2}
+\end{equation}
+\end{document}
