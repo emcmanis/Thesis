@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       145,          7]
-NotebookDataLength[    306213,       9068]
-NotebookOptionsPosition[    257009,       7817]
-NotebookOutlinePosition[    257368,       7833]
-CellTagsIndexPosition[    257325,       7830]
+NotebookDataLength[    407311,      12079]
+NotebookOptionsPosition[    335190,      10270]
+NotebookOutlinePosition[    335549,      10286]
+CellTagsIndexPosition[    335506,      10283]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -7465,61 +7465,2514 @@ Cell[BoxData[
 
 Cell[CellGroupData[{
 
-Cell[BoxData["\<\"***Beginning to calculate the 25th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883740805667*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 26th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883741682723*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 27th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.53088374177844*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 28th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883741831263*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 29th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883741898553*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 30th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883741914195*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 31th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.530883741927047*^9}],
-
-Cell[BoxData["\<\"***Beginning to calculate the 32th lambda, part 3\"\>"], \
-"Print",
- ShowCellLabel->True,
- CellChangeTimes->{3.53088374200327*^9}],
-
 Cell[BoxData["\<\"***Beginning to calculate the 20th lambda, part 2\"\>"], \
 "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.530883742070784*^9}],
+ CellChangeTimes->{3.530883833815209*^9}],
 
 Cell[BoxData["\<\"***Beginning to calculate the 22th lambda, part 2\"\>"], \
 "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.530883742085614*^9}],
+ CellChangeTimes->{3.530883833933948*^9}],
 
 Cell[BoxData["\<\"***Beginning to calculate the 24th lambda, part 3\"\>"], \
 "Print",
  ShowCellLabel->True,
- CellChangeTimes->{3.5308837421504917`*^9}]
-}, Open  ]]
+ CellChangeTimes->{3.530883834080256*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 25th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883834211727*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 26th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308838343460617`*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 27th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883834481654*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 28th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088383457063*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 29th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883834742465*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 30th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088383488308*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 31th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883835031806*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 32th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883835176729*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530883930699541*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 418.472\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308839308516273`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.73\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884027899118*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884030153269*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 911.538\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884030320734*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088403885015*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 859.331\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308840390181627`*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884044027684*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 493.882\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884044184617*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.859\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884125198885*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308841489291267`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 710.444\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884149080501*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884161915552*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 808.091\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088416208289*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884168675445*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 757.817\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884168823374*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.295\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884223133601*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 909.796\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884231034527*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 857.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884244634674*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.64\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884254167733*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884270426228*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 575.093\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884270575643*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884288225198*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 618.599\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884288395653*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088429081317*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 664.038\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308842909769087`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.077\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884320985941*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308843226450863`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 965.679\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884322785844*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.968\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884418890733*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.926\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884431918571*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.719\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884449985903*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 708.703\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308844612524223`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 490.519\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884463830521*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.914\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308845181950073`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 806.349\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884526335629*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 756.076\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308845442326193`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.941\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884616855465*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.49\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884631569043*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.283\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308846549972363`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.08\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308846755293837`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.857\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308847013768167`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 662.296\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308847088335857`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.351\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308847116131153`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.954\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884715446608*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.832\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884775219922*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.937\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088480466082*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.961\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884813985436*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.708\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884830808544*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.478\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308848468708973`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.065\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308848589776363`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.205\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884873511331*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.36\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530884887804335*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.958\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308849124069*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.956\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088501105912*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 615.986\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885032942421*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.599\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885033131156*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.426\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885038441947*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885063499503*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.396\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885089886434*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.5\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885095003003*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885109591807*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 572.48\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308851514691353`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.043\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885189268632*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308852082833767`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.545\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885230668702*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.64\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885231602537*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.902\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308852686735992`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.43\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885300354364*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885306848817*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.066\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885309045849*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.614\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885403949616*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308854053306103`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.572\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308854299953947`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.422\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885440499949*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 660.99\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885448121702*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.929\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885472999824*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885503974329*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.395\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885506687941*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 572.916\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885585545265*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885602717626*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.825\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885615953051*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.585\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885629144392*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.423\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885671483577*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.943\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308856771146812`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308857013677197`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.412\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885705333378*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.505\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885718105472*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885800022155*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.631\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308858065312147`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.204\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885817685299*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.208\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885825894677*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.592\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885827493829*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885880710738*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885898797358*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885915898045*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530885997508016*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886025478409*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.133\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308860288532143`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.451\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088603170954*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.934\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886041162174*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.933\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886084256752*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886096280858*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.314\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308861015663557`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.417\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886129252734*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.313\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886167679748*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.099\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886168341259*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.957\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886194924284*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.59\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886224451071*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.934\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886288434441*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.148992213814062`*^-9", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.1602043450244256`*^-7"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886293571741*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 20th lambda, part 3\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886293743156*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.848\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886301923387*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.419\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088634328226*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.424\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886345763076*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.88\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886384610422*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.59\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886423434803*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.368\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308864482592363`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.025\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886469351385*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308864870236588`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 418.472\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886487174027*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.935\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886493367497*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.045\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886503445916*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.258\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308865094296083`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.42\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886553917508*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886623076845*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886659473152*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.73\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308866839862022`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886698172965*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886763381312*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.74\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886798972499*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.852\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886799513445*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886822216353*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.072\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886825003899*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.231\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088683809803*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.341\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886864590307*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.859\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308868814003057`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886902616014*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.079\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886905034787*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.403\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886973352916*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530886974835575*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308870218701687`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.295\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887078708042*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887105726756*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.866\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887120692651*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.058\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887163194621*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887184343762*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.245\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887187211144*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.355\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887196207263*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887221811619*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 416.077\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887276005004*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.407\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887287365953*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.794\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887290167461*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887309182399*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.052\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887341445706*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887393165848*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308874217709846`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.859\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308874631652412`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.968\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887473143715*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887511650771*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.348\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887550928595*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308876001034327`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.408\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308876012329893`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.051\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887606492415*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308876217501507`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.251\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887634240147*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.914\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887671840378*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887716516005*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.038\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887767658627*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.856\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887782350037*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.821\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887784951952*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887794426984*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887822575553*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.886\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887869603695*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.344\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887879211857*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.409\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887910323151*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887922957897*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530887952184043*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888023413851*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.048\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088804529809*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.873\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088806705441*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.255\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888074578628*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.031\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888096179351*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.854\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308881017456427`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888108633212*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888129313479*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888206521126*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888219623127*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308882259741077`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.866\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888264339857*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888266632495*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.808\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888280524008*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888335529024*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308884258475027`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888428321385*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888439136469*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.035\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888451267372*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.869\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308884612387342`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888483194735*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088851699329*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888533005961*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.347\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888537572845*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088854198158*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888594620343*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888628035288*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.871\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888657759314*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 855.936\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888746792851*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 491.421\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308887507468863`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308887526378603`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.814\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888776918298*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888778919424*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.6781241716099562`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.4162034592121008`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888827170512*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 32th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888827296076*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308888466393957`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308888537298117`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308888656022778`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.3307785378258196`*^-9", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.7623101309076112`*^-7"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308889071404743`*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 24th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308889072708797`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.045\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308889231611156`*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888930803656*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 965.679\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308889309465437`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"4.051046442615541`*^-11", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.268924794763144`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308889511086817`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.254\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888951260048*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 31th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530888951406362*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.937\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889034017947*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.871\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889049807103*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889058426355*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 911.538\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889058601309*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889065045682*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 575.093\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889065195238*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889072955415*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.032\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889106197109*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.066\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308891367850637`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 909.796\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889160165969*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889160592556*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889193585869*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.351\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308892215219727`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.502\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889239400116*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889246162231*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.926\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889264058918*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.818\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889272084836*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.284\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889342000173*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088935990063*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.49\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889368153075*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 572.48\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889378880933*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.254\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889389598596*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889394026368*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308894327376328`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889442714815*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.175\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308894447885027`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.708\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889472193054*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889474227541*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889522123561*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 572.916\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889537641757*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.121\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889548271377*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.817\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308895763302402`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889639045961*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.148\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53088965136277*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.871\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889681138809*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.133\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308896963257008`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889713988649*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.161\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889754487629*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308897563754807`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.816\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889763851603*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308897854077387`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.898\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889785609788*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308898000483513`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308898312257957`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308898355051928`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889849861238*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.242\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889853476712*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.155\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889857457797*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.885\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889890157298*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.151\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308899600448112`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.892\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530889995356539*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.188\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089001281726*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890031914075*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890044087213*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.15\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308900627585897`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890093661789*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890099996176*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.895\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890100378503*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890165774076*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890182892313*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.161\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890186316659*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890205519309*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890228180751*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.045\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308902396208477`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308902601503773`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890268798709*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890268986349*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.892\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308903105906973`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.174\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890342417416*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308903704592657`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890371697461*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308904006538057`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890415856041*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308904235362263`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890424954061*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308904748347893`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.181\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890498973831*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308905214440937`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308905741727123`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089057820627*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308906216038713`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890627034334*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.178\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089065596756*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890680545332*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308906817967653`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089070956039*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890711744205*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890732617317*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890746020212*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890753947137*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890785527467*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.176\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890813487329*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890819055188*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890819218318*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890838213526*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890889202114*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890943267569*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308909708204412`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530890993185142*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 415.87\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891016202518*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891021370706*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891023581624*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891048448606*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308910677486362`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891092975473*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891096594966*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308911232444267`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308911274384193`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308911538525743`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891199731866*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3.2713353296630364`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.1602043424957006`*^-7"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308912128822002`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891239388117*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891259198722*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891262249547*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891283416543*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 963.149\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891302494185*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.41\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891335417685*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308913644241657`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891393932414*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6.183044497149702`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.9928422732021815`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308914053638163`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891442740258*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891457236161*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 908.893\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891469022379*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308914772531137`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891492459724*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"5.955811373282658`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "2.4162034883520876`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089157278019*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891600582205*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.8867126509814297`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "5.138533059173002`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891649167685*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 28th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891649340974*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891709686041*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891717578301*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308917196573277`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891758101452*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308917826210003`*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891805780155*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 757.817\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891805929064*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089182290598*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891914498906*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891937355604*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 756.076\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530891964284774*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089204350249*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892070286706*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308921064166*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.205\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892123057868*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892144422517*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308921575196877`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892189091545*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892226771554*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.64\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892281742104*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308923636186237`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308923813135357`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892392930395*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892431323303*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.423\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308924401332703`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308924682519007`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892538086268*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.531\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892598265417*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 804.855\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892599214857*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892661744196*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.033\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892685358779*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 573.177\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089269454316*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892754978538*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.586\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308927567248287`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892797305002*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.346\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892848601364*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.1750291650433198`*^-9", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.960781290397781`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892852032159*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.559\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530892915165331*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3.308830980898749`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.960781255475761`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893004533435*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 25th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893004685405*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.0821938423329462`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.7373552384816184`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308930441372023`*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 30th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893044300231*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.572\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893073608494*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.046\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893080393785*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.253\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893125068865*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893137992168*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893164907311*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 618.599\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308931650542793`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.565\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893231730743*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893250380142*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 859.331\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893250530418*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2.702049412139994`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.559673248431885`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893278443531*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 29th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893278609254*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.857\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893324852694*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.569\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893390050527*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2.1015498052582576`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.191988713083517`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893403879034*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 27th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893404024601*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 857.589\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893417142232*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308934470442533`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 808.091\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893447178837*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3.0718594866526633`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.198315354561592`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893453505698*^9}],
+
+Cell[BoxData["\<\"***Beginning to calculate the 26th lambda, part 2\"\>"], \
+"Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893453646532*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 615.986\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308934848594007`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308935479214783`*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089356798353*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 710.444\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893568133532*^9}],
+
+Cell[BoxData["\<\"Pass!\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893616362918*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 664.038\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893616540757*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893620567424*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.719\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308936282098093`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.422\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893644703823*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 806.349\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893665752104*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308937062774773`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 708.703\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308937324648533`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 662.296\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308937801118793`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.204\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893806069105*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.283\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893837404598*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308938674568243`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.478\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893868223908*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.832\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308938976041813`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.426\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893944455742*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.313\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530893967445421*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.065\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894004275199*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894022812331*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.043\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894035826281*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.396\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894063646627*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 660.99\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894108838682*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894112467402*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.367\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308941289968853`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.174\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894170511396*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308941808680964`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.261\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894201966625*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.614\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308942296121902`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.208\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894273060782*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.394\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894290322213*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.229\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894337688044*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894339422361*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.152\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894369516781*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.505\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894407086493*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.408\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894451795023*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.317\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308944625794563`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894497784616*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.201\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089450409057*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.097\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894536002015*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894599628743*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894613103904*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.56\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308946222242804`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894656208693*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.215\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894670391526*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.262\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894676307024*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.124\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894702767728*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.418\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894773095396*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308948142360353`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.587\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894838718768*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.208\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308948765232286`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.235\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308948905015306`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.111\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089492023554*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.416\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530894930845784*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308949727070093`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.6\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895054947969*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895086716609*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.416\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895088680933*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.212\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895093678281*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.221\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308950953118277`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308951306226177`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895139677005*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.607\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895223372384*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895248059132*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.228\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895259655888*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.21\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895271185347*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308952888098583`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.101\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895306159959*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.611\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895389617797*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895407405406*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.225\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895423037002*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308954364074574`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 755.571\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895446652557*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.102\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895473036866*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308955676029673`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 962.815\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089557518216*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895584177459*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895601092008*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"9.00784904863246`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.559673282918122`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895605153797*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895622153079*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.103\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895639552829*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895726890934*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895770316688*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308958038167133`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895818245802*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895840947772*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895887985416*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530895976608466*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089601315821*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308960237184267`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896049192943*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.7520153666227992`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "1.992842256195337`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896059361022*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896060292591*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896172792091*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896209963352*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896213613475*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896217157963*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896241432858*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308963713948927`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896379348592*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896384660358*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896406871292*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896435194721*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896530665*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896545097896*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896570816987*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308966019669447`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089666002598*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896690214526*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896710848277*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896734778921*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896822973754*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 616.415\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308968495673723`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896876719051*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530896885657619*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089689892848*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1.0531296585557714`*^-9", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.198315380069415`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897010656493*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897041074272*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897042425664*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897062560362*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308971054073143`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897208025243*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308972260973253`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308972584353123`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897321093357*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897373667775*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308973912913857`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897437776498*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897488354463*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308975393683*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308975567804403`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 856.211\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897605450213*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308976759896927`*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 707.612\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897750038795*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 661.227\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.53089777085678*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"3.238915846797508`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.268924823077084`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897823929434*^9}],
+
+Cell[BoxData["\<\"Bisecting. Midpoint is 805.104\"\>"], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.5308978789422407`*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6.357075638623251`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "5.138533086826359`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897951302657*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"6.929750255683854`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "6.191988742487112`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530897968140031*^9}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"4.520694020491418`*^-10", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "3.737355257539929`*^-8"}], ",", "1"}], "}"}]}], 
+  "}"}]], "Print",
+ ShowCellLabel->True,
+ CellChangeTimes->{3.530898042543729*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "415.9572955298936`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "415.87036471103784`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "491.4210168818827`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "573.1771208100254`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "573.032943150145`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "616.4151616400341`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "616.2532659458229`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "661.2267199849011`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "661.0455806151731`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "707.6119473635918`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "707.409947321401`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "755.5709999114042`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "755.3464291830314`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "805.1040396742756`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "804.8550877546659`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "856.2112368090311`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "855.9359877187526`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "908.892766552628`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "908.5891946853371`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "963.1488120803842`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "962.8147747282637`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5308838170448093`*^9, 3.530898042675804*^9}]
 }, Open  ]],
 
 Cell["\<\
@@ -9025,49 +11478,607 @@ Cell[242497, 7448, 571, 15, 27, "Input"],
 Cell[CellGroupData[{
 Cell[243093, 7467, 149, 3, 20, "Print"],
 Cell[243245, 7472, 149, 3, 20, "Print"],
-Cell[243397, 7477, 148, 3, 20, "Print"],
-Cell[243548, 7482, 149, 3, 20, "Print"],
-Cell[243700, 7487, 149, 3, 20, "Print"],
-Cell[243852, 7492, 149, 3, 20, "Print"],
-Cell[244004, 7497, 149, 3, 20, "Print"],
-Cell[244156, 7502, 148, 3, 20, "Print"],
-Cell[244307, 7507, 149, 3, 20, "Print"],
-Cell[244459, 7512, 149, 3, 20, "Print"],
-Cell[244611, 7517, 151, 3, 20, "Print"]
-}, Open  ]]
+Cell[243397, 7477, 149, 3, 20, "Print"],
+Cell[243549, 7482, 149, 3, 20, "Print"],
+Cell[243701, 7487, 151, 3, 20, "Print"],
+Cell[243855, 7492, 149, 3, 20, "Print"],
+Cell[244007, 7497, 148, 3, 20, "Print"],
+Cell[244158, 7502, 149, 3, 20, "Print"],
+Cell[244310, 7507, 148, 3, 20, "Print"],
+Cell[244461, 7512, 149, 3, 20, "Print"],
+Cell[244613, 7517, 149, 3, 20, "Print"],
+Cell[244765, 7522, 103, 2, 20, "Print"],
+Cell[244871, 7526, 130, 2, 20, "Print"],
+Cell[245004, 7530, 127, 2, 20, "Print"],
+Cell[245134, 7534, 103, 2, 20, "Print"],
+Cell[245240, 7538, 128, 2, 20, "Print"],
+Cell[245371, 7542, 102, 2, 20, "Print"],
+Cell[245476, 7546, 130, 2, 20, "Print"],
+Cell[245609, 7550, 103, 2, 20, "Print"],
+Cell[245715, 7554, 128, 2, 20, "Print"],
+Cell[245846, 7558, 128, 2, 20, "Print"],
+Cell[245977, 7562, 105, 2, 20, "Print"],
+Cell[246085, 7566, 128, 2, 20, "Print"],
+Cell[246216, 7570, 103, 2, 20, "Print"],
+Cell[246322, 7574, 127, 2, 20, "Print"],
+Cell[246452, 7578, 103, 2, 20, "Print"],
+Cell[246558, 7582, 128, 2, 20, "Print"],
+Cell[246689, 7586, 128, 2, 20, "Print"],
+Cell[246820, 7590, 128, 2, 20, "Print"],
+Cell[246951, 7594, 128, 2, 20, "Print"],
+Cell[247082, 7598, 127, 2, 20, "Print"],
+Cell[247212, 7602, 103, 2, 20, "Print"],
+Cell[247318, 7606, 128, 2, 20, "Print"],
+Cell[247449, 7610, 103, 2, 20, "Print"],
+Cell[247555, 7614, 128, 2, 20, "Print"],
+Cell[247686, 7618, 102, 2, 20, "Print"],
+Cell[247791, 7622, 130, 2, 20, "Print"],
+Cell[247924, 7626, 128, 2, 20, "Print"],
+Cell[248055, 7630, 105, 2, 20, "Print"],
+Cell[248163, 7634, 128, 2, 20, "Print"],
+Cell[248294, 7638, 128, 2, 20, "Print"],
+Cell[248425, 7642, 128, 2, 20, "Print"],
+Cell[248556, 7646, 128, 2, 20, "Print"],
+Cell[248687, 7650, 130, 2, 20, "Print"],
+Cell[248820, 7654, 128, 2, 20, "Print"],
+Cell[248951, 7658, 130, 2, 20, "Print"],
+Cell[249084, 7662, 128, 2, 20, "Print"],
+Cell[249215, 7666, 130, 2, 20, "Print"],
+Cell[249348, 7670, 128, 2, 20, "Print"],
+Cell[249479, 7674, 127, 2, 20, "Print"],
+Cell[249609, 7678, 130, 2, 20, "Print"],
+Cell[249742, 7682, 129, 2, 20, "Print"],
+Cell[249874, 7686, 130, 2, 20, "Print"],
+Cell[250007, 7690, 130, 2, 20, "Print"],
+Cell[250140, 7694, 130, 2, 20, "Print"],
+Cell[250273, 7698, 128, 2, 20, "Print"],
+Cell[250404, 7702, 128, 2, 20, "Print"],
+Cell[250535, 7706, 127, 2, 20, "Print"],
+Cell[250665, 7710, 128, 2, 20, "Print"],
+Cell[250796, 7714, 128, 2, 20, "Print"],
+Cell[250927, 7718, 130, 2, 20, "Print"],
+Cell[251060, 7722, 130, 2, 20, "Print"],
+Cell[251193, 7726, 128, 2, 20, "Print"],
+Cell[251324, 7730, 127, 2, 20, "Print"],
+Cell[251454, 7734, 126, 2, 20, "Print"],
+Cell[251583, 7738, 127, 2, 20, "Print"],
+Cell[251713, 7742, 128, 2, 20, "Print"],
+Cell[251844, 7746, 128, 2, 20, "Print"],
+Cell[251975, 7750, 128, 2, 20, "Print"],
+Cell[252106, 7754, 128, 2, 20, "Print"],
+Cell[252237, 7758, 128, 2, 20, "Print"],
+Cell[252368, 7762, 126, 2, 20, "Print"],
+Cell[252497, 7766, 128, 2, 20, "Print"],
+Cell[252628, 7770, 129, 2, 20, "Print"],
+Cell[252760, 7774, 128, 2, 20, "Print"],
+Cell[252891, 7778, 130, 2, 20, "Print"],
+Cell[253024, 7782, 128, 2, 20, "Print"],
+Cell[253155, 7786, 127, 2, 20, "Print"],
+Cell[253285, 7790, 130, 2, 20, "Print"],
+Cell[253418, 7794, 127, 2, 20, "Print"],
+Cell[253548, 7798, 128, 2, 20, "Print"],
+Cell[253679, 7802, 128, 2, 20, "Print"],
+Cell[253810, 7806, 128, 2, 20, "Print"],
+Cell[253941, 7810, 130, 2, 20, "Print"],
+Cell[254074, 7814, 130, 2, 20, "Print"],
+Cell[254207, 7818, 128, 2, 20, "Print"],
+Cell[254338, 7822, 127, 2, 20, "Print"],
+Cell[254468, 7826, 128, 2, 20, "Print"],
+Cell[254599, 7830, 128, 2, 20, "Print"],
+Cell[254730, 7834, 128, 2, 20, "Print"],
+Cell[254861, 7838, 128, 2, 20, "Print"],
+Cell[254992, 7842, 128, 2, 20, "Print"],
+Cell[255123, 7846, 128, 2, 20, "Print"],
+Cell[255254, 7850, 128, 2, 20, "Print"],
+Cell[255385, 7854, 128, 2, 20, "Print"],
+Cell[255516, 7858, 130, 2, 20, "Print"],
+Cell[255649, 7862, 130, 2, 20, "Print"],
+Cell[255782, 7866, 128, 2, 20, "Print"],
+Cell[255913, 7870, 128, 2, 20, "Print"],
+Cell[256044, 7874, 128, 2, 20, "Print"],
+Cell[256175, 7878, 130, 2, 20, "Print"],
+Cell[256308, 7882, 128, 2, 20, "Print"],
+Cell[256439, 7886, 128, 2, 20, "Print"],
+Cell[256570, 7890, 128, 2, 20, "Print"],
+Cell[256701, 7894, 128, 2, 20, "Print"],
+Cell[256832, 7898, 128, 2, 20, "Print"],
+Cell[256963, 7902, 128, 2, 20, "Print"],
+Cell[257094, 7906, 128, 2, 20, "Print"],
+Cell[257225, 7910, 128, 2, 20, "Print"],
+Cell[257356, 7914, 130, 2, 20, "Print"],
+Cell[257489, 7918, 127, 2, 20, "Print"],
+Cell[257619, 7922, 128, 2, 20, "Print"],
+Cell[257750, 7926, 128, 2, 20, "Print"],
+Cell[257881, 7930, 128, 2, 20, "Print"],
+Cell[258012, 7934, 130, 2, 20, "Print"],
+Cell[258145, 7938, 128, 2, 20, "Print"],
+Cell[258276, 7942, 128, 2, 20, "Print"],
+Cell[258407, 7946, 128, 2, 20, "Print"],
+Cell[258538, 7950, 128, 2, 20, "Print"],
+Cell[258669, 7954, 127, 2, 20, "Print"],
+Cell[258799, 7958, 128, 2, 20, "Print"],
+Cell[258930, 7962, 301, 10, 26, "Print"],
+Cell[259234, 7974, 149, 3, 20, "Print"],
+Cell[259386, 7979, 128, 2, 20, "Print"],
+Cell[259517, 7983, 127, 2, 20, "Print"],
+Cell[259647, 7987, 128, 2, 20, "Print"],
+Cell[259778, 7991, 127, 2, 20, "Print"],
+Cell[259908, 7995, 127, 2, 20, "Print"],
+Cell[260038, 7999, 130, 2, 20, "Print"],
+Cell[260171, 8003, 128, 2, 20, "Print"],
+Cell[260302, 8007, 105, 2, 20, "Print"],
+Cell[260410, 8011, 128, 2, 20, "Print"],
+Cell[260541, 8015, 128, 2, 20, "Print"],
+Cell[260672, 8019, 128, 2, 20, "Print"],
+Cell[260803, 8023, 130, 2, 20, "Print"],
+Cell[260936, 8027, 127, 2, 20, "Print"],
+Cell[261066, 8031, 128, 2, 20, "Print"],
+Cell[261197, 8035, 127, 2, 20, "Print"],
+Cell[261327, 8039, 129, 2, 20, "Print"],
+Cell[261459, 8043, 128, 2, 20, "Print"],
+Cell[261590, 8047, 128, 2, 20, "Print"],
+Cell[261721, 8051, 127, 2, 20, "Print"],
+Cell[261851, 8055, 128, 2, 20, "Print"],
+Cell[261982, 8059, 128, 2, 20, "Print"],
+Cell[262113, 8063, 128, 2, 20, "Print"],
+Cell[262244, 8067, 127, 2, 20, "Print"],
+Cell[262374, 8071, 128, 2, 20, "Print"],
+Cell[262505, 8075, 130, 2, 20, "Print"],
+Cell[262638, 8079, 128, 2, 20, "Print"],
+Cell[262769, 8083, 128, 2, 20, "Print"],
+Cell[262900, 8087, 128, 2, 20, "Print"],
+Cell[263031, 8091, 128, 2, 20, "Print"],
+Cell[263162, 8095, 130, 2, 20, "Print"],
+Cell[263295, 8099, 128, 2, 20, "Print"],
+Cell[263426, 8103, 128, 2, 20, "Print"],
+Cell[263557, 8107, 128, 2, 20, "Print"],
+Cell[263688, 8111, 128, 2, 20, "Print"],
+Cell[263819, 8115, 128, 2, 20, "Print"],
+Cell[263950, 8119, 128, 2, 20, "Print"],
+Cell[264081, 8123, 128, 2, 20, "Print"],
+Cell[264212, 8127, 128, 2, 20, "Print"],
+Cell[264343, 8131, 128, 2, 20, "Print"],
+Cell[264474, 8135, 128, 2, 20, "Print"],
+Cell[264605, 8139, 128, 2, 20, "Print"],
+Cell[264736, 8143, 128, 2, 20, "Print"],
+Cell[264867, 8147, 128, 2, 20, "Print"],
+Cell[264998, 8151, 128, 2, 20, "Print"],
+Cell[265129, 8155, 130, 2, 20, "Print"],
+Cell[265262, 8159, 130, 2, 20, "Print"],
+Cell[265395, 8163, 128, 2, 20, "Print"],
+Cell[265526, 8167, 128, 2, 20, "Print"],
+Cell[265657, 8171, 128, 2, 20, "Print"],
+Cell[265788, 8175, 130, 2, 20, "Print"],
+Cell[265921, 8179, 130, 2, 20, "Print"],
+Cell[266054, 8183, 128, 2, 20, "Print"],
+Cell[266185, 8187, 130, 2, 20, "Print"],
+Cell[266318, 8191, 128, 2, 20, "Print"],
+Cell[266449, 8195, 128, 2, 20, "Print"],
+Cell[266580, 8199, 128, 2, 20, "Print"],
+Cell[266711, 8203, 128, 2, 20, "Print"],
+Cell[266842, 8207, 128, 2, 20, "Print"],
+Cell[266973, 8211, 128, 2, 20, "Print"],
+Cell[267104, 8215, 128, 2, 20, "Print"],
+Cell[267235, 8219, 128, 2, 20, "Print"],
+Cell[267366, 8223, 128, 2, 20, "Print"],
+Cell[267497, 8227, 128, 2, 20, "Print"],
+Cell[267628, 8231, 128, 2, 20, "Print"],
+Cell[267759, 8235, 128, 2, 20, "Print"],
+Cell[267890, 8239, 128, 2, 20, "Print"],
+Cell[268021, 8243, 128, 2, 20, "Print"],
+Cell[268152, 8247, 127, 2, 20, "Print"],
+Cell[268282, 8251, 127, 2, 20, "Print"],
+Cell[268412, 8255, 128, 2, 20, "Print"],
+Cell[268543, 8259, 128, 2, 20, "Print"],
+Cell[268674, 8263, 130, 2, 20, "Print"],
+Cell[268807, 8267, 128, 2, 20, "Print"],
+Cell[268938, 8271, 128, 2, 20, "Print"],
+Cell[269069, 8275, 128, 2, 20, "Print"],
+Cell[269200, 8279, 127, 2, 20, "Print"],
+Cell[269330, 8283, 130, 2, 20, "Print"],
+Cell[269463, 8287, 128, 2, 20, "Print"],
+Cell[269594, 8291, 128, 2, 20, "Print"],
+Cell[269725, 8295, 128, 2, 20, "Print"],
+Cell[269856, 8299, 128, 2, 20, "Print"],
+Cell[269987, 8303, 130, 2, 20, "Print"],
+Cell[270120, 8307, 128, 2, 20, "Print"],
+Cell[270251, 8311, 128, 2, 20, "Print"],
+Cell[270382, 8315, 128, 2, 20, "Print"],
+Cell[270513, 8319, 130, 2, 20, "Print"],
+Cell[270646, 8323, 128, 2, 20, "Print"],
+Cell[270777, 8327, 127, 2, 20, "Print"],
+Cell[270907, 8331, 127, 2, 20, "Print"],
+Cell[271037, 8335, 128, 2, 20, "Print"],
+Cell[271168, 8339, 127, 2, 20, "Print"],
+Cell[271298, 8343, 128, 2, 20, "Print"],
+Cell[271429, 8347, 128, 2, 20, "Print"],
+Cell[271560, 8351, 128, 2, 20, "Print"],
+Cell[271691, 8355, 128, 2, 20, "Print"],
+Cell[271822, 8359, 130, 2, 20, "Print"],
+Cell[271955, 8363, 130, 2, 20, "Print"],
+Cell[272088, 8367, 128, 2, 20, "Print"],
+Cell[272219, 8371, 128, 2, 20, "Print"],
+Cell[272350, 8375, 303, 10, 26, "Print"],
+Cell[272656, 8387, 149, 3, 20, "Print"],
+Cell[272808, 8392, 129, 2, 20, "Print"],
+Cell[272940, 8396, 129, 2, 20, "Print"],
+Cell[273072, 8400, 130, 2, 20, "Print"],
+Cell[273205, 8404, 304, 10, 26, "Print"],
+Cell[273512, 8416, 151, 3, 20, "Print"],
+Cell[273666, 8421, 130, 2, 20, "Print"],
+Cell[273799, 8425, 103, 2, 20, "Print"],
+Cell[273905, 8429, 130, 2, 20, "Print"],
+Cell[274038, 8433, 303, 10, 26, "Print"],
+Cell[274344, 8445, 128, 2, 20, "Print"],
+Cell[274475, 8449, 149, 3, 20, "Print"],
+Cell[274627, 8454, 128, 2, 20, "Print"],
+Cell[274758, 8458, 128, 2, 20, "Print"],
+Cell[274889, 8462, 103, 2, 20, "Print"],
+Cell[274995, 8466, 128, 2, 20, "Print"],
+Cell[275126, 8470, 103, 2, 20, "Print"],
+Cell[275232, 8474, 128, 2, 20, "Print"],
+Cell[275363, 8478, 128, 2, 20, "Print"],
+Cell[275494, 8482, 128, 2, 20, "Print"],
+Cell[275625, 8486, 130, 2, 20, "Print"],
+Cell[275758, 8490, 128, 2, 20, "Print"],
+Cell[275889, 8494, 127, 2, 20, "Print"],
+Cell[276019, 8498, 128, 2, 20, "Print"],
+Cell[276150, 8502, 130, 2, 20, "Print"],
+Cell[276283, 8506, 128, 2, 20, "Print"],
+Cell[276414, 8510, 127, 2, 20, "Print"],
+Cell[276544, 8514, 128, 2, 20, "Print"],
+Cell[276675, 8518, 128, 2, 20, "Print"],
+Cell[276806, 8522, 128, 2, 20, "Print"],
+Cell[276937, 8526, 127, 2, 20, "Print"],
+Cell[277067, 8530, 127, 2, 20, "Print"],
+Cell[277197, 8534, 127, 2, 20, "Print"],
+Cell[277327, 8538, 128, 2, 20, "Print"],
+Cell[277458, 8542, 128, 2, 20, "Print"],
+Cell[277589, 8546, 130, 2, 20, "Print"],
+Cell[277722, 8550, 127, 2, 20, "Print"],
+Cell[277852, 8554, 130, 2, 20, "Print"],
+Cell[277985, 8558, 128, 2, 20, "Print"],
+Cell[278116, 8562, 127, 2, 20, "Print"],
+Cell[278246, 8566, 128, 2, 20, "Print"],
+Cell[278377, 8570, 128, 2, 20, "Print"],
+Cell[278508, 8574, 128, 2, 20, "Print"],
+Cell[278639, 8578, 130, 2, 20, "Print"],
+Cell[278772, 8582, 127, 2, 20, "Print"],
+Cell[278902, 8586, 127, 2, 20, "Print"],
+Cell[279032, 8590, 128, 2, 20, "Print"],
+Cell[279163, 8594, 130, 2, 20, "Print"],
+Cell[279296, 8598, 128, 2, 20, "Print"],
+Cell[279427, 8602, 128, 2, 20, "Print"],
+Cell[279558, 8606, 130, 2, 20, "Print"],
+Cell[279691, 8610, 128, 2, 20, "Print"],
+Cell[279822, 8614, 129, 2, 20, "Print"],
+Cell[279954, 8618, 128, 2, 20, "Print"],
+Cell[280085, 8622, 130, 2, 20, "Print"],
+Cell[280218, 8626, 130, 2, 20, "Print"],
+Cell[280351, 8630, 129, 2, 20, "Print"],
+Cell[280483, 8634, 128, 2, 20, "Print"],
+Cell[280614, 8638, 128, 2, 20, "Print"],
+Cell[280745, 8642, 128, 2, 20, "Print"],
+Cell[280876, 8646, 128, 2, 20, "Print"],
+Cell[281007, 8650, 130, 2, 20, "Print"],
+Cell[281140, 8654, 128, 2, 20, "Print"],
+Cell[281271, 8658, 127, 2, 20, "Print"],
+Cell[281401, 8662, 127, 2, 20, "Print"],
+Cell[281531, 8666, 128, 2, 20, "Print"],
+Cell[281662, 8670, 129, 2, 20, "Print"],
+Cell[281794, 8674, 127, 2, 20, "Print"],
+Cell[281924, 8678, 128, 2, 20, "Print"],
+Cell[282055, 8682, 128, 2, 20, "Print"],
+Cell[282186, 8686, 128, 2, 20, "Print"],
+Cell[282317, 8690, 128, 2, 20, "Print"],
+Cell[282448, 8694, 128, 2, 20, "Print"],
+Cell[282579, 8698, 128, 2, 20, "Print"],
+Cell[282710, 8702, 127, 2, 20, "Print"],
+Cell[282840, 8706, 130, 2, 20, "Print"],
+Cell[282973, 8710, 130, 2, 20, "Print"],
+Cell[283106, 8714, 128, 2, 20, "Print"],
+Cell[283237, 8718, 128, 2, 20, "Print"],
+Cell[283368, 8722, 130, 2, 20, "Print"],
+Cell[283501, 8726, 128, 2, 20, "Print"],
+Cell[283632, 8730, 130, 2, 20, "Print"],
+Cell[283765, 8734, 128, 2, 20, "Print"],
+Cell[283896, 8738, 129, 2, 20, "Print"],
+Cell[284028, 8742, 128, 2, 20, "Print"],
+Cell[284159, 8746, 130, 2, 20, "Print"],
+Cell[284292, 8750, 127, 2, 20, "Print"],
+Cell[284422, 8754, 130, 2, 20, "Print"],
+Cell[284555, 8758, 128, 2, 20, "Print"],
+Cell[284686, 8762, 130, 2, 20, "Print"],
+Cell[284819, 8766, 130, 2, 20, "Print"],
+Cell[284952, 8770, 127, 2, 20, "Print"],
+Cell[285082, 8774, 129, 2, 20, "Print"],
+Cell[285214, 8778, 128, 2, 20, "Print"],
+Cell[285345, 8782, 127, 2, 20, "Print"],
+Cell[285475, 8786, 128, 2, 20, "Print"],
+Cell[285606, 8790, 130, 2, 20, "Print"],
+Cell[285739, 8794, 127, 2, 20, "Print"],
+Cell[285869, 8798, 127, 2, 20, "Print"],
+Cell[285999, 8802, 128, 2, 20, "Print"],
+Cell[286130, 8806, 128, 2, 20, "Print"],
+Cell[286261, 8810, 128, 2, 20, "Print"],
+Cell[286392, 8814, 128, 2, 20, "Print"],
+Cell[286523, 8818, 128, 2, 20, "Print"],
+Cell[286654, 8822, 127, 2, 20, "Print"],
+Cell[286784, 8826, 128, 2, 20, "Print"],
+Cell[286915, 8830, 128, 2, 20, "Print"],
+Cell[287046, 8834, 128, 2, 20, "Print"],
+Cell[287177, 8838, 128, 2, 20, "Print"],
+Cell[287308, 8842, 130, 2, 20, "Print"],
+Cell[287441, 8846, 128, 2, 20, "Print"],
+Cell[287572, 8850, 127, 2, 20, "Print"],
+Cell[287702, 8854, 127, 2, 20, "Print"],
+Cell[287832, 8858, 128, 2, 20, "Print"],
+Cell[287963, 8862, 128, 2, 20, "Print"],
+Cell[288094, 8866, 130, 2, 20, "Print"],
+Cell[288227, 8870, 128, 2, 20, "Print"],
+Cell[288358, 8874, 128, 2, 20, "Print"],
+Cell[288489, 8878, 130, 2, 20, "Print"],
+Cell[288622, 8882, 130, 2, 20, "Print"],
+Cell[288755, 8886, 130, 2, 20, "Print"],
+Cell[288888, 8890, 128, 2, 20, "Print"],
+Cell[289019, 8894, 305, 10, 26, "Print"],
+Cell[289327, 8906, 128, 2, 20, "Print"],
+Cell[289458, 8910, 128, 2, 20, "Print"],
+Cell[289589, 8914, 128, 2, 20, "Print"],
+Cell[289720, 8918, 128, 2, 20, "Print"],
+Cell[289851, 8922, 128, 2, 20, "Print"],
+Cell[289982, 8926, 127, 2, 20, "Print"],
+Cell[290112, 8930, 130, 2, 20, "Print"],
+Cell[290245, 8934, 128, 2, 20, "Print"],
+Cell[290376, 8938, 304, 10, 26, "Print"],
+Cell[290683, 8950, 128, 2, 20, "Print"],
+Cell[290814, 8954, 128, 2, 20, "Print"],
+Cell[290945, 8958, 128, 2, 20, "Print"],
+Cell[291076, 8962, 130, 2, 20, "Print"],
+Cell[291209, 8966, 128, 2, 20, "Print"],
+Cell[291340, 8970, 301, 10, 26, "Print"],
+Cell[291644, 8982, 128, 2, 20, "Print"],
+Cell[291775, 8986, 302, 10, 26, "Print"],
+Cell[292080, 8998, 149, 3, 20, "Print"],
+Cell[292232, 9003, 128, 2, 20, "Print"],
+Cell[292363, 9007, 128, 2, 20, "Print"],
+Cell[292494, 9011, 130, 2, 20, "Print"],
+Cell[292627, 9015, 128, 2, 20, "Print"],
+Cell[292758, 9019, 130, 2, 20, "Print"],
+Cell[292891, 9023, 103, 2, 20, "Print"],
+Cell[292997, 9027, 128, 2, 20, "Print"],
+Cell[293128, 9031, 127, 2, 20, "Print"],
+Cell[293258, 9035, 128, 2, 20, "Print"],
+Cell[293389, 9039, 128, 2, 20, "Print"],
+Cell[293520, 9043, 128, 2, 20, "Print"],
+Cell[293651, 9047, 127, 2, 20, "Print"],
+Cell[293781, 9051, 128, 2, 20, "Print"],
+Cell[293912, 9055, 126, 2, 20, "Print"],
+Cell[294041, 9059, 128, 2, 20, "Print"],
+Cell[294172, 9063, 128, 2, 20, "Print"],
+Cell[294303, 9067, 130, 2, 20, "Print"],
+Cell[294436, 9071, 128, 2, 20, "Print"],
+Cell[294567, 9075, 128, 2, 20, "Print"],
+Cell[294698, 9079, 127, 2, 20, "Print"],
+Cell[294828, 9083, 130, 2, 20, "Print"],
+Cell[294961, 9087, 130, 2, 20, "Print"],
+Cell[295094, 9091, 128, 2, 20, "Print"],
+Cell[295225, 9095, 128, 2, 20, "Print"],
+Cell[295356, 9099, 130, 2, 20, "Print"],
+Cell[295489, 9103, 130, 2, 20, "Print"],
+Cell[295622, 9107, 128, 2, 20, "Print"],
+Cell[295753, 9111, 128, 2, 20, "Print"],
+Cell[295884, 9115, 128, 2, 20, "Print"],
+Cell[296015, 9119, 128, 2, 20, "Print"],
+Cell[296146, 9123, 128, 2, 20, "Print"],
+Cell[296277, 9127, 127, 2, 20, "Print"],
+Cell[296407, 9131, 128, 2, 20, "Print"],
+Cell[296538, 9135, 130, 2, 20, "Print"],
+Cell[296671, 9139, 128, 2, 20, "Print"],
+Cell[296802, 9143, 128, 2, 20, "Print"],
+Cell[296933, 9147, 301, 10, 26, "Print"],
+Cell[297237, 9159, 128, 2, 20, "Print"],
+Cell[297368, 9163, 301, 10, 26, "Print"],
+Cell[297672, 9175, 149, 3, 20, "Print"],
+Cell[297824, 9180, 305, 10, 26, "Print"],
+Cell[298132, 9192, 149, 3, 20, "Print"],
+Cell[298284, 9197, 128, 2, 20, "Print"],
+Cell[298415, 9201, 128, 2, 20, "Print"],
+Cell[298546, 9205, 128, 2, 20, "Print"],
+Cell[298677, 9209, 128, 2, 20, "Print"],
+Cell[298808, 9213, 103, 2, 20, "Print"],
+Cell[298914, 9217, 130, 2, 20, "Print"],
+Cell[299047, 9221, 128, 2, 20, "Print"],
+Cell[299178, 9225, 103, 2, 20, "Print"],
+Cell[299284, 9229, 128, 2, 20, "Print"],
+Cell[299415, 9233, 301, 10, 26, "Print"],
+Cell[299719, 9245, 149, 3, 20, "Print"],
+Cell[299871, 9250, 128, 2, 20, "Print"],
+Cell[300002, 9254, 128, 2, 20, "Print"],
+Cell[300133, 9258, 302, 10, 26, "Print"],
+Cell[300438, 9270, 149, 3, 20, "Print"],
+Cell[300590, 9275, 128, 2, 20, "Print"],
+Cell[300721, 9279, 105, 2, 20, "Print"],
+Cell[300829, 9283, 128, 2, 20, "Print"],
+Cell[300960, 9287, 302, 10, 26, "Print"],
+Cell[301265, 9299, 149, 3, 20, "Print"],
+Cell[301417, 9304, 130, 2, 20, "Print"],
+Cell[301550, 9308, 130, 2, 20, "Print"],
+Cell[301683, 9312, 102, 2, 20, "Print"],
+Cell[301788, 9316, 128, 2, 20, "Print"],
+Cell[301919, 9320, 103, 2, 20, "Print"],
+Cell[302025, 9324, 128, 2, 20, "Print"],
+Cell[302156, 9328, 128, 2, 20, "Print"],
+Cell[302287, 9332, 130, 2, 20, "Print"],
+Cell[302420, 9336, 128, 2, 20, "Print"],
+Cell[302551, 9340, 128, 2, 20, "Print"],
+Cell[302682, 9344, 130, 2, 20, "Print"],
+Cell[302815, 9348, 130, 2, 20, "Print"],
+Cell[302948, 9352, 130, 2, 20, "Print"],
+Cell[303081, 9356, 128, 2, 20, "Print"],
+Cell[303212, 9360, 128, 2, 20, "Print"],
+Cell[303343, 9364, 130, 2, 20, "Print"],
+Cell[303476, 9368, 128, 2, 20, "Print"],
+Cell[303607, 9372, 130, 2, 20, "Print"],
+Cell[303740, 9376, 128, 2, 20, "Print"],
+Cell[303871, 9380, 128, 2, 20, "Print"],
+Cell[304002, 9384, 128, 2, 20, "Print"],
+Cell[304133, 9388, 128, 2, 20, "Print"],
+Cell[304264, 9392, 128, 2, 20, "Print"],
+Cell[304395, 9396, 128, 2, 20, "Print"],
+Cell[304526, 9400, 127, 2, 20, "Print"],
+Cell[304656, 9404, 128, 2, 20, "Print"],
+Cell[304787, 9408, 130, 2, 20, "Print"],
+Cell[304920, 9412, 128, 2, 20, "Print"],
+Cell[305051, 9416, 130, 2, 20, "Print"],
+Cell[305184, 9420, 128, 2, 20, "Print"],
+Cell[305315, 9424, 130, 2, 20, "Print"],
+Cell[305448, 9428, 128, 2, 20, "Print"],
+Cell[305579, 9432, 128, 2, 20, "Print"],
+Cell[305710, 9436, 128, 2, 20, "Print"],
+Cell[305841, 9440, 128, 2, 20, "Print"],
+Cell[305972, 9444, 128, 2, 20, "Print"],
+Cell[306103, 9448, 128, 2, 20, "Print"],
+Cell[306234, 9452, 128, 2, 20, "Print"],
+Cell[306365, 9456, 130, 2, 20, "Print"],
+Cell[306498, 9460, 128, 2, 20, "Print"],
+Cell[306629, 9464, 127, 2, 20, "Print"],
+Cell[306759, 9468, 128, 2, 20, "Print"],
+Cell[306890, 9472, 128, 2, 20, "Print"],
+Cell[307021, 9476, 128, 2, 20, "Print"],
+Cell[307152, 9480, 129, 2, 20, "Print"],
+Cell[307284, 9484, 128, 2, 20, "Print"],
+Cell[307415, 9488, 128, 2, 20, "Print"],
+Cell[307546, 9492, 128, 2, 20, "Print"],
+Cell[307677, 9496, 128, 2, 20, "Print"],
+Cell[307808, 9500, 128, 2, 20, "Print"],
+Cell[307939, 9504, 130, 2, 20, "Print"],
+Cell[308072, 9508, 128, 2, 20, "Print"],
+Cell[308203, 9512, 130, 2, 20, "Print"],
+Cell[308336, 9516, 130, 2, 20, "Print"],
+Cell[308469, 9520, 127, 2, 20, "Print"],
+Cell[308599, 9524, 128, 2, 20, "Print"],
+Cell[308730, 9528, 130, 2, 20, "Print"],
+Cell[308863, 9532, 126, 2, 20, "Print"],
+Cell[308992, 9536, 128, 2, 20, "Print"],
+Cell[309123, 9540, 128, 2, 20, "Print"],
+Cell[309254, 9544, 128, 2, 20, "Print"],
+Cell[309385, 9548, 130, 2, 20, "Print"],
+Cell[309518, 9552, 130, 2, 20, "Print"],
+Cell[309651, 9556, 128, 2, 20, "Print"],
+Cell[309782, 9560, 128, 2, 20, "Print"],
+Cell[309913, 9564, 128, 2, 20, "Print"],
+Cell[310044, 9568, 128, 2, 20, "Print"],
+Cell[310175, 9572, 127, 2, 20, "Print"],
+Cell[310305, 9576, 130, 2, 20, "Print"],
+Cell[310438, 9580, 128, 2, 20, "Print"],
+Cell[310569, 9584, 128, 2, 20, "Print"],
+Cell[310700, 9588, 128, 2, 20, "Print"],
+Cell[310831, 9592, 128, 2, 20, "Print"],
+Cell[310962, 9596, 130, 2, 20, "Print"],
+Cell[311095, 9600, 128, 2, 20, "Print"],
+Cell[311226, 9604, 128, 2, 20, "Print"],
+Cell[311357, 9608, 130, 2, 20, "Print"],
+Cell[311490, 9612, 127, 2, 20, "Print"],
+Cell[311620, 9616, 128, 2, 20, "Print"],
+Cell[311751, 9620, 128, 2, 20, "Print"],
+Cell[311882, 9624, 300, 10, 26, "Print"],
+Cell[312185, 9636, 128, 2, 20, "Print"],
+Cell[312316, 9640, 128, 2, 20, "Print"],
+Cell[312447, 9644, 128, 2, 20, "Print"],
+Cell[312578, 9648, 128, 2, 20, "Print"],
+Cell[312709, 9652, 130, 2, 20, "Print"],
+Cell[312842, 9656, 128, 2, 20, "Print"],
+Cell[312973, 9660, 128, 2, 20, "Print"],
+Cell[313104, 9664, 128, 2, 20, "Print"],
+Cell[313235, 9668, 128, 2, 20, "Print"],
+Cell[313366, 9672, 127, 2, 20, "Print"],
+Cell[313496, 9676, 130, 2, 20, "Print"],
+Cell[313629, 9680, 128, 2, 20, "Print"],
+Cell[313760, 9684, 302, 10, 26, "Print"],
+Cell[314065, 9696, 128, 2, 20, "Print"],
+Cell[314196, 9700, 128, 2, 20, "Print"],
+Cell[314327, 9704, 128, 2, 20, "Print"],
+Cell[314458, 9708, 128, 2, 20, "Print"],
+Cell[314589, 9712, 128, 2, 20, "Print"],
+Cell[314720, 9716, 128, 2, 20, "Print"],
+Cell[314851, 9720, 130, 2, 20, "Print"],
+Cell[314984, 9724, 128, 2, 20, "Print"],
+Cell[315115, 9728, 128, 2, 20, "Print"],
+Cell[315246, 9732, 128, 2, 20, "Print"],
+Cell[315377, 9736, 128, 2, 20, "Print"],
+Cell[315508, 9740, 125, 2, 20, "Print"],
+Cell[315636, 9744, 128, 2, 20, "Print"],
+Cell[315767, 9748, 128, 2, 20, "Print"],
+Cell[315898, 9752, 130, 2, 20, "Print"],
+Cell[316031, 9756, 127, 2, 20, "Print"],
+Cell[316161, 9760, 128, 2, 20, "Print"],
+Cell[316292, 9764, 128, 2, 20, "Print"],
+Cell[316423, 9768, 128, 2, 20, "Print"],
+Cell[316554, 9772, 128, 2, 20, "Print"],
+Cell[316685, 9776, 130, 2, 20, "Print"],
+Cell[316818, 9780, 128, 2, 20, "Print"],
+Cell[316949, 9784, 128, 2, 20, "Print"],
+Cell[317080, 9788, 127, 2, 20, "Print"],
+Cell[317210, 9792, 301, 10, 26, "Print"],
+Cell[317514, 9804, 128, 2, 20, "Print"],
+Cell[317645, 9808, 128, 2, 20, "Print"],
+Cell[317776, 9812, 128, 2, 20, "Print"],
+Cell[317907, 9816, 130, 2, 20, "Print"],
+Cell[318040, 9820, 128, 2, 20, "Print"],
+Cell[318171, 9824, 130, 2, 20, "Print"],
+Cell[318304, 9828, 130, 2, 20, "Print"],
+Cell[318437, 9832, 128, 2, 20, "Print"],
+Cell[318568, 9836, 128, 2, 20, "Print"],
+Cell[318699, 9840, 130, 2, 20, "Print"],
+Cell[318832, 9844, 128, 2, 20, "Print"],
+Cell[318963, 9848, 128, 2, 20, "Print"],
+Cell[319094, 9852, 126, 2, 20, "Print"],
+Cell[319223, 9856, 130, 2, 20, "Print"],
+Cell[319356, 9860, 128, 2, 20, "Print"],
+Cell[319487, 9864, 130, 2, 20, "Print"],
+Cell[319620, 9868, 128, 2, 20, "Print"],
+Cell[319751, 9872, 127, 2, 20, "Print"],
+Cell[319881, 9876, 301, 10, 26, "Print"],
+Cell[320185, 9888, 130, 2, 20, "Print"],
+Cell[320318, 9892, 301, 10, 26, "Print"],
+Cell[320622, 9904, 301, 10, 26, "Print"],
+Cell[320926, 9916, 301, 10, 26, "Print"]
 }, Open  ]],
-Cell[244789, 7524, 166, 3, 26, "Text"],
+Cell[321242, 9929, 1713, 45, 58, "Output"]
+}, Open  ]],
+Cell[322970, 9977, 166, 3, 26, "Text"],
 Cell[CellGroupData[{
-Cell[244980, 7531, 254, 6, 27, "Input"],
-Cell[245237, 7539, 199, 5, 27, "Output"]
+Cell[323161, 9984, 254, 6, 27, "Input"],
+Cell[323418, 9992, 199, 5, 27, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[245473, 7549, 135, 2, 27, "Input"],
-Cell[245611, 7553, 96, 1, 27, "Output"]
+Cell[323654, 10002, 135, 2, 27, "Input"],
+Cell[323792, 10006, 96, 1, 27, "Output"]
 }, Open  ]],
-Cell[245722, 7557, 146, 2, 27, "Input"],
+Cell[323903, 10010, 146, 2, 27, "Input"],
 Cell[CellGroupData[{
-Cell[245893, 7563, 656, 18, 27, "Input"],
-Cell[246552, 7583, 7233, 126, 535, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[253822, 7714, 531, 15, 27, "Input"],
-Cell[254356, 7731, 689, 18, 43, "Output"]
+Cell[324074, 10016, 656, 18, 27, "Input"],
+Cell[324733, 10036, 7233, 126, 535, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[255082, 7754, 134, 2, 27, "Input"],
-Cell[255219, 7758, 498, 11, 239, "Output"]
+Cell[332003, 10167, 531, 15, 27, "Input"],
+Cell[332537, 10184, 689, 18, 43, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[255754, 7774, 199, 4, 27, "Input"],
-Cell[255956, 7780, 303, 9, 43, "Output"]
+Cell[333263, 10207, 134, 2, 27, "Input"],
+Cell[333400, 10211, 498, 11, 239, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[256296, 7794, 140, 2, 27, "Input"],
-Cell[256439, 7798, 112, 1, 27, "Output"]
+Cell[333935, 10227, 199, 4, 27, "Input"],
+Cell[334137, 10233, 303, 9, 43, "Output"]
 }, Open  ]],
-Cell[256566, 7802, 140, 1, 26, "Text"],
-Cell[256709, 7805, 272, 8, 27, "Input"]
+Cell[CellGroupData[{
+Cell[334477, 10247, 140, 2, 27, "Input"],
+Cell[334620, 10251, 112, 1, 27, "Output"]
+}, Open  ]],
+Cell[334747, 10255, 140, 1, 26, "Text"],
+Cell[334890, 10258, 272, 8, 27, "Input"]
 }, Open  ]]
 }, Open  ]]
 }
