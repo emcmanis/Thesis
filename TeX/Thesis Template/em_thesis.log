@@ -1,12 +1,23 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.9.14)  28 DEC 2011 17:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  3 JAN 2012 11:43
 entering extended mode
+ \write18 enabled.
  %&-line parsing enabled.
-**\nonstopmode\input em_thesis.tex
-(./em_thesis.tex (./reedthesis.cls
+**em_thesis.tex
+(./em_thesis.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
+rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
+lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
+ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(./reedthesis.cls
 Document Class: reedthesis 2004/01/27 The Reed College Thesis Class
-(/usr/share/texmf-texlive/tex/latex/base/book.cls
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texmf-texlive/tex/latex/base/bk12.clo
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -22,7 +33,7 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -33,41 +44,41 @@ File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 ))
-(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/etc/texmf/tex/latex/config/graphics.cfg
+(/usr/local/texlive/2009/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+(/usr/local/texlive/2009/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/share/texmf-texlive/tex/latex/base/latexsym.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 47.
 )
-(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup5
@@ -75,7 +86,7 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/share/texmf-texlive/tex/latex/amscls/amsthm.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2004/08/06 v2.20
 \thm@style=\toks16
 \thm@bodyfont=\toks17
@@ -87,24 +98,24 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip54
 \dth@everypar=\toks21
 )
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
 \@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-texlive/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks22
 \ex@=\dimen105
 ))
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen106
 )
-(/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count89
@@ -145,7 +156,7 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-(/usr/share/texmf-texlive/tex/latex/tools/longtable.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip58
 \LTright=\skip59
@@ -163,7 +174,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count105
 \LT@p@ftn=\toks27
 )
-(/usr/share/texmf/tex/latex/booktabs/booktabs.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen115
 \lightrulewidth=\dimen116
@@ -183,20 +194,39 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count109
 \@thisrulewidth=\dimen127
 )
-(/usr/share/texmf/tex/latex/setspace/setspace.sty
-Package: setspace 2011/12/19 v6.7a set line spacing
-)
-(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/local/texlive/2009/texmf-dist/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(/usr/share/texmf-texlive/tex/latex/natbib/natbib.sty
+(/usr/local/texlive/2009/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2009/07/16 8.31 (PWD, AO)
 \bibhang=\skip62
 \bibsep=\skip63
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
-) (./em_thesis.aux)
+)
+(./em_thesis.aux
+
+! Package natbib Error: Bibliography not compatible with author-year citations.
+
+(natbib)                Press <return> to continue in numerical citation style.
+
+
+See the natbib package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...mand\NAT@force@numbers{}\NAT@force@numbers
+                                                  
+? H
+Check the bibliography entries for non-compliant syntax,
+or select author-year BibTeX style, e.g. plainnat
+? 
+)
 \openout1 = `em_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -211,8 +241,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
-
-(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen128
@@ -226,25 +255,24 @@ LaTeX Font Info:    ... okay on input line 68.
 \everyMPtoPDFconversion=\toks29
 )
 LaTeX Font Info:    Try loading font information for U+lasy on input line 70.
- (/usr/share/texmf-texlive/tex/latex/base/ulasy.fd
+ (/usr/local/texlive/2009/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 70.
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 70.
 
-(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+(/usr/local/texlive/2009/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 Non-PDF special ignored!
 Non-PDF special ignored!
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-[2
+{/usr/local/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] [3] [4
 
@@ -265,8 +293,7 @@ Non-PDF special ignored!
 
  [5] [6
 
-]
-(./em_thesis.lof)
+] (./em_thesis.lof)
 \tf@lof=\write5
 \openout5 = `em_thesis.lof'.
 
@@ -274,49 +301,51 @@ Non-PDF special ignored!
 
 ] [9] [10
 
-]
-<hydrogenspectrum.png, id=49, 361.35pt x 224.84pt>
-File: hydrogenspectrum.png Graphic file (type png)
- <use hydrogenspectrum.png>
-<hydground.png, id=50, 361.35pt x 227.85126pt>
-File: hydground.png Graphic file (type png)
- <use hydground.png> [1
+] [1
 
 ]
+<hydrogenspectrum.png, id=59, 361.35pt x 224.84pt>
+File: hydrogenspectrum.png Graphic file (type png)
+ <use hydrogenspectrum.png>
+<hydground.png, id=60, 361.35pt x 227.85126pt>
+File: hydground.png Graphic file (type png)
+ <use hydground.png>
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./hydrogenspectrum.png (PNG copy)> <./hydground.png (PNG copy)>] [3]
+[2 <./hydrogenspectrum.png (PNG copy)>] [3 <./hydground.png (PNG copy)>]
 [4
 
-] (./em_thesis.bbl) [5
+] (./em_thesis.bbl) (./em_thesis.aux)
 
-] (./em_thesis.aux) ) 
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2683 strings out of 495061
- 31839 string characters out of 1182621
- 88439 words of memory out of 3000000
- 5814 multiletter control sequences out of 15000+50000
- 12838 words of font info for 53 fonts, out of 3000000 for 9000
- 28 hyphenation exceptions out of 8191
- 29i,11n,45p,565b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
-exmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive
-/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1
-/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsl12
-.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-
-texlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on em_thesis.pdf (19 pages, 160373 bytes).
+ 2676 strings out of 493848
+ 32457 string characters out of 3149207
+ 88247 words of memory out of 3000000
+ 5908 multiletter control sequences out of 15000+200000
+ 11885 words of font info for 50 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 28i,10n,45p,437b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
+al/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/t
+exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
+ive/2009/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on em_thesis.pdf (18 pages, 142326 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
+ 106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

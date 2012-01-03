@@ -113,13 +113,31 @@
 % \onehalfspacing
 % \doublespacing
 
-\section{The hydrogen atom}
-
-Before we talk about the Yukawa potential, let's look at a simpler system: the Coulomb potential in the hydrogen atom. Here, a single negatively charged electron is bound to the positively charged nucleus, consisting of a single proton. The time-independent wave equation for that electron is
+The Yukawa potential governs the force between protons and neutrons in the nucleus of the atom. It is
 \eqn{
--\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) - \frac{e^2}{4\pi \epsilon_0 r}\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
-\label{eq:TIDSWE-hydrogen}
+V(r) = -\frac{C}{r}e^{-r/l}\mbox{,}
 }
+where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. The simplest system in which the potential can be studied is the deuterium nucleus. The system of a single neutron and proton can be expressed as a reduced mass orbiting the center of mass.
+
+The force comes from the exchange of virtual pions between the two nucleons. The limited range is due to the fact that pions have mass. The mass of the pion then generates the length scale:
+\eqn{
+l = \frac{\hbar}{m_{\pi}c} \approx 1.41 \times 10^{-15}\mbox{ m}
+}
+The strength of the force $C$ is only known experimentally; it has been found to be about $2.96 \times 10^{-6}$ eV*m\cite{ER}\footnote{Get a better citation for this than Eisberg and Resnick}. 
+
+In general, the time-independent Schr\"odinger wave equation for some $V(r)$ is
+\eqn{
+-\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
+\label{eq:TIDSWE-general}
+}
+Because we are working with nuclei in atoms, it makes the most sense to express this in spherical coordinates, as above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
+\eqn{
+ V(r) = -\frac{C}{r}\mbox{.}
+ }
+ Plugging this into the wave equation, we have
+ \eqn{
+ -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) -\frac{C}{r}\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
+ }
 This equation can be solved analytically by separation of variables.\footnote{How much of this should I write out? After writing below this, probably more than this.} While the final wave function will be dependent on all three variables, the energy is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
 E_n = -\frac{\mu e^4}{(4 \pi \epsilon_0)^2 2 \hbar ^2 n^2}\mbox{.}
@@ -149,18 +167,9 @@ The ground state wave function is spherically symmetric, meaning that $\psi$ the
 \label{fig:hground}
 \end{figure}
 
-\section{Comparison with the Yukawa potential}
-The Yukawa potential governs the force between protons and neutrons in the nucleus of the atom. It is
-\eqn{
-V(r) = -\frac{C}{r}e^{-r/l}\mbox{.}
-}
-When considering this potential, the analogous system to hydrogen is the deuterium atom. One proton and one neutron means you can view the system as a reduced mass orbiting the center of mass. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
 
-The force comes from the exchange of virtual pions between the two nucleons. The limited range is due to the fact that pions have mass; the Coulomb force is mediated by massless virtual photons. The mass of the pion then generates the length scale:
-\eqn{
-l = \frac{\hbar}{m_{\pi}c} \approx 1.41 \times 10^{-15}\mbox{ m}
-}
-The strength of the force $C$ is only known experimentally; it has been found to be about $2.96 \times 10^{-6}$ eV*m\cite{ER}\footnote{Get a better citation for this than Eisberg and Resnick}. These values give us an idea of how the force will work in an actual atom, and provide something we can plug in to test our model.
+
+This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 %
 %
@@ -185,7 +194,11 @@ The strength of the force $C$ is only known experimentally; it has been found to
 %
 % Make my bibliography be called "Bibliography" and not "References" (or "Works Cited" or...):
 %% \renewcommand{\bibname}{Works Cited}
-  \bibliographystyle{plain} % there are a variety of styles available; 
+
+ \bibliographystyle{plain}
+%FIXME: should be apsrev.
+  
+% there are a variety of styles available; 
 %% replace ``plainnat'' with the style of choice. You can refer to files in the bsts or APA 
 %% subfolder, e.g. 
 %% \bibliographystyle{APA/apa-good}  % or
