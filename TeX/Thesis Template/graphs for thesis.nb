@@ -1,0 +1,190 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5744,        180]
+NotebookOptionsPosition[      5264,        158]
+NotebookOutlinePosition[      5622,        174]
+CellTagsIndexPosition[      5579,        171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"h", " ", "=", " ", 
+   RowBox[{"6.626", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "34"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", 
+   RowBox[{"J", " ", "s"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"hbar", " ", "=", " ", 
+   RowBox[{"h", "/", 
+    RowBox[{"(", 
+     RowBox[{"2", "\[Pi]"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"e", "=", 
+   RowBox[{
+    RowBox[{"-", "1.602"}], "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "19"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", " ", "C", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"\[Epsilon]0", "=", 
+   RowBox[{"8.854", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "12"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", " ", 
+   FractionBox[
+    RowBox[{"C", "^", "2"}], 
+    RowBox[{"J", " ", "m"}]], " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"me", "=", 
+   RowBox[{"9.109", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "31"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", "kg", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"mp", "=", 
+   RowBox[{"1.673", "*", 
+    RowBox[{"10", "^", 
+     RowBox[{"(", 
+      RowBox[{"-", "27"}], ")"}]}]}]}], ";", " ", 
+  RowBox[{"(*", "kg", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"\[Mu]", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     FractionBox["mp", 
+      RowBox[{"me", "+", "mp"}]], ")"}], "*", "me"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"a0", "=", 
+   FractionBox[
+    RowBox[{"4", "\[Pi]", " ", "\[Epsilon]0", " ", 
+     RowBox[{"hbar", "^", "2"}]}], 
+    RowBox[{"\[Mu]", " ", 
+     RowBox[{"e", "^", "2"}]}]]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.533486355714151*^9, 3.533486362865964*^9}, {
+  3.533486406404001*^9, 3.533486467803348*^9}, {3.5334865024369717`*^9, 
+  3.5334865185237417`*^9}, {3.5334865725259333`*^9, 3.5334867061505623`*^9}, {
+  3.53348698333232*^9, 3.533487009363072*^9}, {3.53348705867513*^9, 
+  3.533487102259403*^9}, {3.533487709547645*^9, 3.533487712027905*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Ens", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", 
+       RowBox[{"hbar", "^", "2"}]}], 
+      RowBox[{
+       RowBox[{"a0", "^", "2"}], " ", "2", " ", "\[Mu]", " ", 
+       RowBox[{"n", "^", "2"}]}]], "*", 
+     RowBox[{"1", "/", 
+      RowBox[{"(", 
+       RowBox[{"1.602", "*", 
+        RowBox[{"10", "^", 
+         RowBox[{"(", 
+          RowBox[{"-", "19"}], ")"}]}]}], ")"}]}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "10"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.533486713961091*^9, 3.5334867655508423`*^9}, {
+  3.533486902024716*^9, 3.533486912649208*^9}, {3.533487376848074*^9, 
+  3.533487377150072*^9}, {3.533487443368393*^9, 3.533487460847106*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "13.594084199568682`"}], ",", 
+   RowBox[{"-", "3.3985210498921705`"}], ",", 
+   RowBox[{"-", "1.5104537999520757`"}], ",", 
+   RowBox[{"-", "0.8496302624730426`"}], ",", 
+   RowBox[{"-", "0.5437633679827472`"}], ",", 
+   RowBox[{"-", "0.37761344998801893`"}], ",", 
+   RowBox[{"-", "0.2774302897871159`"}], ",", 
+   RowBox[{"-", "0.21240756561826066`"}], ",", 
+   RowBox[{"-", "0.16782819999467508`"}], ",", 
+   RowBox[{"-", "0.1359408419956868`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.5334867671661167`*^9, 3.533486915258272*^9, 3.533487378306982*^9, {
+   3.533487449193347*^9, 3.5334874649223557`*^9}, 3.533487714406858*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"Ens", ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", "Full"}], ",", 
+   RowBox[{"AxesLabel", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<n\>\"", ",", " ", "\"\<E\>\""}], "}"}]}]}], "]"}]], "Input",\
+
+ CellChangeTimes->{{3.5334877288445797`*^9, 3.533487775521947*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {Hue[0.67, 0.6, 0.6], 
+    PointBox[{{1., -13.594084199568682`}, {2., -3.3985210498921705`}, {
+     3., -1.5104537999520757`}, {4., -0.8496302624730426}, {
+     5., -0.5437633679827472}, {6., -0.37761344998801893`}, {
+     7., -0.2774302897871159}, {8., -0.21240756561826066`}, {
+     9., -0.16782819999467508`}, {10., -0.1359408419956868}}]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{
+    FormBox["\"n\"", TraditionalForm], 
+    FormBox["\"E\"", TraditionalForm]},
+  AxesOrigin->{0, 0},
+  PlotRange->{{0, 10.}, {-13.594084199568682`, 0}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{{3.533487733864875*^9, 3.533487775933257*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 867},
+WindowMargins->{{Automatic, 583}, {42, Automatic}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (February 23, \
+2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 2054, 59, 189, "Input"],
+Cell[CellGroupData[{
+Cell[2636, 83, 763, 21, 48, "Input"],
+Cell[3402, 106, 691, 15, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4130, 126, 322, 8, 27, "Input"],
+Cell[4455, 136, 793, 19, 239, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
