@@ -3,7 +3,7 @@
 % template. Later comments etc. by Ben Salzberg (BTS). Additional
 % restructuring and APA support by Jess Youngberg (JY).
 % Your comments and suggestions are more than welcome; please email
-% them to cus@reed.edu
+% them to cusf@reed.edu
 %
 % See http://web.reed.edu/cis/help/latex.html for help. There are a 
 % great bunch of help pages there, with notes on
@@ -125,52 +125,183 @@ l = \frac{\hbar}{m_{\pi}c} \approx 1.41 \times 10^{-15}\mbox{ m}
 }
 The strength of the force $C$ is only known experimentally; it has been found to be about $2.96 \times 10^{-6}$ eV*m\cite{ER}\footnote{Get a better citation for this than Eisberg and Resnick}. 
 
-In general, the time-independent Schr\"odinger wave equation for some $V(r)$ is
+In general, the time-independent Schr\"odinger wave equation for a particle under the influence of some $V(r)$ is
 \eqn{
--\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
+-\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)
 \label{eq:TIDSWE-general}
 }
-Because we are working with nuclei in atoms, it makes the most sense to express this in spherical coordinates, as above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
+where $\mu$ is the reduced mass of the system. Because we are working with nuclei in atoms, it makes the most sense to express this in spherical coordinates, as above. With the Yukawa potential, this equation cannot be solved analytically, as the exponential term messes things up. However, we \textit{can} solve the more simple system described by the potential without the exponential term, that is,
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
- Plugging this into the wave equation, we have
+ This problem is equivalent to solving the wave equation for the Coulomb potential in hydrogen; in that case, $C = \frac{e^2}{4\pi \epsilon_0}$. Plugging the above potential into the wave equation, we have
  \eqn{
  -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) -\frac{C}{r}\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
  }
-This equation can be solved analytically by separation of variables.\footnote{How much of this should I write out? After writing below this, probably more than this.} While the final wave function will be dependent on all three variables, the energy is just a function of $n$ (the radial quantum number), and is equal to
+This equation can be solved analytically by separation of variables. The wave function can be expressed as the product of three functions
 \eqn{
-E_n = -\frac{\mu e^4}{(4 \pi \epsilon_0)^2 2 \hbar ^2 n^2}\mbox{.}
-\label{eq:hydrogen-E}
+\psi(r,\theta,\phi) = R(r)\Theta(\theta)\Phi(\phi)
 }
-This can be rewritten in terms of 
+with the values
+\begin{align*}
+\Phi_{m_l}(\phi) &= e^{im_l\phi} \\
+\Theta_{lm_l}(\theta) &= \sin^{|m_l|}{\theta} F_{l m_l}(\cos{\theta}) \\
+R_{n l}(r) &= e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n l}\left(\frac{C \mu r}{\hbar^2}\right)
+\end{align*}
+Here, $l$, $m_l$, and $n$ are quantum numbers, and $F_{l m_l}$ and $G_{n l}$ are polynomials in $\cos{\theta}$ and $\left(\frac{C \mu r}{\hbar^2} \right)$, respectively. The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
-a_0 \equiv \frac{4 \pi \epsilon_0 \hbar ^2}{\mu e^2}\mbox{,}
+E_n = -\frac{\mu C^2}{2\hbar^2 n^2}\mbox{.}
 }
-the ``Bohr radius". A constant with units of length, $a_0$ is defined in terms of the other constants in the problem. It is also equal to the radius of the smallest orbit in a Bohr hydrogen atom (the ground state). As such, it sets a natural length scale. Substituting $a_0$ in, the expression for $E_n$ becomes much simpler:
+All of these functions can be simplified further by introducing a length scale, 
 \eqn{
-E_n = -\frac{\hbar^2}{a_0^2 \mu n^2}\mbox{.}
-\label{eq:hydrogen-Ebohr}
+\alpha = \frac{\hbar^2}{C \mu}\mbox{.}
+\label{eq:bohrradius}
 }
-These energies are the energies of the bound states of the electron in the hydrogen atom. As $n$ increases, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible.
+$\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, it represents the radius of the smallest orbit in a Bohr hydrogen atom (the ground state), making it a natural length scale for the problem.
+
+The ground state for the wave function ($n = 1, l = 0, m_l = 0$) is
+\eqn{\frac{1}{\sqrt{\pi}}\left(\frac{1}{\alpha}\right)^{3/2} e^{-r/\alpha}\mbox{.}
+}
+The ground state wave function is spherically symmetric, meaning that $\psi$ there is only a function of $r$. In general, the spherically symmetric wave functions have the form
+\eqn{
+\psi(r) &= e^{-r/\alpha} G_{n}\left(\frac{1}{\alpha}\right)
+}
+where $G_n$ is the same polynomial as earlier.
+As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)$ is plotted for several values of $n$.
 \begin{figure}
+\includegraphics[scale=0.75]{hydground.png}
+\caption{The ground state ($n=1$, $l =0$, $m_l= 0$) wave function for hydrogen}
+\label{fig:hfuncs}
+\end{figure}
+As this happens, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible. This is shown in figure \ref{fig:hspec}.
+\begin{figure}[h]
 \includegraphics[scale=0.75]{hydrogenspectrum.png}
 \caption{The energies of the first 10 bound states of the electron in the hydrogen atom}
 \label{fig:hspec}
 \end{figure}
 
-The ground state wave function is spherically symmetric, meaning that $\psi$ there is only a function of $r$. This function is plotted in Figure \ref{fig:hground}.
+Going back to the more-complicated Yukawa potential, the exponential term in the potential means that its range is limited in a way the Coulomb potential's isn't, because $e^{-x}$ drops off much faster than $1/x$. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
 
-\begin{figure}
-\includegraphics[scale=0.75]{hydground.png}
-\caption{The ground state ($n=1$, $l =0$, $m= 0$) wave function for hydrogen}
-\label{fig:hground}
-\end{figure}
+\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
+\chapter{Semi-Classical Approximation and Numerical Setup}
+\section{The Bohr Model}
+The similarity between the Yukawa potential in deuterium and the Coulomb potential in hydrogen suggests treating them similarly. The Bohr model is a semi-classical view of the electron orbiting the nucleus in hydrogen. The postulates of the model are as follows:
+\begin{enumerate}
+\item Electrons move in circular orbits around the nucleus under the influence of the Coulomb force. They obey all the laws of classical mechanics.
+\item Angular momentum is quantized; $L = n\hbar$ where $n$ is a positive integer.
+\item The energy of the electron in an orbit remains constant.
+\item If an electron changes orbits, electromagnetic radiation is emitted with frequency $\nu = \frac{E_i-E_f}{h}$
+\end{enumerate}
+We can easily use this model with the Yukawa potential instead of the Coulomb to get a qualitative idea of where we expect bound states to be found.
 
+First, we look at the classical energy of a particle (here, the reduced mass of the neutron-proton system) moving under the influence of the Yukawa potential:
+\eqn{
+E = \frac{1}{2}\mu \dot{r}^2+\frac{1}{2}\frac{L^2}{\mu r^2}-\frac{C}{r}e^{-r/l}\mbox{.}
+\label{eq:classical-energy}
+}
+To make this easier to work with, we use the length scale from \eqref{eq:bohrradius}, the ``Bohr radius'' for this problem. We then use this to nondimensionalize $r$, defining
+\begin{equation}
+\rho \equiv \frac{r}{\alpha}\mbox{.}
+\label{eq:rho}
+\end{equation}
+Finally, we define a time scale:
+\begin{equation}
+\beta \equiv \frac{c^2m}{\hbar^3}\mbox{.}
+\label{eq:beta}
+\end{equation}
 
-This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
-%\clearpage %% starts a new page and stops trying to place floats such as tables and figures
+We can now substitute in $\rho$, $\alpha$, and $\tau = \beta t$:
+\begin{align}
+E &= \frac{1}{2}m\left(\frac{d\rho}{d \tau}\alpha \beta\right)^2+\frac{1}{2}\frac{c}{\rho^2 \alpha}(n^2-\rho e^{-(\rho \alpha)/l}) \\
+&= \frac{1}{2}\frac{c}{\alpha}\rho'^2 + \frac{1}{2}\frac{c}{\alpha}\frac{1}{\rho^2}(n^2-\rho e^{-(\rho \alpha)/l}) \\
+\frac{2\alpha}{c}E = \tilde{E} &= \rho'^2 +\frac{1}{\rho^2}(n^2 - 2\rho e^{-\rho/ \lambda})
+\end{align}
+In the last line, we have used $\lambda = \frac{l}{\alpha}$, relating the strength of the force and the length scale of the problem. 
+We now have a dimensionless effective potential,
+\begin{equation}
+V_{eff}=\frac{1}{\rho^2}(n^2- 2\rho e^{-\rho/\lambda})
+\label{veff}
+\end{equation}
+to use for further analysis.
+
+We now turn our attention to the number of bound states allowed by this potential. We expect that the exponential term will act as a cutoff, limiting the number of bound states to some finite quantity. As a really naive approximation of this behavior, we can use the Bohr model to look at a system where $V(r) = -\frac{C}{r}$ for $r < $l, and $V(r) = 0$ everywhere else.
+
+This system is equivalent to hydrogen for $r<l$, so we solve it the same way. We know that
+\eqn{
+\frac{C}{r^2} = F = \mu a = \mu \frac{v^2}{r}
+}
+and 
+\eqn{
+\mu v r = n\hbar
+}
+from the postulates. Solving for $v$ and substituting, we find that
+\eqn{
+r = \frac{n^2 \hbar^2}{\mu C}
+}
+Substituting in our length scale gets us 
+\eqn{
+r = n^2 \alpha \mbox{.}
+}
+The physical interpretation of $\alpha$ is clear here -- in the ground state ($n = 1$), $r = \alpha$. Substituting our nondimensionalized $\rho$ makes the expression even simpler: we get
+\eqn{
+\rho = n^2\mbox{.}
+}
+This can be rearranged to be $n = \sqrt{\rho}$. For some $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$.
+
+To perform the analysis of the full potential, we look at the graph of the effective potential (figure [placeholder]%\ref{fig:veff}
+). 
+We can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more true bound states, and one where $V_{eff}$ doesn't produce any kind of dip.
+
+The first of these critical values occurs when the minimum of $V_{eff}$ is 0. To find it, we start by taking the derivative of \eqref{veff} and setting it to 0, obtaining
+\begin{align}
+\frac{dV}{d\rho_0} &= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda} \\
+0 &= -2n^2 + 2\rho_0 e^{-\rho_0/\lambda} + 2\frac{\rho_0^2}{\lambda} e^{-\rho_0/\lambda}
+\label{vmin}
+\end{align}
+where $\rho_0$ is the value of $\rho$ when $V_{eff}$ is minimized. This equation has no general solution, but we can find one for the specific case where $V_{eff}(\rho_0) = 0$ by solving the equation
+\begin{align}
+V_{eff}(\rho_0)=0 &= n^2 - 2\rho_0 e^{-\rho_0/\lambda} \\
+n^2 &= 2 \rho_0 e^{-\rho_0/\lambda}
+\end{align}
+and plugging it in to the previous, obtaining
+\begin{align}
+0 &= -2n^2 + n^2 +n^2 \frac{\rho_0}{\lambda} \\
+&= -1 + \frac{\rho_0}{\lambda} \\
+\rho_0 &= \lambda \mbox{.}
+\end{align}
+Plugging this back into the equation for $V_{eff}(\rho_0)$ gives us
+\begin{equation}
+\mbox{$n = \sqrt{\frac{2}{e}}\sqrt{\lambda} \approx 0.857764\sqrt{\lambda}$}
+\end{equation}
+which is pretty close to the naive $n = \sqrt{\lambda}$ from above. 
+
+For the second critical point, the one where $V_{eff}$ has no minimum, we rewrite \eqref{vmin} to be
+\begin{equation}
+n^2 = \left( \rho + \frac{\rho^2}{\lambda} \right) e^{-\rho/\lambda}
+\end{equation}
+The right side of this equation will have some maximum, which will be the last point for which the equation can be solved -- after that, the value of $n^2$ will always be greater than the right side. To find this, we differentiate with respect to $\rho$ and set to 0, obtaining
+\begin{align}
+0 &= (1+2\frac{\rho}{\lambda})\expo - \frac{1}{\lambda}(\rho + \frac{\rho^2}{\lambda})\expo \\
+&= 1 + \frac{\rho}{\lambda} + \frac{\rho^2}{\lambda^2}\mbox{.}
+\end{align}
+This is a quadratic in $\rho$ and can be solved using the quadratic formula:
+\begin{align}
+\rho &= \frac{-\frac{1}{\lambda} \pm \sqrt{\left(\frac{1}{\lambda}\right)^2+4\frac{1}{\lambda^2}}}{-\frac{2}{\lambda^2}} \\
+&= \frac{\lambda}{2} \mp \frac{\lambda \sqrt{5}}{2}
+\end{align}
+As $\rho$ is a real physical quantity that can't be negative, we can discard one solution, obtaining
+\begin{equation}
+\rho = \frac{\lambda}{2}(1+\sqrt{5})
+\end{equation}
+We can plug this in to \eqref{vmin} to find the relationship between $\lambda$ and $n$:
+\begin{align}
+n^2 &= \lambda(1+\sqrt{5})\left(\frac{3+\sqrt{5}}{4}\right)e^{-(1+\sqrt{5})/2} \\
+n &= 0.916494 \sqrt{\lambda}
+\end{align}
+From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
+\section{Quantum Mechanics}
+Numerics and stuff goes here.
 %
 %
 %\chapter*{Conclusion}
