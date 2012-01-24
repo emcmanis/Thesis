@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage{graphicx,amsmath,amssymb}
+
+\title{Quantum Mechanics and Computations}
+
+\newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
+
+\begin{document}
+\maketitle
+
+Having analytically obtained an estimate for the critical points, we turn to the Schroedinger Wave Equation. We can turn the relation
+\eqn{
+H \psi = E\psi
+\label{eq:hamiltonian}
+}
+into an eigenvalue problem using the finite difference method to represent the Hamiltonian operator as a vector.
+
+To obtain our Hamiltonian vector, we first nondimensionalize the Hamiltonian operator, 
+\begin{align}
+H &= \frac{\hat{p}^2}{2m} + \vec{V}\\
+&= -\frac{\hbar^2}{2m}\nabla^2 +\vec{V} \mbox{.} 
+\end{align}
+We are only concerned about the $r$ component of the $\nabla$ operator, so this becomes
+\eqn{
+H = \frac{\hbar^2}{2m} \left[\frac{1}{r^2}\frac{d}{dr}\left(r^2 \frac{d}{dr}\right)\right] - \frac{c}{r}e^{-r/l}\mbox{.}
+}
+This can be nondimensionalized using the same constants from the nondimensionalized energy, becoming
+\eqn{
+H=\frac{c}{2\alpha}\tilde{H} = \frac{c}{2\alpha} \left[- \frac{1}{\rho^2}\frac{d}{d\rho}\left(\rho^2\frac{d}{d\rho}\right) - \frac{2}{\rho}e^{-\rho/\lambda}\right]\mbox{.}
+}
+The constant out front is the same one we pulled out of the energy, which allows us to restate \eqref{eq:hamiltonian} as
+\eqn{
+\tilde{H}\psi = \tilde{E}\psi\mbox{.}\footnote{Using $\tilde{E}$ instead of $e$ to avoid confusion with Euler's number.}
+}
+Before constructing the finite difference matrix to solve for $\tilde{E}$, we can simplify the with the substitution\footnote{I should have a cite here.} $u(\rho)=\rho \phi(\rho)$. Plugging this into the above yields
+
+
+\end{document}

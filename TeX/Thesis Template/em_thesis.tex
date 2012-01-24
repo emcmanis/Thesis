@@ -112,33 +112,34 @@
 % single spacing with the \singlespacing command.
 % \onehalfspacing
 % \doublespacing
-
-The Yukawa potential governs the force between protons and neutrons in the nucleus of the atom. It is
+The Yukawa potential describes a force mediated by a massive particle. It is %argh fuck this part
 \eqn{
 V(r) = -\frac{C}{r}e^{-r/l}\mbox{,}
 }
-where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. The simplest system in which the potential can be studied is the deuterium nucleus. The system of a single neutron and proton can be expressed as a reduced mass orbiting the center of mass.
+where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. We are interested in how the bound states change with these constants. 
 
-The force comes from the exchange of virtual pions between the two nucleons. The limited range is due to the fact that pions have mass. The mass of the pion then generates the length scale:
+The force described by the potential comes from the exchange of virtual particles. The lenth scale, which limits the range at which the force acts, comes about because the virtual particles exchanged have mass. The mass of these particles then generates the length scale:
 \eqn{
-l = \frac{\hbar}{m_{\pi}c} \approx 1.41 \times 10^{-15}\mbox{ m}
+l = \frac{\hbar}{m_{\pi}c}\mbox{.}
 }
-The strength of the force $C$ is only known experimentally; it has been found to be about $2.96 \times 10^{-6}$ eV*m\cite{ER}\footnote{Get a better citation for this than Eisberg and Resnick}. 
+The strength of the force $C$ is only known experimentally and depends on the application of the potential. Most commonly, this is the forces between protons and neutrons in an atomic nucleus.
 
 In general, the time-independent Schr\"odinger wave equation for some $V(r)$ is
 \eqn{
 -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
 \label{eq:TIDSWE-general}
 }
-Because we are working with nuclei in atoms, it makes the most sense to express this in spherical coordinates, as above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
+In this thesis, we are working with a system of two particles moving under the influence of the Yukawa potential (in the atomic case, this would be a deuterium nucleus). To simplify the system, it makes the most sense to express this in spherical coordinates as a reduced mass orbiting a center of mass. This is the form used for the wave equation above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
- Plugging this into the wave equation, we have
- \eqn{
- -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) -\frac{C}{r}\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
- }
-This equation can be solved analytically by separation of variables.\footnote{How much of this should I write out? After writing below this, probably more than this.} While the final wave function will be dependent on all three variables, the energy is just a function of $n$ (the radial quantum number), and is equal to
+This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
+The solution to this wave equation is well known:
+\eqn{
+\psi_{l m_l n} (r, \theta, \phi) = R_{n,l}(r) Y_{lm_l}(\theta,\phi)\mbox{.}
+}
+
+. While the final wave function will be dependent on all three variables, the energy is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
 E_n = -\frac{\mu e^4}{(4 \pi \epsilon_0)^2 2 \hbar ^2 n^2}\mbox{.}
 \label{eq:hydrogen-E}
@@ -166,8 +167,6 @@ The ground state wave function is spherically symmetric, meaning that $\psi$ the
 \caption{The ground state ($n=1$, $l =0$, $m= 0$) wave function for hydrogen}
 \label{fig:hground}
 \end{figure}
-
-
 
 This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures

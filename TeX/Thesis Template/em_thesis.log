@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  3 JAN 2012 11:43
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009) (format=pdflatex 2009.11.7)  23 JAN 2012 14:14
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -209,24 +209,7 @@ Package: natbib 2009/07/16 8.31 (PWD, AO)
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count110
 )
-(./em_thesis.aux
-
-! Package natbib Error: Bibliography not compatible with author-year citations.
-
-(natbib)                Press <return> to continue in numerical citation style.
-
-
-See the natbib package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 ...mand\NAT@force@numbers{}\NAT@force@numbers
-                                                  
-? H
-Check the bibliography entries for non-compliant syntax,
-or select author-year BibTeX style, e.g. plainnat
-? 
-)
+(./em_thesis.aux)
 \openout1 = `em_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -241,7 +224,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
- (/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen128
@@ -304,10 +288,10 @@ Non-PDF special ignored!
 ] [1
 
 ]
-<hydrogenspectrum.png, id=59, 361.35pt x 224.84pt>
+<hydrogenspectrum.png, id=57, 361.35pt x 224.84pt>
 File: hydrogenspectrum.png Graphic file (type png)
  <use hydrogenspectrum.png>
-<hydground.png, id=60, 361.35pt x 227.85126pt>
+<hydground.png, id=58, 361.35pt x 227.85126pt>
 File: hydground.png Graphic file (type png)
  <use hydground.png>
 
@@ -325,27 +309,25 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2676 strings out of 493848
- 32457 string characters out of 3149207
- 88247 words of memory out of 3000000
- 5908 multiletter control sequences out of 15000+200000
- 11885 words of font info for 50 fonts, out of 3000000 for 9000
+ 2658 strings out of 493848
+ 32265 string characters out of 3149207
+ 88239 words of memory out of 3000000
+ 5894 multiletter control sequences out of 15000+200000
+ 9868 words of font info for 39 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 28i,10n,45p,437b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,10n,45p,546b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
-r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/loc
-al/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
-texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/t
-exlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texl
-ive/2009/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on em_thesis.pdf (18 pages, 142326 bytes).
+usr/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
+r/local/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/lo
+cal/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local
+/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on em_thesis.pdf (18 pages, 116291 bytes).
 PDF statistics:
- 106 PDF objects out of 1000 (max. 8388607)
+ 98 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
