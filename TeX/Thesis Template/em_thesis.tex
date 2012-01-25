@@ -112,40 +112,34 @@
 % single spacing with the \singlespacing command.
 % \onehalfspacing
 % \doublespacing
-
-The Yukawa potential governs the force between protons and neutrons in the nucleus of the atom. It is
+The Yukawa potential describes a force mediated by a massive particle. It is %argh fuck this part
 \eqn{
 V(r) = -\frac{C}{r}e^{-r/l}\mbox{,}
 }
-where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. The simplest system in which the potential can be studied is the deuterium nucleus. The system of a single neutron and proton can be expressed as a reduced mass orbiting the center of mass.
+where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. We are interested in how the bound states change with these constants. 
 
-The force comes from the exchange of virtual pions between the two nucleons. The limited range is due to the fact that pions have mass. The mass of the pion then generates the length scale:
+The force described by the potential comes from the exchange of virtual particles. The lenth scale, which limits the range at which the force acts, comes about because the virtual particles exchanged have mass. The mass of these particles then generates the length scale:
 \eqn{
-l = \frac{\hbar}{m_{\pi}c} \approx 1.41 \times 10^{-15}\mbox{ m}
+l = \frac{\hbar}{m_{\pi}c}\mbox{.}
 }
-The strength of the force $C$ is only known experimentally; it has been found to be about $2.96 \times 10^{-6}$ eV*m\cite{ER}\footnote{Get a better citation for this than Eisberg and Resnick}. 
+The strength of the force $C$ is only known experimentally and depends on the application of the potential. Most commonly, this is the forces between protons and neutrons in an atomic nucleus.
 
 In general, the time-independent Schr\"odinger wave equation for a particle under the influence of some $V(r)$ is
 \eqn{
 -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)
 \label{eq:TIDSWE-general}
 }
-where $\mu$ is the reduced mass of the system. Because we are working with nuclei in atoms, it makes the most sense to express this in spherical coordinates, as above. With the Yukawa potential, this equation cannot be solved analytically, as the exponential term messes things up. However, we \textit{can} solve the more simple system described by the potential without the exponential term, that is,
+In this thesis, we are working with a system of two particles moving under the influence of the Yukawa potential (in the atomic case, this would be a deuterium nucleus). To simplify the system, it makes the most sense to express this in spherical coordinates as a reduced mass orbiting a center of mass. This is the form used for the wave equation above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
- This problem is equivalent to solving the wave equation for the Coulomb potential in hydrogen; in that case, $C = \frac{e^2}{4\pi \epsilon_0}$. Plugging the above potential into the wave equation, we have
- \eqn{
- -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) -\frac{C}{r}\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)\mbox{.}
- }
-This equation can be solved analytically by separation of variables. The wave function can be expressed as the product of three functions
+This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
+The solution to this wave equation is well known:
 \eqn{
-\psi(r,\theta,\phi) = R(r)\Theta(\theta)\Phi(\phi)
+\psi_{l m_l n} (r, \theta, \phi) = R_{n,l}(r) Y_{lm_l}(\theta,\phi)\mbox{.}
 }
-with the values
+
 \begin{align*}
-\Phi_{m_l}(\phi) &= e^{im_l\phi} \\
-\Theta_{lm_l}(\theta) &= \sin^{|m_l|}{\theta} F_{l m_l}(\cos{\theta}) \\
 R_{n l}(r) &= e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n l}\left(\frac{C \mu r}{\hbar^2}\right)
 \end{align*}
 Here, $l$, $m_l$, and $n$ are quantum numbers, and $F_{l m_l}$ and $G_{n l}$ are polynomials in $\cos{\theta}$ and $\left(\frac{C \mu r}{\hbar^2} \right)$, respectively. The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
@@ -249,6 +243,7 @@ The physical interpretation of $\alpha$ is clear here -- in the ground state ($n
 }
 This can be rearranged to be $n = \sqrt{\rho}$. For some $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$.
 
+<<<<<<< HEAD
 To perform the analysis of the full potential, we look at the graph of the effective potential (figure [placeholder]%\ref{fig:veff}
 ). 
 We can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more true bound states, and one where $V_{eff}$ doesn't produce any kind of dip.
@@ -302,6 +297,10 @@ n &= 0.916494 \sqrt{\lambda}
 From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
 \section{Quantum Mechanics}
 Numerics and stuff goes here.
+=======
+This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
+%\clearpage %% starts a new page and stops trying to place floats such as tables and figures
+>>>>>>> b5b1dafa7f2adc3bff9c343bd6485e0ae22e7be4
 %
 %
 %\chapter*{Conclusion}
