@@ -133,15 +133,15 @@ In this thesis, we are working with a system of two particles moving under the i
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
-This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
+This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}$. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
 The solution to this wave equation is well known:
 \eqn{
 \psi_{l m_l n} (r, \theta, \phi) = R_{n,l}(r) Y_{lm_l}(\theta,\phi)\mbox{.}
 }
 
-\begin{align*}
-R_{n l}(r) &= e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n l}\left(\frac{C \mu r}{\hbar^2}\right)
-\end{align*}
+\eqn{
+R_{n l}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n l}\left(\frac{C \mu r}{\hbar^2}\right)
+}
 Here, $l$, $m_l$, and $n$ are quantum numbers, and $F_{l m_l}$ and $G_{n l}$ are polynomials in $\cos{\theta}$ and $\left(\frac{C \mu r}{\hbar^2} \right)$, respectively. The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
 E_n = -\frac{\mu C^2}{2\hbar^2 n^2}\mbox{.}
@@ -158,7 +158,7 @@ The ground state for the wave function ($n = 1, l = 0, m_l = 0$) is
 }
 The ground state wave function is spherically symmetric, meaning that $\psi$ there is only a function of $r$. In general, the spherically symmetric wave functions have the form
 \eqn{
-\psi(r) &= e^{-r/\alpha} G_{n}\left(\frac{1}{\alpha}\right)
+\psi(r) = e^{-r/\alpha} G_{n}\left(\frac{1}{\alpha}\right)
 }
 where $G_n$ is the same polynomial as earlier.
 As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)$ is plotted for several values of $n$.
@@ -277,7 +277,7 @@ n^2 = \left( \rho + \frac{\rho^2}{\lambda} \right) e^{-\rho/\lambda}
 \end{equation}
 The right side of this equation will have some maximum, which will be the last point for which the equation can be solved -- after that, the value of $n^2$ will always be greater than the right side. To find this, we differentiate with respect to $\rho$ and set to 0, obtaining
 \begin{align}
-0 &= (1+2\frac{\rho}{\lambda})\expo - \frac{1}{\lambda}(\rho + \frac{\rho^2}{\lambda})\expo \\
+0 &= (1+2 \frac{\rho}{\lambda}) - \frac{1}{\lambda}(\rho + \frac{\rho^2}{\lambda}) \\
 &= 1 + \frac{\rho}{\lambda} + \frac{\rho^2}{\lambda^2}\mbox{.}
 \end{align}
 This is a quadratic in $\rho$ and can be solved using the quadratic formula:
