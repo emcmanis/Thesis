@@ -136,13 +136,18 @@ In this thesis, we are working with a system of two particles moving under the i
 This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}$. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
 The solution to this wave equation is well known:
 \eqn{
-\psi_{l m_l n} (r, \theta, \phi) = R_{n,l}(r) Y_{lm_l}(\theta,\phi)\mbox{.}
+\psi_{l, m_l, n} (r, \theta, \phi) = R_{n,l}(r) Y_{l,m_l}(\theta,\phi)\mbox{.}
 }
-
+Here, $l$, $m_l$, and $n$ are quantum numbers. The $Y_{l, m_l}$ are the spherical harmonics. As we are currently interested only in spherically symmetric solutions, we can discard these for the moment, leaving us with
 \eqn{
-R_{n l}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n l}\left(\frac{C \mu r}{\hbar^2}\right)
+\psi_{n, l =0}(r) = R_{n , l= 0}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n, l = 0}\left(\frac{C \mu r}{\hbar^2}\right)
+\label{eq:SWE-coulomb}
 }
-Here, $l$, $m_l$, and $n$ are quantum numbers, and $F_{l m_l}$ and $G_{n l}$ are polynomials in $\cos{\theta}$ and $\left(\frac{C \mu r}{\hbar^2} \right)$, respectively. The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
+The $G_{n,l}$ here is related to the Laguerre polynomials:
+\eqn{
+G_{n,l}\left(\frac{C \mu r}{\hbar^2}\right) = L^{2l + 1 }_{n- l -1} \left(2\frac{C \mu r}{\hbar^2}\right)\mbox{.}
+}
+The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
 E_n = -\frac{\mu C^2}{2\hbar^2 n^2}\mbox{.}
 }
@@ -151,17 +156,7 @@ All of these functions can be simplified further by introducing a length scale,
 \alpha = \frac{\hbar^2}{C \mu}\mbox{.}
 \label{eq:bohrradius}
 }
-$\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, it represents the radius of the smallest orbit in a Bohr hydrogen atom (the ground state), making it a natural length scale for the problem.
-
-The ground state for the wave function ($n = 1, l = 0, m_l = 0$) is
-\eqn{\frac{1}{\sqrt{\pi}}\left(\frac{1}{\alpha}\right)^{3/2} e^{-r/\alpha}\mbox{.}
-}
-The ground state wave function is spherically symmetric, meaning that $\psi$ there is only a function of $r$. In general, the spherically symmetric wave functions have the form
-\eqn{
-\psi(r) = e^{-r/\alpha} G_{n}\left(\frac{1}{\alpha}\right)
-}
-where $G_n$ is the same polynomial as earlier.
-As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)$ is plotted for several values of $n$.
+$\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, $\alpha$ is the length scale of exponential term in the ground state of \eqref{eq:SWE-coulomb}. In hydrogen, this determines the size of the smallest electron cloud. As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)$ is plotted for several values of $n$.
 \begin{figure}
 \includegraphics[scale=0.75]{hydground.png}
 \caption{The ground state ($n=1$, $l =0$, $m_l= 0$) wave function for hydrogen}
