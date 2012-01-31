@@ -156,10 +156,10 @@ All of these functions can be simplified further by introducing a length scale,
 \alpha = \frac{\hbar^2}{C \mu}\mbox{.}
 \label{eq:bohrradius}
 }
-$\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, $\alpha$ is the length scale of exponential term in the ground state of \eqref{eq:SWE-coulomb}. In hydrogen, this determines the size of the smallest electron cloud. As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)$ is plotted for several values of $n$.
+$\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, $\alpha$ is the length scale of the exponential term in the ground state of \eqref{eq:SWE-coulomb}. In hydrogen, this determines the size of the smallest electron cloud. As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)^2$ (the probability density function obtained from $\psi(r)$) is plotted for several values of $n$.
 \begin{figure}
-\includegraphics[scale=0.75]{hydground.png}
-\caption{The ground state ($n=1$, $l =0$, $m_l= 0$) wave function for hydrogen}
+\includegraphics[scale=0.75]{densityplots.png}
+\caption{The first six spherically symmetric wave functions. $\psi(\rho)^2$ was plotted, where $\rho = \frac{r}{\alpha}$ is the nondimensionalized radial coordinate.}
 \label{fig:hfuncs}
 \end{figure}
 As this happens, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible. This is shown in figure \ref{fig:hspec}.
@@ -238,7 +238,6 @@ The physical interpretation of $\alpha$ is clear here -- in the ground state ($n
 }
 This can be rearranged to be $n = \sqrt{\rho}$. For some $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$.
 
-<<<<<<< HEAD
 To perform the analysis of the full potential, we look at the graph of the effective potential (figure [placeholder]%\ref{fig:veff}
 ). 
 We can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more true bound states, and one where $V_{eff}$ doesn't produce any kind of dip.
@@ -292,10 +291,9 @@ n &= 0.916494 \sqrt{\lambda}
 From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
 \section{Quantum Mechanics}
 Numerics and stuff goes here.
-=======
-This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
+
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
->>>>>>> b5b1dafa7f2adc3bff9c343bd6485e0ae22e7be4
+
 %
 %
 %\chapter*{Conclusion}
