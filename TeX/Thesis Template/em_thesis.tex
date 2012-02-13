@@ -180,20 +180,19 @@ Going back to the more-complicated Yukawa potential, the exponential term in the
 
 \chapter{Semi-Classical Approximation and Numerical Setup}
 \section{The Bohr Model}
-The similarity between the Yukawa potential in deuterium and the Coulomb potential in hydrogen suggests treating them similarly. The Bohr model is a semi-classical view of the electron orbiting the nucleus in hydrogen. The postulates of the model are as follows:
+We can again exploit the similarities between the Yukawa potential in deuterium and the Coulomb potential in hydrogen in order to gain some additional insight into the problem before diving into the numerics. We get this from looking at the problem semi-classically, with the Bohr model. The Bohr model is a semi-classical view of the electron orbiting the nucleus in hydrogen. The postulates of the model include the following:
 \begin{enumerate}
 \item Electrons move in circular orbits around the nucleus under the influence of the Coulomb force. They obey all the laws of classical mechanics.
 \item Angular momentum is quantized; $L = n\hbar$ where $n$ is a positive integer.
 \item The energy of the electron in an orbit remains constant.
-\item If an electron changes orbits, electromagnetic radiation is emitted with frequency $\nu = \frac{E_i-E_f}{h}$
 \end{enumerate}
-We can easily use this model with the Yukawa potential instead of the Coulomb to get a qualitative idea of where we expect bound states to be found.
 
-First, we look at the classical energy of a particle (here, the reduced mass of the neutron-proton system) moving under the influence of the Yukawa potential:
+To use these postulates, first, we look at the classical energy of a reduced mass orbiting a center of mass
 \eqn{
-E = \frac{1}{2}\mu \dot{r}^2+\frac{1}{2}\frac{L^2}{\mu r^2}-\frac{C}{r}e^{-r/l}\mbox{.}
+E = \frac{1}{2}\mu \dot{r}^2+\frac{1}{2}\frac{L^2}{\mu r^2}-V(r)\mbox{.}
 \label{eq:classical-energy}
 }
+
 To make this easier to work with, we use the length scale from \eqref{eq:bohrradius}, the ``Bohr radius'' for this problem. We then use this to nondimensionalize $r$, defining
 \begin{equation}
 \rho \equiv \frac{r}{\alpha}\mbox{.}
@@ -201,59 +200,52 @@ To make this easier to work with, we use the length scale from \eqref{eq:bohrrad
 \end{equation}
 Finally, we define a time scale:
 \begin{equation}
-\beta \equiv \frac{c^2m}{\hbar^3}\mbox{.}
+\beta \equiv \frac{C^2m}{\hbar^3}\mbox{.}
 \label{eq:beta}
 \end{equation}
 
-We can now substitute in $\rho$, $\alpha$, and $\tau = \beta t$:
-\begin{align}
-E &= \frac{1}{2}m\left(\frac{d\rho}{d \tau}\alpha \beta\right)^2+\frac{1}{2}\frac{c}{\rho^2 \alpha}(n^2-\rho e^{-(\rho \alpha)/l}) \\
-&= \frac{1}{2}\frac{c}{\alpha}\rho'^2 + \frac{1}{2}\frac{c}{\alpha}\frac{1}{\rho^2}(n^2-\rho e^{-(\rho \alpha)/l}) \\
-\frac{2\alpha}{c}E = \tilde{E} &= \rho'^2 +\frac{1}{\rho^2}(n^2 - 2\rho e^{-\rho/ \lambda})
-\end{align}
-In the last line, we have used $\lambda = \frac{l}{\alpha}$, relating the strength of the force and the length scale of the problem. 
-We now have a dimensionless effective potential,
+We can now substitute in $\rho$, $\alpha$, and $\tau = \beta t$ in order to nondimensionalize:
 \begin{equation}
-V_{eff}=\frac{1}{\rho^2}(n^2- 2\rho e^{-\rho/\lambda})
-\label{veff}
+\tilde{E} = \frac{1}{2}\rho '^2 + \frac{n^2}{2}\frac{1}{\rho^2}+V(\rho)
 \end{equation}
-to use for further analysis.
+We have here used postulate 2 to replace the angular momentum $L$ with $n \hbar$ and multiplied through by $\frac{\alpha}{C}$. 
 
-We now turn our attention to the number of bound states allowed by this potential. We expect that the exponential term will act as a cutoff, limiting the number of bound states to some finite quantity. As a really naive approximation of this behavior, we can use the Bohr model to look at a system where $V(r) = -\frac{C}{r}$ for $r < $l, and $V(r) = 0$ everywhere else.
+We can roll the second half of the equation up into an effective potential, producing something of the form $E = KE + PE$. The effective potential $\tilde{V}_{eff}$ is then
+\eqn{
+\tilde{V}_{eff}(\rho)=\frac{n^2}{2}\frac{1}{\rho^2}+V(\rho)
+\label{eq:veff}
+}
+This equation defines a relationship between the radii of the Bohr orbits, the quantum number $n$, and the energy of the particle in that orbit. We can plot the effective potential vs $\rho$ (figure \ref{fig:veff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant.
 
-This system is equivalent to hydrogen for $r<l$, so we solve it the same way. We know that
-\eqn{
-\frac{C}{r^2} = F = \mu a = \mu \frac{v^2}{r}
-}
-and 
-\eqn{
-\mu v r = n\hbar
-}
-from the postulates. Solving for $v$ and substituting, we find that
-\eqn{
-r = \frac{n^2 \hbar^2}{\mu C}
-}
-Substituting in our length scale gets us 
-\eqn{
-r = n^2 \alpha \mbox{.}
-}
-The physical interpretation of $\alpha$ is clear here -- in the ground state ($n = 1$), $r = \alpha$. Substituting our nondimensionalized $\rho$ makes the expression even simpler: we get
-\eqn{
-\rho = n^2\mbox{.}
-}
-This can be rearranged to be $n = \sqrt{\rho}$. For some $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$.
+Filling in the Coulomb potential for $V(\rho)$ in \eqref{eq:veff}, we can differentiate and set the result to $0$ in order to find the value of $\rho$ at which the minumum of $\tilde{V}_{eff}$ occurs:
+\begin{align}
+0 &= -\frac{n^2}{\rho^3} + \frac{1}{\rho^2} \\
+\rho & = n^2
+\label{eq:rho-n}
+\end{align}
+Fill in the $n$ corresponding to the energy of the desired particle, and there's the radius of its Bohr orbit. For hydrogen, this is perfect -- the semi-classical Bohr model gives exactly the right energy spectrum for the electron, despite the fact that the electron obeys the rules of quantum, not classical mechanics. In other quantum systems, a Bohr approach generally gives a qualitatively reasonable result that's off by a bit quantitatively. For example, when the three-dimensional simple harmonic oscillator is studied, the Bohr method obtains the right form of the solution that differs from the actual solution by a constant.
 
-<<<<<<< HEAD
-To perform the analysis of the full potential, we look at the graph of the effective potential (figure [placeholder]%\ref{fig:veff}
-). 
-We can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more true bound states, and one where $V_{eff}$ doesn't produce any kind of dip.
+Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$ term to dominate, and the potential to behave similarly to the Coulomb potential in hydrogen. When $r >> l$, we expect the exponential term to dominate, and the potential to go to zero. As a na\"ive approximation of this behavior, we can consider cutting off the Coulomb potential at $r = l$. In keeping with the nondimensionalization earlier, we define $\lambda \equiv \frac{l}{\alpha}$. Our effective potential is now
+\eqn{
+\tilde{V}_{eff}(\rho) = \left\{
+\begin{array}{lr}
+ \frac{n^2}{2}\frac{1}{\rho^2}-\frac{1}{\rho} & : \rho \leq \lambda \\
+0 & : \rho > \lambda
+\end{array}
+\right.
+}
+
+This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states. Given $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$. This gives us a hint of what we should see for the full potential.
+
+To perform the analysis of the full potential, we look at the graph of its effective potential (figure \ref{fig:veff_yukawa}).
+ 
+Just like with hydrogen, above, we can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more stable bound states ($E < 0$), and one where $V_{eff}$ doesn't produce any kind of dip.
 
 The first of these critical values occurs when the minimum of $V_{eff}$ is 0. To find it, we start by taking the derivative of \eqref{veff} and setting it to 0, obtaining
-\begin{align}
-\frac{dV}{d\rho_0} &= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda} \\
-0 &= -2n^2 + 2\rho_0 e^{-\rho_0/\lambda} + 2\frac{\rho_0^2}{\lambda} e^{-\rho_0/\lambda}
+\begin{equation}
+\frac{dV}{d\rho_0}= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}
 \label{vmin}
-\end{align}
+\end{equation}
 where $\rho_0$ is the value of $\rho$ when $V_{eff}$ is minimized. This equation has no general solution, but we can find one for the specific case where $V_{eff}(\rho_0) = 0$ by solving the equation
 \begin{align}
 V_{eff}(\rho_0)=0 &= n^2 - 2\rho_0 e^{-\rho_0/\lambda} \\
@@ -265,11 +257,11 @@ and plugging it in to the previous, obtaining
 &= -1 + \frac{\rho_0}{\lambda} \\
 \rho_0 &= \lambda \mbox{.}
 \end{align}
-Plugging this back into the equation for $V_{eff}(\rho_0)$ gives us
+Plugging this back into the equation for $V_{eff}(\rho_0)$ and forcing $n$ to take an integer value gives us
 \begin{equation}
-\mbox{$n = \sqrt{\frac{2}{e}}\sqrt{\lambda} \approx 0.857764\sqrt{\lambda}$}
+n = \lfloor \sqrt{\frac{2}{e}}\sqrt{\lambda} \rfloor \approx \lfloor 0.857764\sqrt{\lambda} \rfloor
 \end{equation}
-which is pretty close to the naive $n = \sqrt{\lambda}$ from above. 
+which is pretty close to the naive $n = \lfloor \sqrt{\lambda} \rfloor$ from above. 
 
 For the second critical point, the one where $V_{eff}$ has no minimum, we rewrite \eqref{vmin} to be
 \begin{equation}
@@ -292,15 +284,11 @@ As $\rho$ is a real physical quantity that can't be negative, we can discard one
 We can plug this in to \eqref{vmin} to find the relationship between $\lambda$ and $n$:
 \begin{align}
 n^2 &= \lambda(1+\sqrt{5})\left(\frac{3+\sqrt{5}}{4}\right)e^{-(1+\sqrt{5})/2} \\
-n &= 0.916494 \sqrt{\lambda}
+n &= \lfloor 0.916494 \sqrt{\lambda} \rfloor \mbox{.}
 \end{align}
 From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
-\section{Quantum Mechanics}
-Numerics and stuff goes here.
-=======
-This means the Yukawa potential's range is limited in a way the Coulomb potential's isn't. We expect that this will limit the number of bound states as well, to some number whose $r$s are less than $l$.
+
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
->>>>>>> b5b1dafa7f2adc3bff9c343bd6485e0ae22e7be4
 %
 %
 %\chapter*{Conclusion}
