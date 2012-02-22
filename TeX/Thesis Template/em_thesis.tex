@@ -173,14 +173,13 @@ Going back to the more-complicated Yukawa potential, the exponential term in the
 
 \clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
-\chapter{Semi-Classical Approximation and Numerical Setup}
+\chapter{Semi-Classical Approximation}
 \section{The Bohr Model}
 The similarity between the Yukawa potential in deuterium and the Coulomb potential in hydrogen suggests treating them similarly. The Bohr model is a semi-classical view of the electron orbiting the nucleus in hydrogen. The postulates of the model are as follows:
 \begin{enumerate}
 \item Electrons move in circular orbits around the nucleus under the influence of the Coulomb force. They obey all the laws of classical mechanics.
 \item Angular momentum is quantized; $L = n\hbar$ where $n$ is a positive integer.
 \item The energy of the electron in an orbit remains constant.
-\item If an electron changes orbits, electromagnetic radiation is emitted with frequency $\nu = \frac{E_i-E_f}{h}$
 \end{enumerate}
 We can easily use this model with the Yukawa potential instead of the Coulomb to get a qualitative idea of where we expect bound states to be found.
 
@@ -289,8 +288,42 @@ n^2 &= \lambda(1+\sqrt{5})\left(\frac{3+\sqrt{5}}{4}\right)e^{-(1+\sqrt{5})/2} \
 n &= 0.916494 \sqrt{\lambda}
 \end{align}
 From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
-\section{Quantum Mechanics}
-Numerics and stuff goes here.
+
+\clearpage %% starts a new page and stops trying to place floats such as tables and figures
+
+\chapter{Numerical Methods and Spherically Symmetric Results}
+
+\section{The Hamiltonian}
+
+In the previous chapter, we analytically obtained an estimate for the number of bound states allowed by the Yukawa potential given $\lambda$. We now turn our attention to the Schroedinger Wave Equation in order to numerically determine the critical values of $\lambda$ at which a new bound state appears. 
+
+The Wave Equation can be written as
+\eqn{
+H \psi = E\psi
+\label{eq:hamiltonian}
+}
+where $H$ is the Hamiltonian operator, $H =-\frac{\hbar^2}{2m}\nabla^2 +V$.  Because we are focusing on spherically symmetric bound states, we are only concerned about the $r$ component of the $\nabla$ operator. Equation \eqref{eq:hamiltonian} then becomes
+\eqn{
+H = \frac{\hbar^2}{2m} \left[\frac{1}{r^2}\frac{d}{dr}\left(r^2 \frac{d}{dr}\right)\right] - \frac{C}{r}e^{-r/l}\mbox{,}
+}
+plugging in the Yukawa potential for $V$.
+
+Using the same nondimensionalizations as in last chapter, we rewrite this as 
+\eqn{
+H=\frac{C}{2\alpha}\tilde{H} = \frac{c}{2\alpha} \left[- \frac{1}{\rho^2}\frac{d}{d\rho}\left(\rho^2\frac{d}{d\rho}\right) - \frac{2}{\rho}e^{-\rho/\lambda}\right]\mbox{.}
+\label{eq:hnondim}
+}
+The constant out front is the same one we pulled when we nondimensionalized the energy of the system, which allows us to restate \eqref{eq:hamiltonian} as
+\eqn{
+\tilde{H}\psi = \tilde{E}\psi\mbox{.}
+}
+To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\rho \phi(\rho)$ into the expression in \eqref{eq:hnondim}. This gives us a much neater Hamiltonian, and our differential equation is now
+\eqn{
+\frac{d^2 u }{d \rho^2} - \frac{2}{\rho}e^{-\rho/\lambda}u = E u\mbox{.}
+\label{eq:hamiltonianfinal}
+}
+
+\section{Numerics: The Finite Difference Method}
 
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
