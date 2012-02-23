@@ -1,0 +1,46 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[       891,         36]
+NotebookOptionsPosition[       643,         23]
+NotebookOutlinePosition[       984,         38]
+CellTagsIndexPosition[       941,         35]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5390158685780363`*^9, 3.539015871101367*^9}}]
+},
+WindowSize->{640, 750},
+WindowMargins->{{Automatic, 407}, {Automatic, 31}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 94, 1, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

@@ -1,0 +1,369 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     12709,        360]
+NotebookOptionsPosition[     11898,        328]
+NotebookOutlinePosition[     12239,        343]
+CellTagsIndexPosition[     12196,        340]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Value of L Goes Here", "Title",
+ CellChangeTimes->{{3.539016382976842*^9, 3.539016401261651*^9}, {
+  3.539016560805434*^9, 3.539016563557267*^9}}],
+
+Cell[BoxData[
+ RowBox[{"l", "=", "1"}]], "Input",
+ CellChangeTimes->{{3.5390165405920362`*^9, 3.539016543581956*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Setup", "Section",
+ CellChangeTimes->{{3.5390164053571978`*^9, 3.539016409700904*^9}}],
+
+Cell["\<\
+This function takes a value of lambda and returns the 100 eigenvalues of the \
+hamiltonian which have the lowest absolute value. nn is the matrix size, d\
+\[Rho] is the step size, and \[Rho]inf is numerical infinity for the problem.
+
+Because the results of the calculation are highly sensitive to changes in \
+\[Rho]inf, I standardized on \
+\>", "Text",
+ CellChangeTimes->{{3.539016445637089*^9, 3.539016455916944*^9}, {
+  3.5390165062850924`*^9, 3.539016527556933*^9}, {3.5390165736130667`*^9, 
+  3.5390166260053387`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RoughCritical", "[", "\[Lambda]_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"H", ",", "res", ",", "d\[Rho]", ",", "\[Rho]inf", ",", "nn"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"d\[Rho]", "=", "0.1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Rho]inf", "=", 
+      RowBox[{"Round", "[", 
+       RowBox[{"20", "*", "\[Lambda]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     
+     RowBox[{"nn", "=", 
+      RowBox[{"Round", "[", 
+       RowBox[{"\[Rho]inf", "/", "d\[Rho]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\<d\[Rho] = \>\"", "<>", 
+         RowBox[{"ToString", "[", "d\[Rho]", "]"}], "<>", 
+         "\"\<, \[Rho]inf = \>\"", "<>", 
+         RowBox[{"ToString", "[", "\[Rho]inf", "]"}], "<>", 
+         "\"\<, and nn = \>\"", "<>", 
+         RowBox[{"ToString", "[", "nn", "]"}], "<>", "\"\<.\>\""}], "]"}], 
+       ";"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"H", "=", 
+      RowBox[{"SparseArray", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"n_", ",", "n_"}], "}"}], "\[Rule]", 
+           RowBox[{
+            FractionBox["2.", 
+             SuperscriptBox["d\[Rho]", "2"]], "-", 
+            RowBox[{
+             FractionBox["2.", 
+              RowBox[{"n", "*", "d\[Rho]"}]], 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "n"}], "*", 
+               RowBox[{"d\[Rho]", "/", "\[Lambda]"}]}]]}], "+", 
+            FractionBox[
+             RowBox[{"l", "*", 
+              RowBox[{"(", 
+               RowBox[{"l", "+", "1"}], ")"}]}], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"n", "*", "d\[Rho]"}], ")"}], "^", "2"}]]}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"n_", ",", " ", "m_"}], "}"}], "/;", " ", 
+            RowBox[{
+             RowBox[{"Abs", "[", 
+              RowBox[{"n", "-", "m"}], "]"}], " ", "\[Equal]", " ", "1"}]}], 
+           " ", "\[Rule]", " ", 
+           FractionBox[
+            RowBox[{"-", "1."}], 
+            SuperscriptBox["d\[Rho]", "2"]]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"nn", ",", "nn"}], "}"}], ",", " ", "0."}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"res", "=", 
+      RowBox[{"Sort", "[", 
+       RowBox[{"Eigenvalues", "[", 
+        RowBox[{"H", ",", 
+         RowBox[{"-", "100"}]}], "]"}], "]"}]}], ";", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+       "Went", " ", "from", " ", "100", " ", "down", " ", "to", " ", "25", 
+        " ", "eigenvalues"}], ",", " ", 
+       RowBox[{
+       "which", " ", "sped", " ", "this", " ", "calculation", " ", "up", " ", 
+        "immensely", " ", "with", " ", "no", " ", "apparent", " ", "loss", 
+        " ", "of", " ", "information"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "res", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5390158685780363`*^9, 3.539015871101367*^9}, {
+   3.53901591943513*^9, 3.539015935217182*^9}, {3.53901600476367*^9, 
+   3.539016008427278*^9}, {3.539016127747554*^9, 3.5390161280126057`*^9}, 
+   3.5390163894865522`*^9, {3.539016462324894*^9, 3.539016486399221*^9}, {
+   3.539016548826387*^9, 3.539016552986286*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountNegs", "[", "list_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"neg", ",", "i"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"neg", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{
+        RowBox[{"list", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "<", "0"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"neg", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "neg", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{3.5390163894870167`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindLs", "[", 
+   RowBox[{"l0_", ",", "lf_", ",", "val_", ",", "vaf_", ",", "range_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"mid", ",", "vam", ",", "lnegs", ",", "mnegs", ",", "hnegs"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"mid", "=", 
+      RowBox[{"l0", "+", 
+       FractionBox[
+        RowBox[{"lf", "-", "l0"}], "2"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"lnegs", "=", 
+      RowBox[{"CountNegs", "[", "val", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vam", "=", 
+      RowBox[{"RoughCritical", "[", "mid", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"mnegs", "=", 
+      RowBox[{"CountNegs", "[", "vam", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"hnegs", "=", 
+      RowBox[{
+       RowBox[{"CountNegs", "[", "vaf", "]"}], "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"lf", "-", "l0"}], ">", "range"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lnegs", "<", "mnegs"}], " ", "||", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"lnegs", "\[Equal]", "mnegs"}], " ", "&&", " ", 
+               RowBox[{
+                RowBox[{"val", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+                RowBox[{"vam", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], "&&", " ", 
+               RowBox[{"mnegs", ">", "0"}]}], ")"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"FindLs", "[", 
+              RowBox[{
+              "l0", ",", "mid", ",", "val", ",", "vam", ",", "range"}], "]"}],
+              ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"mnegs", "<", "hnegs"}], " ", "||", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"hnegs", "\[Equal]", "mnegs"}], " ", "&&", " ", 
+               RowBox[{
+                RowBox[{"vam", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+                RowBox[{"vaf", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], "&&", 
+               RowBox[{"hnegs", ">", "0"}]}], ")"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"FindLs", "[", 
+              RowBox[{
+              "mid", ",", "lf", ",", "vam", ",", "vaf", ",", "range"}], "]"}],
+              ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"res", "=", 
+           RowBox[{"Append", "[", 
+            RowBox[{"res", ",", 
+             RowBox[{"{", 
+              RowBox[{"l0", ",", "lf"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", "\"\<Found one!\>\"", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}]}]}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5390160212254333`*^9, 3.539016022503304*^9}, {
+   3.539016061561664*^9, 3.539016107531227*^9}, {3.5390161435373096`*^9, 
+   3.539016157009387*^9}, {3.5390161921374207`*^9, 3.539016257482386*^9}, 
+   3.539016389488509*^9, {3.5390164910828753`*^9, 3.5390164914821863`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Finding candidate ranges", "Section",
+ CellChangeTimes->{{3.539016437663969*^9, 3.5390164403089323`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RangeChunk", "[", 
+   RowBox[{"low_", ",", "high_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"res", ",", "val", ",", "vaf"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"res", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"val", "=", 
+      RowBox[{"RoughCritical", "[", "low", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"vaf", "=", 
+      RowBox[{"RoughCritical", "[", "high", "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"FindLs", "[", 
+      RowBox[{"low", ",", "high", ",", "val", ",", "vaf", ",", "1"}], 
+      "]"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.5390243657998734`*^9, 3.539024373684915*^9}, {
+  3.539024407285041*^9, 3.539024457783689*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"BinaryTest", "[", 
+   RowBox[{"l0_", ",", "lf_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"mid", ",", "res"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"res", "=", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"mid", "=", 
+      RowBox[{"l0", "+", 
+       FractionBox[
+        RowBox[{"lf", "-", "l0"}], "2"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"lf", "-", "l0"}], ">", "range"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"res", "=", 
+         RowBox[{"Append", "[", 
+          RowBox[{"res", ",", 
+           RowBox[{"BinaryTest", "[", 
+            RowBox[{"l0", ",", "mid"}], "]"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"res", "=", 
+         RowBox[{"Append", "[", 
+          RowBox[{"res", ",", 
+           RowBox[{"BinaryTest", "[", 
+            RowBox[{"mid", ",", "lf"}], "]"}]}], "]"}]}], ";"}], 
+       "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Return", "[", "mid", "]"}], ";"}]}], "\[IndentingNewLine]", 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "res", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.539024653066339*^9, 3.539024867116802*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"BinaryTest", "[", 
+  RowBox[{"1", ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.53902486937813*^9, 3.5390248716775427`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{3.53902487237786*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{640, 750},
+WindowMargins->{{Automatic, 407}, {Automatic, 31}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[567, 22, 152, 2, 76, "Title"],
+Cell[722, 26, 117, 2, 27, "Input"],
+Cell[CellGroupData[{
+Cell[864, 32, 92, 1, 67, "Section"],
+Cell[959, 35, 533, 10, 71, "Text"],
+Cell[1495, 47, 3477, 87, 295, "Input"],
+Cell[4975, 136, 770, 21, 118, "Input"],
+Cell[5748, 159, 3447, 84, 355, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9232, 248, 111, 1, 67, "Section"],
+Cell[9346, 251, 844, 22, 103, "Input"],
+Cell[10193, 275, 1398, 37, 220, "Input"],
+Cell[CellGroupData[{
+Cell[11616, 316, 153, 3, 27, "Input"],
+Cell[11772, 321, 86, 2, 27, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

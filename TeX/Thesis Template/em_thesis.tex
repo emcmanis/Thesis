@@ -140,12 +140,12 @@ The solution to this wave equation is well known:
 }
 Here, $l$, $m_l$, and $n$ are quantum numbers. The $Y_{l, m_l}$ are the spherical harmonics. As we are currently interested only in spherically symmetric solutions, we can discard these for the moment, leaving us with
 \eqn{
-\psi_{n, l =0}(r) = R_{n , l= 0}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n, l = 0}\left(\frac{C \mu r}{\hbar^2}\right)
+\psi_{n, l =0}(r) = R_{n , l= 0}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n, l = 0}\left(\frac{C \mu r}{n \hbar^2}\right)
 \label{eq:SWE-coulomb}
 }
 The $G_{n,l}$ here is related to the Laguerre polynomials:
 \eqn{
-G_{n,l}\left(\frac{C \mu r}{\hbar^2}\right) = L^{2l + 1 }_{n- l -1} \left(2\frac{C \mu r}{\hbar^2}\right)\mbox{.}
+G_{n,l}\left(\frac{C \mu r}{n \hbar^2}\right) = L^{2l + 1 }_{n- l -1} \left(2\frac{C \mu r}{n \hbar^2}\right)\mbox{.}
 }
 The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
@@ -158,7 +158,7 @@ All of these functions can be simplified further by introducing a length scale,
 }
 $\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, $\alpha$ is the length scale of the exponential term in the ground state of \eqref{eq:SWE-coulomb}. In hydrogen, this determines the size of the smallest electron cloud. As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)^2$ (the probability density function obtained from $\psi(r)$) is plotted for several values of $n$.
 \fig{
-\includegraphics[scale=0.7]{densityplots}
+\includegraphics[scale=0.7]{Figures/densityplots}
 }{
 \caption{The first six spherically symmetric wave functions. $\psi(\rho)^2$ was plotted, where $\rho = \frac{r}{\alpha}$ is the nondimensionalized radial coordinate.}
 \label{fig:hfuncs}
@@ -166,7 +166,7 @@ $\alpha$ is a constant with units of length, defined in terms of the other const
 As this happens, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible. This is shown in figure \ref{fig:hspec}.
 \begin{figure}[h]
 \begin{center}
-\includegraphics[scale=0.7]{hydrogenspectrum}
+\includegraphics[scale=0.7]{Figures/hydrogenspectrum}
 \end{center}
 \caption{The energies of the first 10 bound states of the electron in the hydrogen atom}
 \label{fig:hspec}
@@ -220,7 +220,7 @@ We can now substitute these into \eqref{eq:classical-energy} and \eqref{eq:veff}
 We can plot the effective potential vs $\rho$ (figure \ref{fig:hveff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant.
 
 \fig{
-\includegraphics{hyd_Veff}}
+\includegraphics{Figures/hyd_Veff}}
 {\label{fig:hveff}
 \caption{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{eff-min}$.}
 }
@@ -247,7 +247,7 @@ Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$
 }
 
 \fig{
-\includegraphics{cutoff}}
+\includegraphics{Figures/cutoff}}
 {
 \label{fig:cutoff}
 \caption{A polar plot of the first three Bohr orbits along with a cutoff at $\lambda = 6$. Because the $n=3$ orbit lies outside the cutoff, it would not be allowed under the na\"ive approximation of the Yukawa potential (equation \eqref{eq:naive})}
@@ -262,7 +262,7 @@ To perform the analysis of the full potential, we look at the graph of its effec
 }
  
 \fig{
-\includegraphics{yukawa_Veff}}
+\includegraphics{Figures/yukawa_Veff}}
 {
 \label{fig:yveff}
 \caption{The effective Yukawa potential. All possible bound states occur below $V_{eff} = 0$, which is a limited region, unlike in hydrogen.}
