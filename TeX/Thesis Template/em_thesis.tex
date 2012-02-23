@@ -40,7 +40,7 @@
 
 \newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
 \newcommand{\eq}[1]{\begin{align}#1\end{align}}
-
+\newcommand{\fig}[2]{\begin{figure}\begin{center}#1\end{center}#2\end{figure}}
 
 \title{Quantum Mechanical Bound States of the Yukawa Potential (or some better title)}
 \author{Ellen M. McManis}
@@ -157,14 +157,17 @@ All of these functions can be simplified further by introducing a length scale,
 \label{eq:bohrradius}
 }
 $\alpha$ is a constant with units of length, defined in terms of the other constants of the problem. In hydrogen, this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2}$. Physically, $\alpha$ is the length scale of the exponential term in the ground state of \eqref{eq:SWE-coulomb}. In hydrogen, this determines the size of the smallest electron cloud. As $n$ increases, so do the possible values of $r$, and the particle can be found further and further from the center of mass of the system. This can be seen in figure \ref{fig:hfuncs}, in which $\psi(r)^2$ (the probability density function obtained from $\psi(r)$) is plotted for several values of $n$.
-\begin{figure}
-\includegraphics[scale=0.75]{densityplots.png}
+\fig{
+\includegraphics[scale=0.7]{densityplots}
+}{
 \caption{The first six spherically symmetric wave functions. $\psi(\rho)^2$ was plotted, where $\rho = \frac{r}{\alpha}$ is the nondimensionalized radial coordinate.}
 \label{fig:hfuncs}
-\end{figure}
+}
 As this happens, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible. This is shown in figure \ref{fig:hspec}.
 \begin{figure}[h]
-\includegraphics[scale=0.75]{hydrogenspectrum.png}
+\begin{center}
+\includegraphics[scale=0.7]{hydrogenspectrum}
+\end{center}
 \caption{The energies of the first 10 bound states of the electron in the hydrogen atom}
 \label{fig:hspec}
 \end{figure}
@@ -184,10 +187,19 @@ We can again exploit the similarities between the Yukawa potential in deuterium 
 
 To use these postulates, first, we look at the classical energy of a reduced mass orbiting a center of mass
 \eqn{
-E = \frac{1}{2}\mu \dot{r}^2+\frac{1}{2}\frac{L^2}{\mu r^2}-V(r)\mbox{.}
+E = \frac{1}{2}\mu \dot{r}^2+\frac{1}{2}\frac{(n \hbar)^2}{\mu r^2}-V(r)\mbox{.}
 \label{eq:classical-energy}
 }
+We have here used postulate 2 to replace the angular momentum $L$ with $n \hbar$ and multiplied through by $\frac{\alpha}{C}$. 
 
+We can roll the second half of the equation up into an effective potential, producing something of the form $E = KE + PE$. The effective potential $\tilde{V}_{eff}$ is then
+\eqn{
+\tilde{V}_{eff}(\rho)=\frac{(n \hbar)^2}{2}\frac{1}{\rho^2}+V(\rho)
+\label{eq:veff}
+}
+This equation defines a relationship between the radii of the Bohr orbits, the quantum number $n$, and the energy of the particle in that orbit. 
+
+\section{Application to Coulomb potential}
 To make this easier to work with, we use the length scale from \eqref{eq:bohrradius}, the ``Bohr radius'' for this problem. We then use this to nondimensionalize $r$, defining
 \begin{equation}
 \rho \equiv \frac{r}{\alpha}\mbox{.}
@@ -198,27 +210,30 @@ Finally, we define a time scale:
 \beta \equiv \frac{C^2m}{\hbar^3}\mbox{.}
 \label{eq:beta}
 \end{equation}
-
-We can now substitute in $\rho$, $\alpha$, and $\tau = \beta t$ in order to nondimensionalize:
-\begin{equation}
-\tilde{E} = \frac{1}{2}\rho '^2 + \frac{n^2}{2}\frac{1}{\rho^2}+V(\rho)
-\end{equation}
-We have here used postulate 2 to replace the angular momentum $L$ with $n \hbar$ and multiplied through by $\frac{\alpha}{C}$. 
-
-We can roll the second half of the equation up into an effective potential, producing something of the form $E = KE + PE$. The effective potential $\tilde{V}_{eff}$ is then
-\eqn{
-\tilde{V}_{eff}(\rho)=\frac{n^2}{2}\frac{1}{\rho^2}+V(\rho)
-\label{eq:veff}
-}
-This equation defines a relationship between the radii of the Bohr orbits, the quantum number $n$, and the energy of the particle in that orbit. We can plot the effective potential vs $\rho$ (figure \ref{fig:veff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant.
-
-Filling in the Coulomb potential for $V(\rho)$ in \eqref{eq:veff}, we can differentiate and set the result to $0$ in order to find the value of $\rho$ at which the minumum of $\tilde{V}_{eff}$ occurs:
+We can now substitute these into \eqref{eq:classical-energy} and \eqref{eq:veff} in order to obtain nondimensionalize:
 \begin{align}
-0 &= -\frac{n^2}{\rho^3} + \frac{1}{\rho^2} \\
-\rho & = n^2
+\frac{\alpha}{C}E &= \tilde{E}= \frac{1}{2}\rho '^2 + \frac{n^2}{2}\frac{1}{\rho^2}-\frac{1}{\rho} \\
+\tilde{V}_{eff} &= \frac{n^2}{2}\frac{1}{\rho^2}-\frac{1}{\rho}
+\label{eq:veff-nondim}
+\end{align}
+
+We can plot the effective potential vs $\rho$ (figure \ref{fig:hveff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant.
+
+\fig{
+\includegraphics{hyd_Veff}}
+{\label{fig:hveff}
+\caption{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{eff-min}$.}
+}
+
+To find the location of this minimum, we differentiate \eqref{eq:veff-nondim} and set the result to $0$:
+\begin{align}
+0 &= -\frac{n^2}{\rho_0^3} + \frac{1}{\rho_0^2} \\
+\rho_0 & = n^2
 \label{eq:rho-n}
 \end{align}
-Fill in the $n$ corresponding to the energy of the desired particle, and there's the radius of its Bohr orbit. For hydrogen, this is perfect -- the semi-classical Bohr model gives exactly the right energy spectrum for the electron, despite the fact that the electron obeys the rules of quantum, not classical mechanics. In other quantum systems, a Bohr approach generally gives a qualitatively reasonable result that's off by a bit quantitatively. For example, when the three-dimensional simple harmonic oscillator is studied, the Bohr method obtains the right form of the solution that differs from the actual solution by a constant.
+Fill in the $n$ corresponding to the energy of the desired particle, and there's the radius of its Bohr orbit. For hydrogen, this is perfect -- the semi-classical Bohr model gives exactly the right energy spectrum for the electron, despite the fact that the electron obeys the rules of quantum, not classical mechanics. In other quantum systems, a Bohr approach generally gives a qualitatively reasonable result that's off by a bit quantitatively. For example, when the three-dimensional simple harmonic oscillator is studied, the Bohr method obtains the right form of the solution that differs from the actual solution by an additive constant.
+
+\subsection{Approximating the Yukawa potential with a cutoff}
 
 Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$ term to dominate, and the potential to behave similarly to the Coulomb potential in hydrogen. When $r >> l$, we expect the exponential term to dominate, and the potential to go to zero. As a na\"ive approximation of this behavior, we can consider cutting off the Coulomb potential at $r = l$. In keeping with the nondimensionalization earlier, we define $\lambda \equiv \frac{l}{\alpha}$. Our effective potential is now
 \eqn{
@@ -228,14 +243,34 @@ Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$
 0 & : \rho > \lambda
 \end{array}
 \right.
+\label{eq:naive}
 }
-This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states. Given $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$. This gives us a hint of what we should see for the full potential.
 
-To perform the analysis of the full potential, we look at the graph of its effective potential (figure \ref{fig:veff_yukawa}).
+\fig{
+\includegraphics{cutoff}}
+{
+\label{fig:cutoff}
+\caption{A polar plot of the first three Bohr orbits along with a cutoff at $\lambda = 6$. Because the $n=3$ orbit lies outside the cutoff, it would not be allowed under the na\"ive approximation of the Yukawa potential (equation \eqref{eq:naive})}
+}
+
+This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states (figure \ref{fig:cutoff}). Any bound state allowed under \eqref{eq:rho-n} for which $\rho$ exceeds $\lambda$ will not exist. Given $\lambda$, then, there will be $\lfloor \sqrt{\lambda} \rfloor$ bound states, and a new bound state will appear when $\sqrt{\lambda} = n$. This gives us a hint of what we should see for the full potential.
+\section{Application to Yukawa Potential}
+To perform the analysis of the full potential, we look at the graph of its effective potential (figure \ref{fig:yveff}):
+\eqn{
+\tilde{V}_{eff} = \frac{n^2}{2 \rho^2} - \frac{1}{\rho}e^{-\rho/\lambda}
+\label{eq:yveff}
+}
  
-Just like with hydrogen, above, we can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$ Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more stable bound states ($E < 0$), and one where $V_{eff}$ doesn't produce any kind of dip.
-
-The first of these critical values occurs when the minimum of $V_{eff}$ is 0. To find it, we start by taking the derivative of \eqref{veff} and setting it to 0, obtaining
+\fig{
+\includegraphics{yukawa_Veff}}
+{
+\label{fig:yveff}
+\caption{The effective Yukawa potential. All possible bound states occur below $V_{eff} = 0$, which is a limited region, unlike in hydrogen.}
+}
+ 
+Just like with hydrogen, above, we can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$. Keeping $\alpha$ and $n$ constant, there will then be two critical values of $\lambda$ -- one where $V_{eff}$ has no more stable bound states ($E < 0$), and one where $V_{eff}$ doesn't produce any kind of dip.
+\subsection{Stable bound states}
+The first of these critical values occurs when the minimum of $V_{eff}$ is 0. We again start by taking the derivative of \eqref{eq:yveff} and setting it to 0, obtaining
 \begin{equation}
 \frac{dV}{d\rho_0}= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}
 \label{vmin}
@@ -256,7 +291,7 @@ Plugging this back into the equation for $V_{eff}(\rho_0)$ and forcing $n$ to ta
 n = \lfloor \sqrt{\frac{2}{e}}\sqrt{\lambda} \rfloor \approx \lfloor 0.857764\sqrt{\lambda} \rfloor
 \end{equation}
 which is pretty close to the naive $n = \lfloor \sqrt{\lambda} \rfloor$ from above. 
-
+\subsection{Unstable bound states}
 For the second critical point, the one where $V_{eff}$ has no minimum, we rewrite \eqref{vmin} to be
 \begin{equation}
 n^2 = \left( \rho + \frac{\rho^2}{\lambda} \right) e^{-\rho/\lambda}
@@ -280,7 +315,8 @@ We can plug this in to \eqref{vmin} to find the relationship between $\lambda$ a
 n^2 &= \lambda(1+\sqrt{5})\left(\frac{3+\sqrt{5}}{4}\right)e^{-(1+\sqrt{5})/2} \\
 n &= \lfloor 0.916494 \sqrt{\lambda} \rfloor \mbox{.}
 \end{align}
-From these equations, we expect the number of bound states to go up as the square root of $\lambda$.
+\section{Summary}
+Using the Bohr model to analyze the Yukawa potential suggests that the number of bound states to go up as the square root of $\lambda$.
 
 \clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
@@ -317,6 +353,28 @@ To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\r
 }
 
 \section{Numerics: The Finite Difference Method}
+How it works
+
+This implementation
+
+Graphs of sample solutions (along with hydrogen solutions? Pick a large and a small lambda)
+
+\section{Code}
+Rootfinders
+
+\section{Estimating errors}
+Requirements for $\rho_{inf}$ and $\Delta \rho$
+
+Asymtotic behaviors
+
+\section{Results and fit}
+Pictures!
+
+Discussion of fit options:
+
+log log plot
+
+quadtratic fit
 
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
