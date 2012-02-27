@@ -353,22 +353,36 @@ To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\r
 }
 
 \section{Numerics: The Finite Difference Method}
-In order to solve this differential equation, we turn to the finite difference method. This method discretizes the differential equation, turning it into a matrix times a vector given boundary conditions. Take a general linear second-order differential equation,
-\eqn{
-f''(x) + a(x)f'(x) + b(x)f(x) = c(x)
-}
-Defining $x_f = (N+1) \Delta x$ and $x_0 = 0$, for any $n$ between $0$ and $N$ we can write,
-\begin{array}
-\frac{f(x_n + \Delta x)-2
+The finite difference method transforms a differential equation into a matrix problem. It does this by approximating the first and second derivatives of a function on a discrete grid of points $x_n$ which are a distance $\Delta x$ apart. We can write
 
+$f'(x_n) =$ stuff
 
+$f''(x_n) =$ more stuff
 
-This implementation
+Applied to a general 2nd-order-ODE, this is
 
-Graphs of sample solutions (along with hydrogen solutions? Pick a large and a small lambda)
+eqn
+
+which suggests rewriting this as the multiplication of a vector with a column vector equal to some source term. Put all of the $f(x_n)$s together, and you've got a large matrix with entries on the diagonal and off-diagonal multiplying a column vector.
+
+For our potential, we want to set up the eigenvalue problem. Our source vector will then be $E u$. To deal with the end points, we solve the equation at x_0 and x_f and modify the source appropriately. We know that the wave function will be 0 at $x_0$ -- that's the center of mass, and $V(r)$ blows up. Because we are looking for bound states, we demand that the wave function go to 0 at infinity, which means that $x_f$ will also be 0. 
+
+Our finite difference matrix thus runs from $\rho = 0$ to $\rho_{\infty}$, that is, whatever we declare numerical infinity to be. 
+
+Using \eqref{eq:fdifference}, we discretize the hamiltonian, obtaining
+
+stuff
+
+Multiply this by the column vector whose entries are the $u_n$, and we have
+
+EIGENVALUE PROBLEM
+
+Using this, we can now see what our wave functions actually look like.
+
+Graphs of sample solutions (along with hydrogen solutions? Pick a large and a small lambda).
 
 \section{Code}
-Rootfinders
+To actually locate the critical values of lambda, we 
 
 \section{Estimating errors}
 Requirements for $\rho_{inf}$ and $\Delta \rho$
