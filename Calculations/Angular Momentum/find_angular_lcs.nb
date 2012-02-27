@@ -1,0 +1,264 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      9213,        255]
+NotebookOptionsPosition[      8803,        238]
+NotebookOutlinePosition[      9144,        253]
+CellTagsIndexPosition[      9101,        250]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Critical", "[", 
+   RowBox[{"\[Lambda]_", ",", "consts_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"H", ",", "res", ",", "d\[Rho]", ",", "\[Rho]inf", ",", "nn"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"d\[Rho]", "=", 
+      RowBox[{"consts", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Rho]inf", "=", 
+      RowBox[{"Round", "[", 
+       RowBox[{"consts", "[", 
+        RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"nn", "=", 
+      RowBox[{"Round", "[", 
+       RowBox[{"\[Rho]inf", "/", "d\[Rho]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Print", "[", 
+        RowBox[{"\"\<d\[Rho] = \>\"", "<>", 
+         RowBox[{"ToString", "[", "d\[Rho]", "]"}], "<>", 
+         "\"\<, \[Rho]inf = \>\"", "<>", 
+         RowBox[{"ToString", "[", "\[Rho]inf", "]"}], "<>", 
+         "\"\<, and nn = \>\"", "<>", 
+         RowBox[{"ToString", "[", "nn", "]"}], "<>", "\"\<.\>\""}], "]"}], 
+       ";"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"H", "=", 
+      RowBox[{"SparseArray", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"n_", ",", "n_"}], "}"}], "\[Rule]", 
+           RowBox[{
+            FractionBox["2.", 
+             SuperscriptBox["d\[Rho]", "2"]], "-", 
+            RowBox[{
+             FractionBox["2.", 
+              RowBox[{"n", "*", "d\[Rho]"}]], 
+             SuperscriptBox["\[ExponentialE]", 
+              RowBox[{
+               RowBox[{"-", "n"}], "*", 
+               RowBox[{"d\[Rho]", "/", "\[Lambda]"}]}]]}], "+", 
+            FractionBox[
+             RowBox[{"2", 
+              RowBox[{"(*", 
+               RowBox[{"=", 
+                RowBox[{"l", 
+                 RowBox[{"(", 
+                  RowBox[{"l", "+", "1"}], ")"}]}]}], "*)"}]}], 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"n", "*", "d\[Rho]"}], ")"}], "^", "2"}]]}]}], ",", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"n_", ",", " ", "m_"}], "}"}], "/;", " ", 
+            RowBox[{
+             RowBox[{"Abs", "[", 
+              RowBox[{"n", "-", "m"}], "]"}], " ", "\[Equal]", " ", "1"}]}], 
+           " ", "\[Rule]", " ", 
+           FractionBox[
+            RowBox[{"-", "1."}], 
+            SuperscriptBox["d\[Rho]", "2"]]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"nn", ",", "nn"}], "}"}], ",", " ", "0."}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"res", "=", 
+      RowBox[{"Sort", "[", 
+       RowBox[{"Eigenvalues", "[", 
+        RowBox[{"H", ",", 
+         RowBox[{"-", "100"}]}], "]"}], "]"}]}], ";", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{
+       "Went", " ", "from", " ", "100", " ", "down", " ", "to", " ", "25", 
+        " ", "eigenvalues"}], ",", " ", 
+       RowBox[{
+       "which", " ", "sped", " ", "this", " ", "calculation", " ", "up", " ", 
+        "immensely", " ", "with", " ", "no", " ", "apparent", " ", "loss", 
+        " ", "of", " ", "information"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "res", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5390158685780363`*^9, 3.539015871101367*^9}, {
+  3.53901591943513*^9, 3.539015935217182*^9}, {3.53901600476367*^9, 
+  3.539016008427278*^9}, {3.539016127747554*^9, 3.5390161280126057`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"CountNegs", "[", "list_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"neg", ",", "i"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"neg", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "1"}], ",", 
+       RowBox[{
+        RowBox[{"list", "[", 
+         RowBox[{"[", "i", "]"}], "]"}], "<", "0"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"neg", "++"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Return", "[", "neg", "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"res", "=", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"val", "=", 
+   RowBox[{"Critical", "[", "0.5", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vaf", "=", 
+   RowBox[{"Critical", "[", "1000", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.539015987726816*^9, 3.539015996206503*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FindLs", "[", 
+   RowBox[{"l0_", ",", "lf_", ",", "val_", ",", "vaf_", ",", "range_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"mid", ",", "vam", ",", "lnegs", ",", "mnegs", ",", "hnegs"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"mid", "=", 
+      RowBox[{"l0", "+", 
+       FractionBox[
+        RowBox[{"lf", "-", "l0"}], "2"]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"lnegs", "=", 
+      RowBox[{"CountNegs", "[", "val", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"vam", "=", 
+      RowBox[{"Critical", "[", "mid", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"mnegs", "=", 
+      RowBox[{"CountNegs", "[", "vam", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"hnegs", "=", 
+      RowBox[{
+       RowBox[{"CountNegs", "[", "vaf", "]"}], "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"lf", "-", "l0"}], ">", "range"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lnegs", "<", "mnegs"}], " ", "||", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"lnegs", "\[Equal]", "mnegs"}], " ", "&&", " ", 
+               RowBox[{
+                RowBox[{"val", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+                RowBox[{"vam", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], "&&", " ", 
+               RowBox[{"mnegs", ">", "0"}]}], ")"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"FindLs", "[", 
+              RowBox[{
+              "l0", ",", "mid", ",", "val", ",", "vam", ",", "range"}], "]"}],
+              ";"}]}], "\[IndentingNewLine]", "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"mnegs", "<", "hnegs"}], " ", "||", " ", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"hnegs", "\[Equal]", "mnegs"}], " ", "&&", " ", 
+               RowBox[{
+                RowBox[{"vam", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], " ", "<", " ", 
+                RowBox[{"vaf", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}]}], "&&", 
+               RowBox[{"hnegs", ">", "0"}]}], ")"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"FindLs", "[", 
+              RowBox[{
+              "mid", ",", "lf", ",", "vam", ",", "vaf", ",", "range"}], "]"}],
+              ";"}]}], "\[IndentingNewLine]", "]"}], ";"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"res", "=", 
+           RowBox[{"Append", "[", 
+            RowBox[{"res", ",", 
+             RowBox[{"{", 
+              RowBox[{"l0", ",", "lf"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", "\"\<Found one!\>\"", "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}]}]}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5390160212254333`*^9, 3.539016022503304*^9}, {
+  3.539016061561664*^9, 3.539016107531227*^9}, {3.5390161435373096`*^9, 
+  3.539016157009387*^9}, {3.5390161921374207`*^9, 3.539016257482386*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ranges", "=", 
+  RowBox[{"FindLs", "[", 
+   RowBox[{"0.5", ",", "1000.", ",", "val", ",", "vaf", ",", "1"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.539016326134295*^9, 3.539016346670292*^9}}]
+},
+WindowSize->{640, 750},
+WindowMargins->{{Automatic, 407}, {Automatic, 31}},
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (February 18, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 3564, 91, 295, "Input"],
+Cell[4112, 113, 726, 20, 118, "Input"],
+Cell[4841, 135, 373, 10, 58, "Input"],
+Cell[5217, 147, 3358, 82, 325, "Input"],
+Cell[8578, 231, 221, 5, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
