@@ -353,7 +353,15 @@ To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\r
 }
 
 \section{Numerics: The Finite Difference Method}
-How it works
+In order to solve this differential equation, we turn to the finite difference method. This method discretizes the differential equation, turning it into a matrix times a vector given boundary conditions. Take a general linear second-order differential equation,
+\eqn{
+f''(x) + a(x)f'(x) + b(x)f(x) = c(x)
+}
+Defining $x_f = (N+1) \Delta x$ and $x_0 = 0$, for any $n$ between $0$ and $N$ we can write,
+\begin{array}
+\frac{f(x_n + \Delta x)-2
+
+
 
 This implementation
 
