@@ -33,6 +33,7 @@
 \usepackage{graphicx,latexsym} 
 \usepackage{amssymb,amsthm,amsmath}
 \usepackage{longtable,booktabs,setspace} 
+\usepackage{subfig}
 %\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage{url}
 \usepackage{natbib}
@@ -116,37 +117,51 @@ The Yukawa potential describes a force mediated by a massive particle. It is %ar
 \eqn{
 V(r) = -\frac{C}{r}e^{-r/l}\mbox{,}
 }
-where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. We are interested in how the bound states change with these constants. 
+where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. We are interested in how the bound states of a particle subject to this potential change with these constants. 
 
-The force described by the potential comes from the exchange of virtual particles. The lenth scale, which limits the range at which the force acts, comes about because the virtual particles exchanged have mass. The mass of these particles then generates the length scale:
-\eqn{
+A force described by this potential comes from the exchange of massive virtual particles. The length scale, which limits the range at which the force acts, is then related to the mass $m$ by the equation\eqn{
 l = \frac{\hbar}{m_{\pi}c}\mbox{.}
 }
-The strength of the force $C$ is only known experimentally and depends on the application of the potential. Most commonly, this is the forces between protons and neutrons in an atomic nucleus.
+Both the mass $m$ and the strength of the force $C$ depend on the application of the potential. Most commonly, we use this potential to describe the force between protons and neutrons in an atomic nucleus, where $m$ is the mass of the pion, $m_{\pi} = 140$ MeV/c$^2$.\footnote{I know I'm missing numbers here, will add}
 
-In general, the time-independent Schr\"odinger wave equation for a particle under the influence of some $V(r)$ is
+In general, we find the bound states of a system using the time-independent Schr\"odinger wave equation for a particle under the influence of some $V(r)$:
 \eqn{
 -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)
 \label{eq:TIDSWE-general}
 }
+and look for solutions which go to zero at infinity.
+
 In this thesis, we are working with a system of two particles moving under the influence of the Yukawa potential (in the atomic case, this would be a deuterium nucleus). To simplify the system, it makes the most sense to express this in spherical coordinates as a reduced mass orbiting a center of mass. This is the form used for the wave equation above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
-This potential is the same form as the Coulomb potential in the hydrogen atom. With the Coulomb potential, $C = \frac{e^2}{4\pi \epsilon_0}$. While $r << l$, the Yukawa potential should behave similarly to this, because the $-C/r$ term will dominate. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for this one.
+This potential is the same form as the Coulomb potential in the hydrogen atom, for which $C = \frac{e^2}{4\pi \epsilon_0}$. While $r << l$, the Yukawa potential should behave similarly to this, because
+\begin{equation*}
+-\frac{C}{r}e^{-r/l} \approx -\frac{C}{r}
+\end{equation*}
+in this region. Therefore, we will gain some insight on the Yukawa potential by solving the wave equation for the Coulomb potential.
+
 The solution to this wave equation is well known:
 \eqn{
 \psi_{l, m_l, n} (r, \theta, \phi) = R_{n,l}(r) Y_{l,m_l}(\theta,\phi)\mbox{.}
 }
-Here, $l$, $m_l$, and $n$ are quantum numbers. The $Y_{l, m_l}$ are the spherical harmonics. As we are currently interested only in spherically symmetric solutions, we can discard these for the moment, leaving us with
+Here, $l$, $m_l$, and $n$ are quantum numbers. The $Y_{l, m_l}$ are the spherical harmonics. For simplicity, we begin by focusing on states with zero angular momentum, for which the solutions are spherically symmetric. We therefore take $Y_{0,0} = 1/\sqrt{4 \pi}$, leaving us with
 \eqn{
-\psi_{n, l =0}(r) = R_{n , l= 0}(r) = e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} G_{n, l = 0}\left(\frac{C \mu r}{n \hbar^2}\right)
+\psi_{n, l =0}(r) = R_{n , l= 0}(r) = \frac{1}{\sqrt{4\pi}} e^{-C \mu r / n \hbar^2}\left(\frac{C \mu r}{\hbar^2}\right)^{l} L^{2l + 1 }_{n- l -1} \left(2\frac{C \mu r}{n \hbar^2}\right)
 \label{eq:SWE-coulomb}
 }
-The $G_{n,l}$ here is related to the Laguerre polynomials:
-\eqn{
-G_{n,l}\left(\frac{C \mu r}{n \hbar^2}\right) = L^{2l + 1 }_{n- l -1} \left(2\frac{C \mu r}{n \hbar^2}\right)\mbox{.}
-}
+where $L^{2l+1}_{n-l-1}$ is an associated Laguerre polynomial. 
+
+The factor of $e^{-C \mu r / n \hbar^2}$ ensures that the wave function goes to 0 as $r$ goes to infinity, with the $n$ in the denominator controlling how fast that happens. The Laguerre polynomial determines how many nodes the wave function has -- $L^1_{n-1}$ has $n-1$ roots, so the wave function will have that many nodes (figure \ref{fig:wavefunctions}).
+\begin{figure}[h]
+\centering
+\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps0}}
+\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps1}}
+\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps2}}
+\caption{The first three bound states of $\psi(\rho)$ for the Coulomb potential, where $\rho$ is the nondimensionalized radial coordinate. These show the nodes given by the Laguerre polynomials as well as the exponential dieoff of the wave function.}
+\label{fig:wavefunctions}
+\end{figure}
+
 The energy for the particle described by this wave function is just a function of $n$ (the radial quantum number), and is equal to
 \eqn{
 E_n = -\frac{\mu C^2}{2\hbar^2 n^2}\mbox{.}
@@ -160,7 +175,7 @@ $\alpha$ is a constant with units of length, defined in terms of the other const
 \fig{
 \includegraphics[scale=0.7]{Figures/densityplots}
 }{
-\caption{The first six spherically symmetric wave functions. $\psi(\rho)^2$ was plotted, where $\rho = \frac{r}{\alpha}$ is the nondimensionalized radial coordinate.}
+\caption{The first six spherically symmetric wave functions. This plot shows the probability density, $\psi(\rho)^2$, in spherical coordinates. These plots are all close to the origin, where $\psi$ is large.}
 \label{fig:hfuncs}
 }
 As this happens, $E_n$ gets closer and closer to zero, but never quite reaches it -- there are an infinite number of bound states possible. This is shown in figure \ref{fig:hspec}.
@@ -353,41 +368,83 @@ To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\r
 }
 
 \section{Numerics: The Finite Difference Method}
-The finite difference method transforms a differential equation into a matrix problem. It does this by approximating the first and second derivatives of a function on a discrete grid of points $x_n$ which are a distance $\Delta x$ apart. We can write
+The finite difference method transforms a differential equation into a matrix problem. It does this by approximating the first and second derivatives of a function on a discrete grid of points $x_n$ which are a distance $\Delta x$ apart. Using the concept of the derivative as the slope of the tangent line to some point, we can write
+\eqn{
+f'(x_n) + \frac{1}{6}f'''(x_n)\Delta{x}^2 + O(\Delta{x}^3) = \frac{f(x_n + \Delta x) - f(x_n - \Delta x)}{2 \Delta x}
+\label{fdifference}
+}
+\eqn{
+f''(x_n) + \frac{1}{12}f''''(x_n)\Delta{x}^2 + O(\Delta{x}^3) = {f(x_n + \Delta x) - 2 f(x_n) + f(x_n - \Delta x)}{\Delta x^2}
+\label{f2difference}
+}
+Applied to a general 2nd-order-ODE $f''(x) + a(x)f'(x) + b(x)f(x) = c(x)$, this is\footnote{this is all out of Joel's sci-comp notes}
+\eqn{
+f_{n-1} \left( -\frac{a_n}{2\Delta x} + \frac{1}{\Delta x^2} \right) + f_n\left(b_n - \frac{2}{\Delta x^2} \right) + f_{n+1}\left(\frac{a_n}{2\Delta x} + \frac{1}{\Delta x^2} \right) = c_n
+}
+which suggests rewriting this as the multiplication of a vector with a column vector equal to some source term. Put all of the $f(x_n)$s together, and you've got a large matrix with entries on the diagonal and off-diagonal multiplying a column vector equal to some other column vector.
 
-$f'(x_n) =$ stuff
-
-$f''(x_n) =$ more stuff
-
-Applied to a general 2nd-order-ODE, this is
-
-eqn
-
-which suggests rewriting this as the multiplication of a vector with a column vector equal to some source term. Put all of the $f(x_n)$s together, and you've got a large matrix with entries on the diagonal and off-diagonal multiplying a column vector.
-
-For our potential, we want to set up the eigenvalue problem. Our source vector will then be $E u$. To deal with the end points, we solve the equation at x_0 and x_f and modify the source appropriately. We know that the wave function will be 0 at $x_0$ -- that's the center of mass, and $V(r)$ blows up. Because we are looking for bound states, we demand that the wave function go to 0 at infinity, which means that $x_f$ will also be 0. 
+For our potential, we want to set up the eigenvalue problem. Our source vector on the right side will then be $E u$. To deal with the end points, we solve the equation at $x_0$ and $x_f$ and modify the source appropriately. We know that the wave function will be 0 at $x_0$ -- that's the center of mass, and $V(r)$ blows up. Because we are looking for bound states, we demand that the wave function go to 0 at infinity, which means that $x_f$ will also be 0. 
 
 Our finite difference matrix thus runs from $\rho = 0$ to $\rho_{\infty}$, that is, whatever we declare numerical infinity to be. 
 
-Using \eqref{eq:fdifference}, we discretize the hamiltonian, obtaining
-
-stuff
-
-Multiply this by the column vector whose entries are the $u_n$, and we have
-
-EIGENVALUE PROBLEM
-
-Using this, we can now see what our wave functions actually look like.
-
-Graphs of sample solutions (along with hydrogen solutions? Pick a large and a small lambda).
-
+Using \eqref{eq:fdifference} and \eqref{eq:f2difference}, we discretize our Hamiltonian. $E u_n$ will be given by
+\eqn{
+\left(-\frac{1}{\Delta \rho^2}, \frac{2}{\Delta \rho^2} - \frac{2}{n \Delta \rho} e^{-n\Delta \rho / \lambda}, -\frac{1}{\Delta \rho^2}\right)
+\left(
+\begin{array}{c}
+u_{n-1} \\
+u_{n} \\
+u_{n_1}
+\end{array} 
+\right)
+= E u_n
+\label{eq:hamiltonian-disc}
+}
+Using this, we can now see what our wave functions actually look like. For bound states where $n^2 << \lambda$, we find that the bound states look very similar to hydrogen, with the exception of sign (figure \ref{fig:hyd-yukawa}).
+\begin{figure}[h]
+\centering
+\subfloat[]{\includegraphics[width=0.5\textwidth]{Figures/n2yukawa}}
+\subfloat[]{\includegraphics[width=0.5\textwidth]{Figures/n2hyd}}
+\caption{The $n = 2$ bound states for the Yukawa potential (left) and Coulomb potential (right). Both were calculated using my finite difference Hamiltonian. For the Yukawa potential, $\lambda = 12.9$, and for both, $\rho_{\infty} = 20*12.9 = 258$. The plot only extends out to $\rho = 50$ in order to see the earlier behavior; the function is remains 0 further out.}
+\label{fig:hyd-yukawa}
+\end{figure}
+As $\lambda$ increases and more bound states are possible, the wave functions get more interesting, as in figure \ref{fig:largebound}.
+\begin{figure}[h]
+\centering
+\includegraphics{Figures/largebound}
+\caption{A bound state at $\lambda = 200$, probably $n = 14$. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\label{fig:largebound}
+\end{figure}
 \section{Code}
-To actually locate the critical values of lambda, we 
+To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
+
+The rootfinder actually used was a recursive bisection routine:
+\begin{verbatim}
+Bisect (low, high, delta):
+    mid = low + (high-low)/2
+    If (high - low < delta)
+       Return mid
+    Else if negs(low) < negs(mid)
+        Bisect(low, mid)
+    Else 
+        Bisect(mid, high)
+\end{verbatim}
+We use a $\delta$ here instead of the usual $\epsilon$ because we are interested in minimizing uncertainty in $\lambda$, not the function we are performing rootfinding on. There either is or isn't an additional eigenvalue, so $\epsilon$ has little meaning and would be complicated to compute.
+
+To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as long as there is a zero in one of the ranges, and returns a list of points instead of just one. For efficiency's sake, this calculation is run at a low $\rho_{\infty}$, and a range is returned instead of a single point. That range can then be bisected more thoroughly in order to identify the most likely point. 
+
+The function doing the actual work is just Mathematica's Eigenvalues[ ]. Because our Hamiltonian matrix only has entries on the diagonal and off-diagonals, we can define it as a SparseArray to speed up calculation. 
+
+\subsection{Parallelization}
+
+Finding a single $\lambda_{c}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
+
+This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{c}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
 
 \section{Estimating errors}
 Requirements for $\rho_{inf}$ and $\Delta \rho$
 
-Asymtotic behaviors
+Asymptotic behaviors
 
 \section{Results and fit}
 Pictures!
