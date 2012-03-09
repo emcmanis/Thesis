@@ -37,6 +37,7 @@
 %\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage{url}
 \usepackage{natbib}
+\usepackage{pdfpages}
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
 \newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
@@ -409,35 +410,11 @@ Using this, we can now see what our wave functions actually look like. For bound
 As $\lambda$ increases and more bound states are possible, the wave functions get more interesting, as in figure \ref{fig:largebound}.
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/largebound}
-\caption{A bound state at $\lambda = 200$, probably $n = 14$. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\includegraphics{Figures/hyukawa10}
+\caption{The $n=10$ bound state at $\lambda = 200$. The $n=10$ Coulomb wave function is shown as well. While they start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
 \label{fig:largebound}
 \end{figure}
-\section{Code}
-To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
-
-The rootfinder actually used was a recursive bisection routine:
-\begin{verbatim}
-Bisect (low, high, delta):
-    mid = low + (high-low)/2
-    If (high - low < delta)
-       Return mid
-    Else if negs(low) < negs(mid)
-        Bisect(low, mid)
-    Else 
-        Bisect(mid, high)
-\end{verbatim}
-We use a $\delta$ here instead of the usual $\epsilon$ because we are interested in minimizing uncertainty in $\lambda$, not the function we are performing rootfinding on. There either is or isn't an additional eigenvalue, so $\epsilon$ has little meaning and would be complicated to compute.
-
-To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as long as there is a zero in one of the ranges, and returns a list of points instead of just one. For efficiency's sake, this calculation is run at a low $\rho_{\infty}$, and a range is returned instead of a single point. That range can then be bisected more thoroughly in order to identify the most likely point. 
-
-The function doing the actual work is just Mathematica's Eigenvalues[ ]. Because our Hamiltonian matrix only has entries on the diagonal and off-diagonals, we can define it as a SparseArray to speed up calculation. 
-
-\subsection{Parallelization}
-
-Finding a single $\lambda_{c}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
-
-This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{c}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
+\section{Finding Critical Values of Lambda}
 
 \section{Estimating errors}
 Requirements for $\rho_{inf}$ and $\Delta \rho$
@@ -465,9 +442,35 @@ quadtratic fit
 %	\setcounter{section}{0}
 %	
 %
-%%If you feel it necessary to include an appendix, it goes here.
-%    \appendix
-%      \chapter{The First Appendix}
+%If you feel it necessary to include an appendix, it goes here.
+\appendix
+\chapter{Numerical Methods}
+To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
+
+The rootfinder actually used was a recursive bisection routine:
+\begin{verbatim}
+Bisect (low, high, delta):
+    mid = low + (high-low)/2
+    If (high - low < delta)
+       Return mid
+    Else if negs(low) < negs(mid)
+        Bisect(low, mid)
+    Else 
+        Bisect(mid, high)
+\end{verbatim}
+We use a $\delta$ here instead of the usual $\epsilon$ because we are interested in minimizing uncertainty in $\lambda$, not the function we are performing rootfinding on. There either is or isn't an additional eigenvalue, so $\epsilon$ has little meaning and would be complicated to compute.
+
+To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as long as there is a zero in one of the ranges, and returns a list of points instead of just one. For efficiency's sake, this calculation is run at a low $\rho_{\infty}$, and a range is returned instead of a single point. That range can then be bisected more thoroughly in order to identify the most likely point. 
+
+The function doing the actual work is just Mathematica's Eigenvalues[ ]. Because our Hamiltonian matrix only has entries on the diagonal and off-diagonals, we can define it as a SparseArray to speed up calculation. 
+
+\subsection{Parallelization}
+
+Finding a single $\lambda_{c}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
+
+This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{c}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
+\includepdf{find_lcs.pdf}
+
 %      \chapter{The Second Appendix, for Fun}
 %
 %
