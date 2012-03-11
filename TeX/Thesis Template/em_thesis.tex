@@ -402,24 +402,37 @@ The eigenvectors of this matrix will be the wave functions $u(\rho_n)$, and the 
 Using this, we can now see what our wave functions actually look like. For bound states where $n^2 << \lambda$, we find that the bound states look very similar to hydrogen, with the exception of sign (figure \ref{fig:hyd-yukawa}).
 \begin{figure}[h]
 \centering
-\subfloat[]{\includegraphics[width=0.5\textwidth]{Figures/n2yukawa}}
-\subfloat[]{\includegraphics[width=0.5\textwidth]{Figures/n2hyd}}
-\caption{The $n = 2$ bound states for the Yukawa potential (left) and Coulomb potential (right). Both were calculated using my finite difference Hamiltonian. For the Yukawa potential, $\lambda = 12.9$, and for both, $\rho_{\infty} = 20*12.9 = 258$. The plot only extends out to $\rho = 50$ in order to see the earlier behavior; the function is remains 0 further out.}
+\includegraphics{Figures/n2hydyukawa}
+\caption{The $n = 2$ bound states for the Yukawa potential and Coulomb potential. The Yukawa potential was calculated using my finite difference Hamiltonian with $\lambda = 20$ and  $\rho_{\infty} = 20*20 = 400$. The Coulomb wave function is the exact $n=2$ wave function, scaled by a constant to match the Yukawa function. The plot only extends out to $\rho = 30$ in order to see the earlier behavior; the function is remains 0 further out.}
 \label{fig:hyd-yukawa}
 \end{figure}
 As $\lambda$ increases and more bound states are possible, the wave functions get more interesting, as in figure \ref{fig:largebound}.
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/hyukawa10}
-\caption{The $n=10$ bound state at $\lambda = 200$. The $n=10$ Coulomb wave function is shown as well. While they start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\includegraphics{Figures/hyukawa14}
+\caption{The $n=14$ bound state at $\lambda = 200$. The $n=14$ Coulomb wave function is shown as well (scaled to match). While they start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
 \label{fig:largebound}
 \end{figure}
 \section{Finding Critical Values of Lambda}
+For the calculation of these eigenvalues and eigenvectors, we rely on Mathematica's built-in Eigenvalues[ ] command. Mathematica uses the sparseness of the array to optimize the calculation, speeding it up immensely. At each value of lambda, we calculate the number of negative eigenvalues, and use rootfinding to look for a place where that number increases. For a further discussion of the exact methods used, see Appendix A.
+
+Visually, we are looking for wave functions like in Figure \ref{fig:scatt-to-bound}. The wave function starts looking like it will keep going past the end of the calculation, and then switches to going to zero before the end point.
+\begin{figure}
+\centering \subfloat[][$\lambda = 12.5$]{\label{scatt12-5}
+\includegraphics[width=0.5\textwidth]{Figures/12-5scatt}}
+%\hspace{8pt}% 
+\subfloat[][$\lambda = 12.9$]{\label{scatt12-9}\includegraphics[width=0.5\textwidth]{Figures/12-9scatt}} \\ 
+\subfloat[][$\lambda = 13.1$]{\label{bound13-1}\includegraphics[width=0.5\textwidth]{Figures/13-1bound}}% \hspace{8pt}%
+\subfloat[][$\lambda = 14.0$]{\label{bound14}%\includegraphics[width=0.5\textwidth]{Figures/14-bound}}
+\caption[This is the box text.]{The progression of an eigenstate from scattering to bound. In \subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it. It doesn't level out much before it gets there, so it'll probably keep going right on through. In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound (and flipped over!). Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$.}%\label{fig:scatt-to-bound}
+\end{figure}
 
 \section{Estimating errors}
-Requirements for $\rho_{inf}$ and $\Delta \rho$
+In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to be interesting around 0. At the same time, we require $\rho_{\infty}$ to be large, as the thing that separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time.
 
-Asymptotic behaviors
+It therefore seems likely that any errors in calculation we get will be based on that, not in the methods themselves. To determine the errors in each, we look at how much our calculated value for some $\lambda_{c}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$.
+
+After plotting these, we observed that changes in $\rho_{\infty}$ were more significant than changes in $\Delta \rho$. Furthermore, the changes in both caused the value of $\lambda_{c}$ to asymtotically approach some value. This provides a way to estimate error bars. We can plot $\lambda_c(\rho_{\infty})$ and look at the difference in $\lambda_c$ obtained from doubling $\rho_{infty}$. Because the graph is asymptotically approaching some value, this difference will be greater than the distance between that second point and the ``true'' value of $\lambda_c$. This is shown in figure \ref{comingsoon}.
 
 \section{Results and fit}
 Pictures!
@@ -447,29 +460,18 @@ quadtratic fit
 \chapter{Numerical Methods}
 To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
 
-The rootfinder actually used was a recursive bisection routine:
-\begin{verbatim}
-Bisect (low, high, delta):
-    mid = low + (high-low)/2
-    If (high - low < delta)
-       Return mid
-    Else if negs(low) < negs(mid)
-        Bisect(low, mid)
-    Else 
-        Bisect(mid, high)
-\end{verbatim}
-We use a $\delta$ here instead of the usual $\epsilon$ because we are interested in minimizing uncertainty in $\lambda$, not the function we are performing rootfinding on. There either is or isn't an additional eigenvalue, so $\epsilon$ has little meaning and would be complicated to compute.
+The rootfinder actually used was a recursive bisection routine. In that, we used a $\delta$ here instead of the usual $\epsilon$ because we are interested in minimizing uncertainty in $\lambda$, not the function we are performing rootfinding on. There either is or isn't an additional eigenvalue, so $\epsilon$ has little meaning and would be complicated to compute.
 
 To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as long as there is a zero in one of the ranges, and returns a list of points instead of just one. For efficiency's sake, this calculation is run at a low $\rho_{\infty}$, and a range is returned instead of a single point. That range can then be bisected more thoroughly in order to identify the most likely point. 
 
 The function doing the actual work is just Mathematica's Eigenvalues[ ]. Because our Hamiltonian matrix only has entries on the diagonal and off-diagonals, we can define it as a SparseArray to speed up calculation. 
 
-\subsection{Parallelization}
+\section{Parallelization}
 
 Finding a single $\lambda_{c}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
 
 This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{c}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
-\includepdf{find_lcs.pdf}
+\includepdf[pages=-]{Figures/find_lcs.pdf}
 
 %      \chapter{The Second Appendix, for Fun}
 %
