@@ -120,19 +120,17 @@ V(r) = -\frac{C}{r}e^{-r/l}\mbox{,}
 }
 where $C$ and $l$ are constants. $C$ sets the strength of the force; $l$ acts as a length scale. The exponential term provides an effective cutoff once $r$ gets much larger than $l$, as the exponential term drops off quite rapidly. We are interested in how the bound states of a particle subject to this potential change with these constants. 
 
-A force described by this potential comes from the exchange of massive virtual particles. The length scale, which limits the range at which the force acts, is then related to the mass $m$ by the equation\eqn{
-l = \frac{\hbar}{m_{\pi}c}\mbox{.}
+The length scale of the potential, which limits the range at which the force acts, is related to the mass of the mediating particle ($m$) by the equation\eqn{
+l = \frac{\hbar}{m c}\mbox{.}
 }
 Both the mass $m$ and the strength of the force $C$ depend on the application of the potential. Most commonly, we use this potential to describe the force between protons and neutrons in an atomic nucleus, where $m$ is the mass of the pion, $m_{\pi} = 140$ MeV/c$^2$.\footnote{I know I'm missing numbers here, will add}
 
-In general, we find the bound states of a system using the time-independent Schr\"odinger wave equation for a particle under the influence of some $V(r)$:
+To find the bound states of a particle under the influence of some $V(r)$, we solve the time-independent Schr\"odinger wave equation (equation \eqref{eq:TIDSWE-general}) and look for solutions which go to zero at infinity.
 \eqn{
 -\frac{\hbar^2}{2\mu}\nabla^2\psi(r,\phi,\theta) + V(r)\psi (r,\phi,\theta) = E \psi(r,\phi,\theta)
 \label{eq:TIDSWE-general}
 }
-and look for solutions which go to zero at infinity.
-
-In this thesis, we are working with a system of two particles moving under the influence of the Yukawa potential (in the atomic case, this would be a deuterium nucleus). To simplify the system, it makes the most sense to express this in spherical coordinates as a reduced mass orbiting a center of mass. This is the form used for the wave equation above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
+In this thesis, we are working with a system of two particles attracted to each other by the Yukawa potential (in the atomic case, this would be a deuterium nucleus). To simplify the system, it makes the most sense to express this in spherical coordinates as a reduced mass orbiting a center of mass. This is the form used for the wave equation above. With the Yukawa potential, this equation cannot be solved analytically. However, we can solve the more simple system described by the potential without the exponential term, that is,
 \eqn{
  V(r) = -\frac{C}{r}\mbox{.}
  }
@@ -417,14 +415,20 @@ As $\lambda$ increases and more bound states are possible, the wave functions ge
 For the calculation of these eigenvalues and eigenvectors, we rely on Mathematica's built-in Eigenvalues[ ] command. Mathematica uses the sparseness of the array to optimize the calculation, speeding it up immensely. At each value of lambda, we calculate the number of negative eigenvalues, and use rootfinding to look for a place where that number increases. For a further discussion of the exact methods used, see Appendix A.
 
 Visually, we are looking for wave functions like in Figure \ref{fig:scatt-to-bound}. The wave function starts looking like it will keep going past the end of the calculation, and then switches to going to zero before the end point.
-\begin{figure}
+
+\begin{figure}
 \centering \subfloat[][$\lambda = 12.5$]{\label{scatt12-5}
 \includegraphics[width=0.5\textwidth]{Figures/12-5scatt}}
 %\hspace{8pt}% 
-\subfloat[][$\lambda = 12.9$]{\label{scatt12-9}\includegraphics[width=0.5\textwidth]{Figures/12-9scatt}} \\ 
-\subfloat[][$\lambda = 13.1$]{\label{bound13-1}\includegraphics[width=0.5\textwidth]{Figures/13-1bound}}% \hspace{8pt}%
-\subfloat[][$\lambda = 14.0$]{\label{bound14}%\includegraphics[width=0.5\textwidth]{Figures/14-bound}}
-\caption[This is the box text.]{The progression of an eigenstate from scattering to bound. In \subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it. It doesn't level out much before it gets there, so it'll probably keep going right on through. In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound (and flipped over!). Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$.}%\label{fig:scatt-to-bound}
+\subfloat[][$\lambda = 12.9$]{\label{scatt12-9}
+\includegraphics[width=0.5\textwidth]{Figures/12-9scatt}} \\ 
+\subfloat[][$\lambda = 13.1$]{\label{bound13-1}
+\includegraphics[width=0.5\textwidth]{Figures/13-1bound}}% \hspace{8pt}%
+\subfloat[][$\lambda = 14.0$]{\label{bound14}%
+\includegraphics[width=0.5\textwidth]{Figures/14-bound}}
+\caption[This is the box text.]{The progression of an eigenstate from scattering to bound. In 
+\subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it. It doesn't level out much before it gets there, so it'll probably keep going right on through. In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound (and flipped over!). Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$.}%
+\label{fig:scatt-to-bound}
 \end{figure}
 
 \section{Estimating errors}
