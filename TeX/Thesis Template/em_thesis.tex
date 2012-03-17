@@ -212,10 +212,10 @@ We can roll the second half of the equation up into an effective potential, prod
 }
 eferring back to the first postulate, we know that our semi-classical particle is moving in a circular orbit. Classically, a circular orbit occurs when the effective potential is minimized, that is, when
 \eqn{
-\pd{V_{eff}}{r}|_{r_0} = 0
+\frac{\partial V_{eff}}{\partial r_0} = 0
 \label{eq:vrnaught}
 }
-Given some $n$, the radius of the Bohr orbit will be given by \eqn{eq:vrnaught}. The energy of this orbit will be given by evaluating \eqref{eq:classical-energy
+Given some $n$, the radius of the Bohr orbit will be given by \eqref{eq:vrnaught}. The energy of this orbit will be given by evaluating \eqref{eq:classical-energy}
 } at $r_0$. Because the orbit is circular, $\dot{r} = 0$, so the energy will be given by
 \eqn{
 E_{n,r0} = \frac{1}{2}{(n\hbar)^2}{\mu r_0^2} - V(r_0)\mbox{.}
@@ -238,17 +238,17 @@ We can substitute these into \eqref{eq:classical-energy} and \eqref{eq:veff} in 
 \label{eq:energy-nondim}
 }
 \eqn{
-\tilde{V}_{eff} &= \frac{n^2}{2}\frac{1}{\rho^2}-\frac{1}{\rho}
+\tilde{V}_{eff} = \frac{n^2}{2}\frac{1}{\rho^2}-\frac{1}{\rho}
 \label{eq:veff-nondim}
 }
 
 We can plot the effective potential vs $\rho$ (figure \ref{fig:hveff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant. Note that a different value of $n$ gives a different effective potential with a different minimum. 
 
-\fig{
-\includegraphics{Figures/hyd_Veff}}
-{\label{fig:hveff}
+\begin{figure}[h]
+\center{\includegraphics{Figures/hyd_Veff}}
 \caption{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{eff-min}$.}
-}
+\label{fig:hveff}
+\end{figure}
 
 To find the location of this minimum, we differentiate \eqref{eq:veff-nondim} and set the result to $0$, which gives
 \eqn{
