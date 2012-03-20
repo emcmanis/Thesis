@@ -215,9 +215,10 @@ eferring back to the first postulate, we know that our semi-classical particle i
 \frac{\partial V_{eff}}{\partial r_0} = 0
 \label{eq:vrnaught}
 }
-Given some $n$, the radius of the Bohr orbit will be given by \eqref{eq:vrnaught}. The energy of this orbit will be given by evaluating \eqref{eq:classical-energy} at $r_0$. Because the orbit is circular, $\dot{r} = 0$, so the energy will be given by
+Given some $n$, the radius of the Bohr orbit will be given by \eqref{eq:vrnaught}. The energy of this orbit will be given by evaluating \eqref{eq:classical-energy}
+ at $r_0$. Because the orbit is circular, $\dot{r} = 0$, so the energy will be given by
 \eqn{
-E_{n,r0} = \frac{1}{2}{(n\hbar)^2}{\mu r_0^2} - V(r_0)\mbox{.}
+E_{n,r0} = \frac{1}{2}\frac{(n\hbar)^2}{\mu r_0^2} - V(r_0)\mbox{.}
 }
 
 \section{Application to Coulomb potential}
@@ -244,7 +245,7 @@ We can substitute these into \eqref{eq:classical-energy} and \eqref{eq:veff} in 
 We can plot the effective potential vs $\rho$ (figure \ref{fig:hveff}). The circular orbits will be at the minimum of this effective potential, where the radius of the particle's orbit is constant. Note that a different value of $n$ gives a different effective potential with a different minimum. 
 
 \begin{figure}[h]
-\center{\includegraphics{Figures/hyd_Veff}}
+\center{\includegraphics[width=\textwidth]{Figures/hyd_Veff}}
 \caption{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{eff-min}$.}
 \label{fig:hveff}
 \end{figure}
@@ -276,8 +277,8 @@ Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$
 \fig{
 \includegraphics{Figures/cutoff}}
 {
-\label{fig:cutoff}
 \caption{A polar plot of the first three Bohr orbits along with a cutoff at $\lambda = 6$. Because the $n=3$ orbit lies outside the cutoff, it would not be allowed under the na\"ive approximation of the Yukawa potential (equation \eqref{eq:naive})}
+\label{fig:cutoff}
 }
 
 This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states (figure \ref{fig:cutoff}). Any bound state allowed under \eqref{eq:rho-n} for which $\rho$ exceeds $\lambda$ will not exist. If we imagine increasing $\lambda$ gradually, a new bound state will be added whenever we pass through a point $\lambda = n^2$ (for some integer $n$). We call these points the critical values of lambda, notated $\lambda_c$. For the Coulomb potential with cutoff, then, $\lambda_c = n^2$.
@@ -289,25 +290,32 @@ To perform the analysis of the full potential, we look at the graph of its effec
 \label{eq:yveff}
 }
  
-\fig{
-\includegraphics{Figures/yukawa_Veff}}
-{
+Just like with the $C/r$ potential above, we can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$. However, there also appear to be bound states \emph{above} $E = 0$. Clasically, these are perfectly valid elliptical orbits. Quantum mechanically, a particle in one of these states can tunnel through and become a scattering state. We now have two possible definitions for a critical value of $\lambda$ -- one where $V_{eff}$ has no more stable bound states ($E < 0$), and one where $V_{eff}$ has no bound states of any kind. These two critical points are shown in figure \ref{fig:critpoints}
+
+\begin{figure}[h]
+\center{\includegraphics{Figures/criticalpoints}}
+\caption[The two critical values of $\lambda$]{Two curves showing $V_{eff}$ at the two critical values of $\lambda$ -- one where there are no more stable bound states, and one where there are no more bound states at all.}
+\label{fig:critpoints}
+\end{figure}
+
+\begin{figure}[h]
+\center{\includegraphics[width=\textwidth]{Figures/yukawa_Veff}}
+\caption[The effective Yukawa potential]{The effective Yukawa potential. Equation \eqref{eq:yveff} was plotted for $n = 1$ through $6$ with $\lambda = 32$. As with Coulomb, the curves get increasingly shallow as $n$ increases. The curves for $n = 1$ through $4$ all have a circular orbit with $E < 0$, that is, they have a stable bound state. The curve for $n = 5$ has a very slight minimum, but it does not go below $0$, meaning this corresponds to an unstable bound state. The $n = 6$ curve does not have a minimum at all. For all curves with a minimum, the approximate location of this minimum (obtained via Mathematica's NMinimize) has been plotted on the $\rho$ axis.}
 \label{fig:yveff}
-\caption{The effective Yukawa potential. All possible bound states occur below $V_{eff} = 0$, which is a limited region, unlike in hydrogen.}
-}
- 
-Just like with the $C/r$ potential above, we can see that bound states exist for $\rho$ where $V_{eff}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{eff}$. However, there also appear to be bound states \emph{above} $E = 0$. Clasically, these are perfectly valid elliptical orbits. Quantum mechanically, a particle in one of these states can tunnel through and become a scattering state. We now have two possible definitions for a critical value of $\lambda$ -- one where $V_{eff}$ has no more stable bound states ($E < 0$), and one where $V_{eff}$ has no bound states of any kind.
+\end{figure}
+
 \subsection{Stable bound states}
 The first of these critical values occurs when the minimum of $V_{eff}$ is 0. We again start by taking the derivative of \eqref{eq:yveff} and setting it to 0, obtaining
 \begin{equation}
-\frac{dV}{d\rho_0}= -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}
+\frac{dV}{d\rho}\Big |_{\rho = \rho_0} =0 = -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}
 \label{vmin}
 \end{equation}
 where $\rho_0$ is the value of $\rho$ when $V_{eff}$ is minimized. This equation has no general solution, but we can find one for the specific case where $V_{eff}(\rho_0) = 0$ by solving the equation
 \begin{equation}
 V_{eff}(\rho_0)=0 = n^2 - 2\rho_0 e^{-\rho_0/\lambda} 
 \end{equation}
-and plugging it in to the previous, obtaining
+for $n^2$
+and plugging the result into \eqref{vmin}, obtaining
 \begin{equation}
 \rho_0 = \lambda \mbox{.}
 \end{equation}
@@ -379,7 +387,7 @@ To simplify, we can substitute \footnote{I should have a cite here.} $u(\rho)=\r
 }
 
 \section{Numerics: The Finite Difference Method}
-The finite difference method transforms a differential equation into a matrix problem. It does this by approximating the first and second derivatives of a function on a discrete grid of points $x_n$ which are a distance $\Delta x$ apart. Using the concept of the derivative as the slope of the tangent line to some point, we can write
+The finite difference method transforms a differential equation into a matrix problem. It does this by approximating the first and second derivatives of a function on a discrete grid of points $u(\rho_n) = u_n$ which are a distance $\Delta \rho$ apart. Using the concept of the derivative as the slope of the tangent line to some point, we can write
 \eqn{
 u'(\rho_n) + O(\Delta{\rho}^2) = \frac{u(\rho_n + \Delta \rho) - u(\rho_n - \Delta \rho)}{2 \Delta \rho}
 \label{fdifference}
@@ -388,7 +396,7 @@ u'(\rho_n) + O(\Delta{\rho}^2) = \frac{u(\rho_n + \Delta \rho) - u(\rho_n - \Del
 u''(\rho_n) + O(\Delta{\rho}^2) = \frac{u(\rho_n + \Delta \rho) - 2 u(\rho_n) + u(\rho_n - \Delta \rho)}{\Delta \rho^2}
 \label{f2difference}
 }
-We can rewrite $u(\rho_n)$ as $u_n$ and apply \eqref{f2difference} to our differential equation in \eqref{eq:hamiltonianfinal}, obtaining
+We can rewrite this by applying \eqref{f2difference} to our differential equation in \eqref{eq:hamiltonianfinal}, obtaining
 \eqn{
 -u_{n-1}\frac{1}{\Delta \rho^2} - u_n\left(\frac{2} {\Delta \rho^2} -  \frac{2}{\rho_n}e^{-\rho_n/\lambda} \right) - u_{n-1}\frac{1}{\Delta \rho^2}  = E u_n\mbox{.}
 \label{eq:hamiltonian-disc}
@@ -420,13 +428,13 @@ As $\lambda$ increases and more bound states are possible, the wave functions ge
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/hyukawa14}
-\caption{The $n=14$ bound state at $\lambda = 200$. The $n=14$ Coulomb wave function is shown as well (scaled to match). While they start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\caption{The $n=14$ bound state at $\lambda = 200$. The $n=14$ Coulomb wave function is shown as well (scaled to match). At this value of $\lambda$, the $n=14$ state only recently became bound. While the Coulomb and Yukawa wavefunctions start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
 \label{fig:largebound}
 \end{figure}
 \section{Finding Critical Values of Lambda}
 For the calculation of these eigenvalues and eigenvectors, we rely on Mathematica's built-in Eigenvalues[ ] command. Mathematica uses the sparseness of the array to optimize the calculation, speeding it up immensely. At each value of lambda, we calculate the number of negative eigenvalues, and use rootfinding to look for a place where that number increases. For a further discussion of the exact methods used, see Appendix A.
 
-Visually, we are looking for wave functions like in Figure \ref{fig:scatt-to-bound}. The wave function starts looking like it will keep going past the end of the calculation, and then switches to going to zero before the end point.
+We are looking for wave functions that behave like the ones in figure \ref{fig:scatt-to-bound}. The wave function will always be zero at $\rho_{\infty}$, but in scattering states this looks like a root. In a bound state, the function goes to zero before $\rho_{\infty}$ and stays there. 
 
 \begin{figure}
 \centering \subfloat[][$\lambda = 12.5$]{\label{scatt12-5}
@@ -438,17 +446,31 @@ Visually, we are looking for wave functions like in Figure \ref{fig:scatt-to-bou
 \includegraphics[width=0.5\textwidth]{Figures/13-1bound}}% \hspace{8pt}%
 \subfloat[][$\lambda = 14.0$]{\label{bound14}%
 \includegraphics[width=0.5\textwidth]{Figures/14-bound}}
-\caption[This is the box text.]{The progression of an eigenstate from scattering to bound. In 
-\subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it. It doesn't level out much before it gets there, so it'll probably keep going right on through. In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound (and flipped over!). Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$.}%
+\caption[The progression of an eigenstate from scattering to bound]
+{In \subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it. It doesn't level out much before it gets there, so it'll probably keep going right on through. In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound. Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$.}%
 \label{fig:scatt-to-bound}
 \end{figure}
 
 \section{Estimating errors}
 In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to be interesting around 0. At the same time, we require $\rho_{\infty}$ to be large, as the thing that separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time.
 
-It therefore seems likely that any errors in calculation we get will be based on that, not in the methods themselves. To determine the errors in each, we look at how much our calculated value for some $\lambda_{c}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$.
+It therefore seems likely that any errors in calculation we get will be based on that, not in the methods themselves. To determine the errors in each, we look at how much our calculated value for some $\lambda_{c}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$. We picked one low $\lambda_c$ to find, and looked at the effect of doubling $\rho_{\infty}$ and halving $\Delta \rho$. The results of this are in figure \ref{fig:errorchanges}. We found that a change in $\rho_{\infty}$ produced a much bigger change in our calculated $\lambda_c$ than an equivalent change in $\Delta \rho$. Accordingly, we left $\Delta \rho$ fixed and only focused in errors in $\rho_{\infty}$.
 
-After plotting these, we observed that changes in $\rho_{\infty}$ were more significant than changes in $\Delta \rho$. Furthermore, the changes in both caused the value of $\lambda_{c}$ to asymtotically approach some value. This provides a way to estimate error bars. We can plot $\lambda_c(\rho_{\infty})$ and look at the difference in $\lambda_c$ obtained from doubling $\rho_{infty}$. Because the graph is asymptotically approaching some value, this difference will be greater than the distance between that second point and the ``true'' value of $\lambda_c$. This is shown in figure \ref{comingsoon}.
+\begin{figure}[h]
+\centering
+\includegraphics{Figures/errors}
+\caption[Errors in $\rho_{\infty}$ and $\Delta \rho$]{The value of $\lambda_c$ as $\rho_{\infty}$ is doubled and $\Delta \rho$ is halved. The big black circles show $\lambda_c$ at $\rho_{\infty}$ and $2\rho_{\infty}$, holding $\Delta \rho$ constant. The grey circles show $\lambda_c$ at $\Delta \rho$ and $0.5 \Delta \rho$, holding $\rho_{\infty}$ constant.}
+\label{fig:errorchanges}
+\end{figure}
+
+When we doubled $\rho_{\infty}$ a few more times, we found that the calculated values of $\lambda_c$ asymtotically approached some true value. (figure \ref{fig:asymtote}). Because each point is closer to the true value than it is to the previous point, we can estimate the error by taking the distance between the two points and using that as error bars on the latter point.
+
+\begin{figure}[h]
+\centering
+\includegraphics{Figures/asymtote}
+\caption[Asymtotic behavior of $\lambda_c (\rho_{\infty})$]{The values of $\lambda_c$ as $\rho_{\infty}$ is repeatedly doubled, showing their asymtotic approach to some value.}
+\label{fig:asymtote}
+\end{figure} 
 
 \section{Results and fit}
 Pictures!
