@@ -48,7 +48,7 @@
 
 
 
-\title{Quantum Mechanical Bound States of the Yukawa Potential (or some better title)}
+\title{Quantum Mechanical Bound States of the Yukawa Potential} 
 \author{Ellen M. McManis}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{May 2012}
@@ -80,8 +80,15 @@
 % Acknowledgements (Acceptable American spelling) are optional
 % So are Acknowledgments (proper English spelling)
     \chapter*{Acknowledgements}
-	People. Things. Shep, the dog who is currently keeping me company.
+In the completion of this thesis, a profound debt is owed:
 
+To my adviser, Nelia Mann, for all the help, support, and knowledge. To Mary James, for the help learning how to learn.
+
+To my friends. To my classmates and fellow Reedies, who shaped me into the person who wrote this. To the upperclassmen (Reuven, Rosie, Robin, and Mary) who took the time, my freshman year, to tell me how neat physics was. To Joel Franklin, for sharing neat problems and his excitement for the subject. 
+
+To everyone on IRC who's been listening to my thesis ramblings these past months. And finally, to those people who have loved and supported me through this year.
+
+You people are amazing.
 % The preface is optional
 % To remove it, comment it out or delete it.
 %    \chapter*{Preface}
@@ -96,8 +103,7 @@
 % The abstract is not required if you're writing a creative thesis (but aren't they all?)
 % If your abstract is longer than a page, there may be a formatting issue.
     \chapter*{Abstract}
-	Math and computers and stuff gave me results!
-		
+Using the finite difference method we obtain a model for the relationship between the number of bound states of the Yukawa potential $l/\alpha$, the ratio of the length scale to the ``Bohr radius'' for the problem. We find this relationship to be $\lambda = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants that depend on the quantum number $l$. 
 %	\chapter*{Dedication}
 %	You can have a dedication here if you wish.
 
@@ -515,22 +521,13 @@ When we doubled $\rho_{\infty}$ a few more times, we found that the calculated v
 \end{figure} 
 
 \section{Results and fit}
-We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40$ and $80$ times $\lambda$ in order to capture errors in $\rho_{\infty}$ while keeping calculation times reasonable.
-
-Our raw data, including error bars, is shown in figure \ref{fig:rawdata}. At a quick glance, it looks pretty quadratic -- just what we expected, but we needed to fit it to be sure.
-
-\begin{figure}[h]
-\centering
-\includegraphics{Figures/rawdata}
-\caption[Raw data for spherically symmetric $\lambda_n$s]{Raw data showing the locations of $\lambda_n$s with error bars from errors in $\rho_{\infty}$ Collected for $\lambda$ between 0.5 and 1000 with $\Delta \rho = 0.1$ and $\rho_{\infty} = 80*\lambda$.}
-\label{fig:rawdata}
-\end{figure}
+We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40$ and $80$ times $\lambda$ in order to capture errors in $\rho_{\infty}$ while keeping calculation times reasonable. At a quick glance, our data looked pretty quadratic -- just what we expected, but we needed to fit it to be sure.
 
 Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:loglog}). Our fit was $\log(\lambda_n) = -0.22149 + 1.9947 \log(n)$. The coefficient of the $\log(n)$ term wasn't quite 2, and while the fit looked good, it was inaccurate, especially for low values of $n$. 
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/loglog}
-\caption[Log-log fit]{Linear fit to a log-log plot of the data from figure \ref{fig:rawdata}. Our fit was $\log(\lambda_n) = -0.22149 + 1.9947 \log(n)$.}
+\caption[Log-log fit]{Linear fit to a log-log plot of the data. Our fit was $\log(\lambda_n) = -0.22149 + 1.9947 \log(n)$.}
 \label{fig:loglog}
 \end{figure}
 
@@ -538,7 +535,7 @@ Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c 
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/quadfit}
-\caption[Quadratic fit]{The data in figure \ref{fig:rawdata}, this time fit to a quadratic. The fit shown is $\lambda_n = 0.0578679 + 0.0517547 n + 0.785389 n^2$.}
+\caption[Quadratic fit]{Our data again, this time fit to a quadratic. The fit shown is $\lambda_n = 0.0578679 + 0.0517547 n + 0.785389 n^2$.}
 \label{fig:quadfit}
 \end{figure}
 
@@ -548,22 +545,29 @@ We computed the average error in $\lambda_n$ to check the goodness of fit. The c
 
 Adding angular momentum is simple. Because the potential is spherically symmetric, the energies and locations of the bound states will only be based on the radial portion of the wave equation, so we still don't need to consider the spherical harmonics. The radial equation is now
 \eqn{
--\frac{-u'' - (\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}) u = E u
+-u'' - \left(\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}\right) u = E u
 \label{eq:angmomentum}
 }
-which can again be discretized using \eqref{eq:f2difference}. 
+which can again be discretized using \eqref{f2difference}. 
 
 We re-ran our program and obtained curves showing the critical values of $\lambda$ for $l = 1$ to $10$. These are plotted in figure \ref{fig:allthelcs} along with the $l = 0$ data from the previous section.
+
+\begin{figure}[h]
+\centering
+\includegraphics{Figures/allthelcs}
+\caption[Plots of $\lambda_n$ versus $n$ for $l = 0$ to $10$]{These curves show the relationship between $\lambda_n$ and $n$ for $l = 0$ to 10. In this plot, $n$ is the radial quantum number. The principal quantum number is now $l + n$.}
+\label{fig:allthelcs}
+\end{figure}
 
 Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$. $B$ and $C$ vary linearly with $l$, while $A$ varies quadratically (figure \ref{fig:parameters}). 
 \begin{figure}[h]
 \centering \subfloat[][]{\label{paras:as}
-\includegraphics[width=0.3\textwidth]{Figures/paras-as}}
+\includegraphics[width=0.3\textwidth]{Figures/poly-as}}
 \subfloat[][]{\label{paras:bs}
-\includegraphics[width=0.3\textwidth]{Figures/paras-bs}}  
+\includegraphics[width=0.3\textwidth]{Figures/poly-bs}}  
 \subfloat[][]{\label{paras:cs}
-\includegraphics[width=0.3\textwidth]{Figures/paras-cs}}% \hspace{8pt}%
-caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters as a function of $l$}
+\includegraphics[width=0.3\textwidth]{Figures/poly-cs}}% \hspace{8pt}%
+\caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters $a$, $b$, and $c$ as a function of $l$}
 \label{fig:parameters}
 \end{figure}
 To understand why this is, we recall that when $l$ is non-zero, the quantum number $n$ becomes the \emph{radial} quantum number. The principal quantum number, meanwhile, becomes $n + l$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
@@ -572,13 +576,18 @@ To understand why this is, we recall that when $l$ is non-zero, the quantum numb
 
 %
 %
-%\chapter*{Conclusion}
-%         \addcontentsline{toc}{chapter}{Conclusion}
-%	\chaptermark{Conclusion}
-%	\markboth{Conclusion}{Conclusion}
-%	\setcounter{chapter}{4}
-%	\setcounter{section}{0}
-%	
+\chapter*{Conclusion}
+         \addcontentsline{toc}{chapter}{Conclusion}
+	\chaptermark{Conclusion}
+	\markboth{Conclusion}{Conclusion}
+	\setcounter{chapter}{4}
+	\setcounter{section}{0}
+
+We used the Bohr model to get an approximate relationship between the number of bound states of the Yukawa potential and the value of the length scale. We then obtained the same relationship directly from the potential using the finite difference method. As with other central force potentials, the Bohr method gave a reasonable approximation, but the numerical picture was more subtle. 
+
+We found that the relationship between the number of bound states and the length scale was of the form $\lambda_n = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants dependent on the quantum number $l$. When we compared our value for $\lambda_1$ with a value obtained by [citation], we found that they differed significantly. Our value was higher than theirs by x\%, a difference greater than our error bars could explain. Our value of $\lambda_1$ was higher than theirs, which seems to confirm our systematic overestimate of the values of $\lambda_n$s. This error could possibly be reduced by looking at the errors in $\Delta \rho$ as well as those in $\rho_{\infty}$. 
+
+While this method was intended to look at the number of bound states, not the energies, a decent energy spectrum could be obtained using the finite difference method as well. However, in order to do this, one would need a different routine for finding the eigenvalues of the Hamiltonian matrix, as the continuous eigenvalues above zero introduced a lot of noise into our data. 
 %
 %If you feel it necessary to include an appendix, it goes here.
 \appendix
