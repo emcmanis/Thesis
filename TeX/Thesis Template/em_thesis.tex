@@ -544,6 +544,30 @@ Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c 
 
 We computed the average error in $\lambda_n$ to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good and that the error estimation in the previous section likely overestimates the error in our numerical methods.
 
+\section{Angular Momentum}
+
+Adding angular momentum is simple. Because the potential is spherically symmetric, the energies and locations of the bound states will only be based on the radial portion of the wave equation, so we still don't need to consider the spherical harmonics. The radial equation is now
+\eqn{
+-\frac{-u'' - (\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}) u = E u
+\label{eq:angmomentum}
+}
+which can again be discretized using \eqref{eq:f2difference}. 
+
+We re-ran our program and obtained curves showing the critical values of $\lambda$ for $l = 1$ to $10$. These are plotted in figure \ref{fig:allthelcs} along with the $l = 0$ data from the previous section.
+
+Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$. $B$ and $C$ vary linearly with $l$, while $A$ varies quadratically (figure \ref{fig:parameters}). 
+\begin{figure}[h]
+\centering \subfloat[][]{\label{paras:as}
+\includegraphics[width=0.3\textwidth]{Figures/paras-as}}
+\subfloat[][]{\label{paras:bs}
+\includegraphics[width=0.3\textwidth]{Figures/paras-bs}}  
+\subfloat[][]{\label{paras:cs}
+\includegraphics[width=0.3\textwidth]{Figures/paras-cs}}% \hspace{8pt}%
+caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters as a function of $l$}
+\label{fig:parameters}
+\end{figure}
+To understand why this is, we recall that when $l$ is non-zero, the quantum number $n$ becomes the \emph{radial} quantum number. The principal quantum number, meanwhile, becomes $n + l$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
+
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
 %
