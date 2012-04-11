@@ -164,10 +164,10 @@ where $L_{n-1}$ is a Laguerre polynomial.
 The factor of $e^{-r /\alpha n}$ ensures that the wave function goes to 0 as $r$ goes to infinity, with $n$ controlling how fast that happens. The Laguerre polynomial determines how many nodes the wave function has. Because $L_{n-1}$ has $n-1$ roots, so the wave function will have that many nodes (figure \ref{fig:wavefunctions}).
 \begin{figure}[h]
 \centering
-\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps0}}
-\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps1}}
-\subfloat[]{\includegraphics[width=0.3\textwidth]{Figures/ps2}}
-\caption{The first three bound states of $\psi(\rho)$ for the Coulomb potential, where $\rho = r/\alpha$. These show the nodes given by the Laguerre polynomials as well as the exponential dieoff of the wave function.}
+\subfloat[$n = 1$]{\includegraphics[width=0.3\textwidth]{Figures/ps0}}
+\subfloat[$n = 2$]{\includegraphics[width=0.3\textwidth]{Figures/ps1}}
+\subfloat[$n = 3$]{\includegraphics[width=0.3\textwidth]{Figures/ps2}}
+\caption[The first three bound states of $\psi(\rho)$ for the Coulomb potential]{The first three bound states of $\psi(\rho)$ for the Coulomb potential, where $\rho = r/\alpha$. These show the nodes given by the Laguerre polynomials as well as the exponential dieoff of the wave function.}
 \label{fig:wavefunctions}
 \end{figure}
 
@@ -256,7 +256,7 @@ We can plot the effective potential vs $\rho$ (figure \ref{fig:hveff}). The circ
 
 \begin{figure}[h]
 \center{\includegraphics[width=\textwidth]{Figures/hyd_Veff}}
-\caption{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{\mathrm{eff-min}}$.}
+\caption[The effective Coulomb potential]{The effective Coulomb potential. Particles can exist with energies greater than the potential energy, and their trajectories will cover all possible radii at that energy. A particle in a circular orbit, then, must have $E = V_{\mathrm{eff-min}}$.}
 \label{fig:hveff}
 \end{figure}
 
@@ -443,14 +443,14 @@ Using this, we can now see what our wave functions actually look like. For bound
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/n2hydyukawa}
-\caption{The $n = 2$ bound states for the Yukawa potential and Coulomb potential. The Yukawa potential was calculated using my finite difference Hamiltonian with $\lambda = 20$ and  $\rho_{\infty} = 20*20 = 400$. The Coulomb wave function is the exact $n=2$ wave function, scaled by a constant to match the Yukawa function. The plot only extends out to $\rho = 30$ in order to see the earlier behavior; the function is remains 0 further out.}
+\caption[The $n = 2$ bound states for the Yukawa potential and Coulomb potential]{The $n = 2$ bound states for the Yukawa potential and Coulomb potential. The Yukawa potential was calculated using my finite difference Hamiltonian with $\lambda = 20$ and  $\rho_{\infty} = 20*20 = 400$. The Coulomb wave function is the exact $n=2$ wave function, scaled by a constant to match the Yukawa function. The plot only extends out to $\rho = 30$ in order to see the earlier behavior; the function is remains 0 further out.}
 \label{fig:hyd-yukawa}
 \end{figure}
 As $\lambda$ increases and more bound states are possible, the wave functions get more interesting, as in figure \ref{fig:largebound}.
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/hyukawa14}
-\caption{The $n=14$ bound state at $\lambda = 200$. The $n=14$ Coulomb wave function is shown as well (scaled to match). At this value of $\lambda$, the $n=14$ state only recently became bound. While the Coulomb and Yukawa wavefunctions start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\includegraphics{Figures/largebound}
+\caption[The $n=14$ bound state at $\lambda = 200$]{The $n=14$ bound state at $\lambda = 200$. The $n=14$ Coulomb wave function is shown as well (scaled to match). At this value of $\lambda$, the $n=14$ state only recently became bound. While the Coulomb and Yukawa wavefunctions start out close together, the Coulomb wave function goes to zero faster and the wave functions diverge a bit towards the end. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
 \label{fig:largebound}
 \end{figure}
 \section{Finding Critical Values of Lambda}
