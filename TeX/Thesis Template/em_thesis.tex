@@ -148,7 +148,7 @@ V(r) \approx -\frac{C}{r}\mbox{.}
 }
 This is the same form as the Coulomb potential (in which $C = \frac{e^2}{4\pi\epsilon_0}$), which we use to find the bound states of an electron and a proton in Hydrogen. \eqref{eq:vapprox} suggests that we will be able to gain some insight into the Yukawa potential by looking at the solutions to the wave equation for the Coulomb potential. 
 
-These solutions are:
+These solutions are \cite{griffiths_introduction_2005}:
 \eqn{
 \psi_{l, m_l, n} (r, \theta, \phi) = R_{n,l}(r) Y_{l,m_l}(\theta,\phi)\mbox{.}
 }
@@ -193,8 +193,10 @@ There are an infinite number of bound states labelled by n, and as n gets large,
 
 Now let us consider how this changes for the Yukawa potential, which itself has an exponential die-off with length scale $l$. Because of \eqref{eq:vapprox}, we expect the Yukawa states to resemble the Coulomb states for bound states with $r << l$. For $r >> l$, the potential is approximately $0$. We do not expect to find any bound states where the wave function is significantly non-zero in this region, because there is no force to bind the particle. We therefore expect that the number of bound states of this potential will be be finite.
 
-When working with the Yukawa problem, we will continue using the length scale alpha from \eqref{eq:bohrradius}. What we are interested in is not $l$ itself, but the ratio $l / \alpha$.
-If $l / \alpha$ is small, a given state is more likely to fall outside of the range of the potential, meaning that only a small number of states (those whose wave functions do not extend very far out) may be bound. For a large $l / \alpha$, the reverse is true, and we expect a large number of bound states.
+When working with the Yukawa problem, we will continue using the length scale alpha from \eqref{eq:bohrradius}. What we are interested in is not $l$ itself, but the ratio $l / \alpha$ which we call $\lambda$.
+If $\lambda$ is small, a given state is more likely to fall outside of the range of the potential, meaning that only a small number of states (those whose wave functions do not extend very far out) may be bound. For a large $\lambda$, the reverse is true, and we expect a large number of bound states.
+
+In order to 
 
 %\begin{figure}[h]
 %\begin{center}
@@ -541,6 +543,10 @@ Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c 
 
 We computed the average error in $\lambda_n$ to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good and that the error estimation in the previous section likely overestimates the error in our numerical methods.
 
+In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$. \cite{PhysRevA.50.228}. They find $1 / \lambda_1$ to be $1.19061227 \pm 0.00000004$, obtained using a linear combination of atomic orbitals method. This translates to a $\lambda_1$ of $0.83990399 \pm 0.00000003$. 
+
+This result differs significantly from ours, $\lambda_1 = 0.87 \pm 0.3$. Our result is an overestimate, consistent with our predictions in the last section, but it's even more of an overestimate than expected. However, this difference vanishes if we rerun the calculation and collect the error in $\Delta \rho$ as well as the error in $\rho_{\infty}$. Our calculations which did not incorporate this error are therefore known to be subject to this systematic error.
+
 \section{Angular Momentum}
 
 Adding angular momentum is simple. Because the potential is spherically symmetric, the energies and locations of the bound states will only be based on the radial portion of the wave equation, so we still don't need to consider the spherical harmonics. The radial equation is now
@@ -585,7 +591,7 @@ To understand why this is, we recall that when $l$ is non-zero, the quantum numb
 
 We used the Bohr model to get an approximate relationship between the number of bound states of the Yukawa potential and the value of the length scale. We then obtained the same relationship directly from the potential using the finite difference method. As with other central force potentials, the Bohr method gave a reasonable approximation, but the numerical picture was more subtle. 
 
-We found that the relationship between the number of bound states and the length scale was of the form $\lambda_n = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants dependent on the quantum number $l$. When we compared our value for $\lambda_1$ with a value obtained by [citation], we found that they differed significantly. Our value was higher than theirs by x\%, a difference greater than our error bars could explain. Our value of $\lambda_1$ was higher than theirs, which seems to confirm our systematic overestimate of the values of $\lambda_n$s. This error could possibly be reduced by looking at the errors in $\Delta \rho$ as well as those in $\rho_{\infty}$. 
+We found that the relationship between the number of bound states and the length scale was of the form $\lambda_n = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants dependent on the quantum number $l$. When we compared our value for $\lambda_1$ with a value obtained in \cite{PhysRevA.50.228}, we found that they differed significantly. Our value was higher than theirs by 3.3\%, a difference greater than our error bars could explain. The direction of this error seems to confirm our systematic overestimate of the values of $\lambda_n$s. The error can be reduced by looking at the errors in $\Delta \rho$ as well as those in $\rho_{\infty}$, but this was not done for all data points.
 
 While this method was intended to look at the number of bound states, not the energies, a decent energy spectrum could be obtained using the finite difference method as well. However, in order to do this, one would need a different routine for finding the eigenvalues of the Hamiltonian matrix, as the continuous eigenvalues above zero introduced a lot of noise into our data. 
 %
