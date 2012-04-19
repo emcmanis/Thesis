@@ -106,7 +106,7 @@ You people are amazing.
 % The abstract is not required if you're writing a creative thesis (but aren't they all?)
 % If your abstract is longer than a page, there may be a formatting issue.
     \chapter*{Abstract}
-Using the finite difference method we obtain a model for the relationship between the number of bound states of the Yukawa potential $l/\alpha$, the ratio of the length scale to the ``Bohr radius'' for the problem. We find this relationship to be $\lambda = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants that depend on the quantum number $l$. 
+In this thesis, we obtain a model for the relationship between the number of bound states of the Yukawa potential and $\ell/\alpha$, the ratio of the exponential cutoff length scale to the ``Bohr radius'' for the problem. We use a semi-classical approximation to make a qualitative prediction for the relationship. We then use the finite difference method to obtain numerical values for the crititical values of $\lambda$, $\lambda_n$, which are the values of $\lambda$ at which new bound states appear.These data can be fit to a quadratic, giving us $\lambda = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants that depend on the angular momentum quantum number $l$. This is in good agreement with qualitative predictions.
 %	\chapter*{Dedication}
 %	You can have a dedication here if you wish.
 
@@ -488,11 +488,11 @@ The function primarily looks like that of a free particle in a box of size $\rho
 \end{figure}
 
 \section{Estimating errors}
-In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to be interesting around 0. At the same time, we require $\rho_{\infty}$ to be large, because what separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time.
+In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to fluctuate on lengths scales of order 1 with our non-dimensionalization. At the same time, we require $\rho_{\infty}$ to be large, because what separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time.
 
 These, then, are our two primary sources of error. To determine the errors in each, we look at how much our calculated value for some $\lambda_{n}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$.  
 
-To determine this, we looked at $\lambda_{4}$, chosen because it is relatively low, making the calculations quicker. We calculated the value of $\lambda_{4}$ at four different points: $\rho_{\infty} = 40*\lambda$ and $\Delta \rho = 0.1$, $\rho_{\infty} = 40*\lambda$ and $\Delta \rho = 0.05$, $\rho_{\infty} = 80*\lambda$ and $\Delta \rho = 0.1$, and $\rho_{\infty} = 80*\lambda$ and $\Delta \rho = 0.05$. The results of this are in table \ref{tab:errorchanges}. 
+To determine this, we looked at $\lambda_{4}$, chosen because it is relatively low, making the calculations quicker. We calculated the value of $\lambda_{4}$ at four different points: $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.1$, $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.05$, $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.1$, and $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.05$. The results of this are in table \ref{tab:errorchanges}. 
 \begin{table}
 \centering
 \begin{tabular}{r|c|c|c|}
@@ -514,10 +514,14 @@ $\Delta \rho = 0.05$ & 12.8233 & 12.7521& $\Delta \lambda_n = 0.0712$ \\
 \caption{Errors in $\Delta \rho$ and $\rho_{\infty}$ for $\lambda_4$.}
 \label{tab:errorchanges}
 \end{table}
-The changes in the calculated value for $\lambda_4$ from changes in $\Delta \rho$ and $\rho_{\infty}$ are independent of each other. We found that a change in $\rho_{\infty}$ produced a much bigger change in our calculated $\lambda_{n}$ than an equivalent change in $\Delta \rho$. Accordingly, we left $\Delta \rho$ fixed at 0.1 and only focused in errors in $\rho_{\infty}$. We decided to pin the value of $\rho_{\infty}$ to $\lambda$ in our calculations, which evened out the errors in different data points and allowed for more efficient calculations.
+As is seen in the table, changing $\Delta \rho$ creates the same change in $\lambda_4$ regardless of the value of $\rho_{\infty}$. The reverse is also true -- changes in $\rho_{\infty}$ produce the same change in $\lambda_4$, regardless of the value of $\Delta \rho$. We therefore conclude that these errors are independent of each other. We found that a change in $\rho_{\infty}$ produced a much bigger change in our calculated $\lambda_{n}$ than an equivalent change in $\Delta \rho$, at least in the ranges we were considering. Accordingly, we left $\Delta \rho$ fixed at 0.1 and only focused on errors from $\rho_{\infty}$.
+ 
+When we doubled $\rho_{\infty}$ a few more times, we found that the calculated values of $\lambda_{n}$ appeared to asymtotically decrease, approaching some true value, as shown in figure \ref{fig:asymtote}. The size of the change in $\lambda_4$ is less than half the previous change for each doubling, indicating a rapid convergence. Because each point is closer to the true value than it is to the previous point, we can estimate the error by taking the distance between the two points. Thus, for every value of $\lambda_n$, we compute it at two values of $\rho_{\infty}$, one twice the other. We use the value computed with the larger $\rho_{\infty}$ as our data point, and the difference between the two as an estimate of our error.
 
-When we doubled $\rho_{\infty}$ a few more times, we found that the calculated values of $\lambda_{n}$ asymtotically decreased, approaching some true value. (figure \ref{fig:asymtote}). Because each point is closer to the true value than it is to the previous point, we can estimate the error by taking the distance between the two points and using that as error bars on the latter point.
+We chose to always set $\rho_{\infty}$ as some constant multiplied by $\lambda$ (for example, $40 \lambda$ or $80 \lambda$, as in the error calculation above). This kept the errors more consistent across different $\lambda_n$s while also keeping computation times reasonable.
 
+It is worth noting that our quoted $\lambda_n$ values will all likely be too large based on this method, creating a systematic overstimate of the true value of $\lambda_n$.
+ 
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/asymtote}
@@ -526,7 +530,7 @@ When we doubled $\rho_{\infty}$ a few more times, we found that the calculated v
 \end{figure} 
 
 \section{Results and fit}
-We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40$ and $80$ times $\lambda$ in order to capture errors in $\rho_{\infty}$ while keeping calculation times reasonable. At a quick glance, our data looked pretty quadratic -- just what we expected, but we needed to fit it to be sure.
+We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40 \lambda$ and $80 \lambda$. We found 35 critical values of $\lambda$, plotted in figures \ref{fig:loglog} and \ref{fig:quadfit}. The first 8 values of $\lambda_n$ along with errors are given in table \ref{tab:l0short}. The rest can be found in Appendix B. At a quick glance, our data looked pretty quadratic -- just what we expected. In order to explore this further, we attempted to fit the data to functions.
 
 \begin{table}[h]
 \centering
@@ -546,7 +550,12 @@ We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a
 	\end{tabular}
 \end{table}
 
-Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:loglog}). Our fit was $\log(\lambda_n) = -0.22149 + 1.9947 \log(n)$. The coefficient of the $\log(n)$ term wasn't quite 2, and while the fit looked good, it was inaccurate, especially for low values of $n$. 
+Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:loglog}). Our fit was 
+\eqn{
+log(\lambda_n) = -0.22149 + 1.9947 \log(n)\mbox{.}
+\label{eq:logfit}
+} 
+The coefficient of the $\log(n)$ term wasn't quite 2, and while the fit looked good, it was inaccurate, especially for low values of $n$. When we checked the fit against our measured error bars, the line did not pass through many of them. This suggested that the dependence was not a pure power law at low $n$.
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/loglog}
@@ -554,7 +563,11 @@ Because we were looking for a relationship like $\lambda_n = a n^2$, we first tr
 \label{fig:loglog}
 \end{figure}
 
-Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c n^2$ (figure \ref{fig:quadfit}). We found a general equation of $\lambda_n = 0.0578679 + 0.0517547 n + 0.785389 n^2$, which matched the data much better. Residuals for this fit were more random and did not conform to a pattern.
+Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c n^2$ (figure \ref{fig:quadfit}). We found a general equation of 
+\eqn{
+lambda_n = 0.0578679 + 0.0517547 n + 0.785389 n^2\mbox{,}
+}
+which matched the data much better. Residuals for this fit were more random and did not conform to a pattern.
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/quadfit}
@@ -562,11 +575,11 @@ Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c 
 \label{fig:quadfit}
 \end{figure}
 
-We computed the average error in $\lambda_n$ to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good and that the error estimation in the previous section likely overestimates the error in our numerical methods.
+We computed the average error in $\lambda_n$ to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good. The difference between these may suggest that our error estimations are too large, but may also be due to the likelihood that our errors are largely systematic rather than random.
 
-In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$. \cite{PhysRevA.50.228}. They find $1 / \lambda_1$ to be $1.19061227 \pm 0.00000004$, obtained using a linear combination of atomic orbitals method. This translates to a $\lambda_1$ of $0.83990399 \pm 0.00000003$. 
+In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$\cite{PhysRevA.50.228}. They find $1 / \lambda_1$ to be $1.19061227 \pm 0.00000004$, obtained using a linear combination of atomic orbitals method. This translates to a $\lambda_1$ of $0.83990399 \pm 0.00000003$. 
 
-This result differs significantly from ours, $\lambda_1 = 0.87 \pm 0.3$. Our result is an overestimate, consistent with our predictions in the last section, but it's even more of an overestimate than expected. However, this difference vanishes if we rerun the calculation and collect the error in $\Delta \rho$ as well as the error in $\rho_{\infty}$. Our calculations which did not incorporate this error are therefore known to be subject to this systematic error.
+This result differs significantly from ours, $\lambda_1 = 0.87 \pm 0.3$. Our result is an overestimate, consistent with our predictions in the last section, but it's even more of an overestimate than expected; their numerically calculated value does not lie within our error bars. However, this difference vanishes if we rerun the calculation and collect the error in $\Delta \rho$ as well as the error in $\rho_{\infty}$. We can therefore see that for a better estimation of the erros in our $\lambda_n$s, we should also include the effects of changing $\Delta \rho$.
 
 \section{Angular Momentum}
 
