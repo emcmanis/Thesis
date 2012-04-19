@@ -40,12 +40,15 @@
 \usepackage{pdfpages}
 \usepackage{fancyvrb}
 \usepackage{multirow}
+\usepackage{chngpage}
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
 
 \newcommand{\eqn}[1]{\begin{equation}#1\end{equation}}
 \newcommand{\eq}[1]{\begin{align}#1\end{align}}
 \newcommand{\fig}[2]{\begin{figure}\begin{center}#1\end{center}#2\end{figure}}
 
+\def\changemargin#1#2{\list{}{\rightmargin#2\leftmargin#1}\item[]}
+\let\endchangemargin=\endlist
 
 
 \title{Quantum Mechanical Bound States of the Yukawa Potential} 
@@ -525,6 +528,24 @@ When we doubled $\rho_{\infty}$ a few more times, we found that the calculated v
 \section{Results and fit}
 We ran our calculation for values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40$ and $80$ times $\lambda$ in order to capture errors in $\rho_{\infty}$ while keeping calculation times reasonable. At a quick glance, our data looked pretty quadratic -- just what we expected, but we needed to fit it to be sure.
 
+\begin{table}[h]
+\centering
+	\caption{The first 8 values of $\lambda_n$, with uncertainties. In this data, $l = 0$. For the full table, see appendix B.}
+	\label{tab:l0short}
+	\begin{tabular}{c|c}
+		$n$	& $\lambda_n$	 \\
+\hline
+		1	& 0.90	$\pm$ 0.03\\
+		2	& 3.30	$\pm$ 0.04\\
+		3	& 7.29	$\pm$ 0.06\\
+		4	& 12.83	$\pm$ 0.07\\
+		5	& 19.95	$\pm$ 0.09\\
+		6	& 28.6	$\pm$ 0.1\\
+		7	& 38.9	$\pm$ 0.1\\
+		8	& 50.7	$\pm$ 0.2
+	\end{tabular}
+\end{table}
+
 Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:loglog}). Our fit was $\log(\lambda_n) = -0.22149 + 1.9947 \log(n)$. The coefficient of the $\log(n)$ term wasn't quite 2, and while the fit looked good, it was inaccurate, especially for low values of $n$. 
 \begin{figure}[h]
 \centering
@@ -565,7 +586,8 @@ We re-ran our program and obtained curves showing the critical values of $\lambd
 \label{fig:allthelcs}
 \end{figure}
 
-Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$. $B$ and $C$ vary linearly with $l$, while $A$ varies quadratically (figure \ref{fig:parameters}). 
+Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$. $B$ and $C$ vary linearly with $l$, while $A$ varies quadratically. This is shown in figure \ref{fig:parameters}, while the data itself is in table \ref{tab:fitparams}.
+
 \begin{figure}[h]
 \centering \subfloat[][]{\label{paras:as}
 \includegraphics[width=0.3\textwidth]{Figures/poly-as}}
@@ -576,7 +598,40 @@ Again, all the curves neatly fit a quadratic. The constants of the quadratic are
 \caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters $a$, $b$, and $c$ as a function of $l$}
 \label{fig:parameters}
 \end{figure}
+
+\begin{table}[h]
+	\centering
+	\caption{The fit parameters A, B, and C (with uncertainties) for $l = 0$ to 10.}
+	\label{tab:fitparams}
+	\begin{tabular}{r|ccc}
+		l	& A	 	& B	 	& C	 \\
+		\hline
+		0	& 0.058	$\pm$ 0.001	& 0.0518	$\pm$ 0.0001	& 0.785389	$\pm$ 0.000003\\
+		1	& 2.08	$\pm$ 0.03	& 1.872	$\pm$ 0.004	& 0.7834	$\pm$ 0.0001\\
+		2	& 6.70	$\pm$ 0.06	& 3.762	$\pm$ 0.008	& 0.7810	$\pm$ 0.0002\\
+		3	& 13.97	$\pm$ 0.07	& 5.67	$\pm$ 0.01	& 0.7787	$\pm$ 0.0003\\
+		4	& 23.92	$\pm$ 0.08	& 7.59	$\pm$ 0.01	& 0.7763	$\pm$ 0.0004\\
+		5	& 36.55	$\pm$ 0.09	& 9.52	$\pm$ 0.01	& 0.7741	$\pm$ 0.0004\\
+		6	& 51.84	$\pm$ 0.09	& 11.46	$\pm$ 0.01	& 0.7714	$\pm$ 0.0005\\
+		7	& 69.88	$\pm$ 0.09	& 13.40	$\pm$ 0.01	& 0.7693	$\pm$ 0.0005\\
+		8	& 90.62	$\pm$ 0.08	& 15.34	$\pm$ 0.01	& 0.7672	$\pm$ 0.0006\\
+		9	& 114.08	$\pm$ 0.08	& 17.28	$\pm$ 0.01	& 0.7652	$\pm$ 0.0006\\
+		10	& 140.22	$\pm$ 0.07	& 19.23	$\pm$ 0.01	& 0.7626	$\pm$ 0.0006
+	\end{tabular}
+\end{table}
+
 To understand why this is, we recall that when $l$ is non-zero, the quantum number $n$ becomes the \emph{radial} quantum number. The principal quantum number, meanwhile, becomes $n + l$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
+
+We can instead assume that $\lambda_n$ depends quadratically on the principal quantum number, not the radial quantum number, is quadratic. When we do this, we get a slightly different set of plots (figure \ref{fig:alllcs-principal}).
+
+\begin{figure}[h]
+\centering
+\includegraphics{Figures/alllcs-principal}
+\caption[Plots of $\lambda_n$ versus $n + l$ for $l = 0$ to $10$]{These curves show the relationship between $\lambda_n$ and $n_p = n + l$ for $n_p = 0$ to 35.}
+\label{fig:alllcs-principal}
+\end{figure}
+
+While the plots are more stacked on top of each other, they have the same shape and the same kinds of dependence in their fit parameters $\tilde{A}$, $\tilde{B}$, and $\tilde{C}$.
 
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
@@ -656,6 +711,101 @@ As is clear from the code, the function doing the actual work is just Mathematic
 Finding a single $\lambda_{n}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
 
 This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{n}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
+
+\chapter{Data}
+
+\begin{table}[h]
+\centering
+	\caption{Full data table for $\lambda_n$ at $l = 0$}
+	\label{tab:l0}
+	\begin{tabular}{c|c}
+		$n$	& $\lambda_n$\\
+		\hline
+		1	& 0.9 $\pm$ 0.03\\
+		2	& 3.3 $\pm$ 0.04\\
+		3	& 7.29 $\pm$ 0.06\\
+		4	& 12.83 $\pm$ 0.07\\
+		5	& 19.95 $\pm$ 0.09\\
+		6	& 28.6 $\pm$ 0.1\\
+		7	& 38.9 $\pm$ 0.1\\
+		8	& 50.7 $\pm$ 0.2\\
+		9	& 64.1 $\pm$ 0.2\\
+		10	& 79.1 $\pm$ 0.2\\
+		11	& 95.7 $\pm$ 0.2\\
+		12	& 113.8 $\pm$ 0.2\\
+		13	& 133.5 $\pm$ 0.3\\
+		14	& 154.7 $\pm$ 0.3\\
+		15	& 177.5 $\pm$ 0.3\\
+		16	& 201.9 $\pm$ 0.3\\
+		17	& 227.9 $\pm$ 0.4\\
+		18	& 255.5 $\pm$ 0.4\\
+		19	& 284.6 $\pm$ 0.4\\
+		20	& 315.2 $\pm$ 0.4\\
+		21	& 347.5 $\pm$ 0.5\\
+		22	& 381.3 $\pm$ 0.5\\
+		23	& 416.7 $\pm$ 0.5\\
+		24	& 453.7 $\pm$ 0.5\\
+		25	& 492.2 $\pm$ 0.6\\
+		26	& 532.3 $\pm$ 0.6\\
+		27	& 574. $\pm$ 0.6\\
+		28	& 617.3 $\pm$ 0.6\\
+		29	& 662.1 $\pm$ 0.6\\
+		30	& 708.5 $\pm$ 0.7\\
+		31	& 756.4 $\pm$ 0.7\\
+		32	& 806. $\pm$ 0.7\\
+		33	& 857.1 $\pm$ 0.7\\
+		34	& 909.7 $\pm$ 0.8\\
+		35	& 964. $\pm$ 0.8
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\begin{adjustwidth}{-1in}{-1in}
+	\caption{All the data. Error bars not shown.}
+	\label{tab:alldata}
+	\begin{tabular}{c|cccccccccc}
+		$n_p$	& $l = 1$	& $l = 2$	& $l = 3$	& $l = 4$	& $l = 5$	& $l = 6$	& $l = 7$	& $l = 8$	& $l = 9$	& $l = 10$\\
+		\hline
+		1	& -	& -	& -	& -	& -	& -	& -	& -	& -	& -\\
+		2	& 4.541	& -	& -	& -	& -	& -	& -	& -	& -	& -\\
+		3	& 8.872	& 10.947	& -	& -	& -	& -	& -	& -	& -	& -\\
+		4	& 14.730	& 17.210	& 20.068	& -	& -	& -	& -	& -	& -	& -\\
+		5	& 22.130	& 24.984	& 28.257	& 31.904	& -	& -	& -	& -	& -	& -\\
+		6	& 31.080	& 34.285	& 37.949	& 42.018	& 46.459	& -	& -	& -	& -	& -\\
+		7	& 41.585	& 45.121	& 49.159	& 53.630	& 58.496	& 63.730	& -	& -	& -	& -\\
+		8	& 53.647	& 57.501	& 61.894	& 66.752	& 72.028	& 77.691	& 83.720	& -	& -	& -\\
+		9	& 67.270	& 71.427	& 76.163	& 81.392	& 87.064	& 93.143	& 99.604	& 106.428	& -	& -\\
+		10	& 82.455	& 86.905	& 91.970	& 97.559	& 103.614	& 110.096	& 116.977	& 124.235	& 131.854	& -\\
+		11	& 99.204	& 103.937	& 109.321	& 115.257	& 121.684	& 128.558	& 135.847	& 143.528	& 151.583	& 159.999\\
+		12	& 117.516	& 122.525	& 128.219	& 134.493	& 141.281	& 148.536	& 156.224	& 164.318	& 172.798	& 181.650\\
+		13	& 137.394	& 142.670	& 148.666	& 155.268	& 162.409	& 170.035	& 178.112	& 186.609	& 195.507	& 204.786\\
+		14	& 158.838	& 164.375	& 170.664	& 177.588	& 185.071	& 193.061	& 201.517	& 210.410	& 219.715	& 229.414\\
+		15	& 181.848	& 187.641	& 194.217	& 201.453	& 209.272	& 217.617	& 226.445	& 235.725	& 245.430	& 255.540\\
+		16	& 206.425	& 212.468	& 219.325	& 226.867	& 235.014	& 243.706	& 252.899	& 262.558	& 272.655	& 283.170\\
+		17	& 232.569	& 238.857	& 245.990	& 253.832	& 262.300	& 271.333	& 280.883	& 290.913	& 301.396	& 312.308\\
+		18	& 260.281	& 266.809	& 274.212	& 282.349	& 291.132	& 300.499	& 310.399	& 320.795	& 331.657	& 342.959\\
+		19	& 289.560	& 296.325	& 303.994	& 312.419	& 321.512	& 331.207	& 341.451	& 352.206	& 363.440	& 375.127\\
+		20	& 320.407	& 327.406	& 335.336	& 344.045	& 353.442	& 363.459	& 374.042	& 385.150	& 396.750	& 408.814\\
+		21	& 352.823	& 360.051	& 368.238	& 377.226	& 386.923	& 397.256	& 408.172	& 419.628	& 431.588	& 444.025\\
+		22	& 386.807	& 394.261	& 402.701	& 411.965	& 421.956	& 432.602	& 443.846	& 455.643	& 467.959	& 480.762\\
+		23	& 422.359	& 430.037	& 438.727	& 448.262	& 458.543	& 469.496	& 481.063	& 493.198	& 505.863	& 519.028\\
+		24	& 459.480	& 467.379	& 476.315	& 486.118	& 496.685	& 507.941	& 519.826	& 532.293	& 545.303	& 558.826\\
+		25	& 498.170	& 506.287	& 515.467	& 525.533	& 536.382	& 547.937	& 560.136	& 572.931	& 586.282	& 600.156\\
+		26	& 538.429	& 546.761	& 556.182	& 566.508	& 577.636	& 589.486	& 601.995	& 615.113	& 628.800	& 643.022\\
+		27	& 580.257	& 588.802	& 598.461	& 609.045	& 620.447	& 632.588	& 645.403	& 658.841	& 672.860	& 687.425\\
+		28	& 623.654	& 632.410	& 642.304	& 653.142	& 664.817	& 677.245	& 690.363	& 704.116	& 718.462	& 733.367\\
+		29	& 668.620	& 677.585	& 687.712	& 698.802	& 710.745	& 723.458	& 736.874	& 750.939	& 765.609	& 780.849\\
+		30	& 715.156	& 724.328	& 734.684	& 746.023	& 758.233	& 771.227	& 784.938	& 799.311	& 814.302	& 829.873\\
+		31	& 763.261	& 772.637	& 783.223	& 794.808	& 807.280	& 820.552	& 834.555	& 849.233	& 864.541	& 880.440\\
+		32	& 812.935	& 822.515	& 833.326	& 845.156	& 857.888	& 871.435	& 885.727	& 900.707	& 916.328	& 932.551\\
+		33	& 864.179	& 873.960	& 884.995	& 897.067	& 910.057	& 923.877	& 938.455	& 953.733	& 969.664	& -\\
+		34	& 916.992	& 926.973	& 938.231	& 950.542	& 963.787	& -	& -	& -	& -	& -\\
+		35	& 971.375	& -	& -	& -	& -	& -	& -	& -	& -	& -
+	\end{tabular}
+	\end{adjustwidth}
+\end{table}
+
 
 %      \chapter{The Second Appendix, for Fun}
 %
