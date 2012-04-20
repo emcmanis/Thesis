@@ -565,7 +565,7 @@ The coefficient of the $\log(n)$ term wasn't quite 2, and while the fit looked g
 
 Based on this, we decided to try a fit to the equation $\lambda_n = a + b n + c n^2$ (figure \ref{fig:quadfit}). We found a general equation of 
 \eqn{
-lambda_n = 0.0578679 + 0.0517547 n + 0.785389 n^2\mbox{,}
+\lambda_n = (0.058 \pm 0.001) + (0.0518 \pm 0.0001) n + ( 0.785389 \pm 0.000003) n^2\mbox{,}
 }
 which matched the data much better. Residuals for this fit were more random and did not conform to a pattern.
 \begin{figure}[h]
@@ -575,22 +575,26 @@ which matched the data much better. Residuals for this fit were more random and 
 \label{fig:quadfit}
 \end{figure}
 
-We computed the average error in $\lambda_n$ to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good. The difference between these may suggest that our error estimations are too large, but may also be due to the likelihood that our errors are largely systematic rather than random.
+We computed the average error in $\lambda_n$ based on the fit to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good. The difference between these may suggest that our error estimations are too large, but may also be due to the likelihood that our errors are largely systematic rather than random.
 
-In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$\cite{PhysRevA.50.228}. They find $1 / \lambda_1$ to be $1.19061227 \pm 0.00000004$, obtained using a linear combination of atomic orbitals method. This translates to a $\lambda_1$ of $0.83990399 \pm 0.00000003$. 
+In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$\cite{PhysRevA.50.228}. Gomes, Chacham, and Mohallem find $1 / \lambda_1$ to be $1.19061227 \pm 0.00000004$, obtained using a linear combination of atomic orbitals method. This translates to a $\lambda_1$ of $0.83990399 \pm 0.00000003$. 
 
 This result differs significantly from ours, $\lambda_1 = 0.87 \pm 0.3$. Our result is an overestimate, consistent with our predictions in the last section, but it's even more of an overestimate than expected; their numerically calculated value does not lie within our error bars. However, this difference vanishes if we rerun the calculation and collect the error in $\Delta \rho$ as well as the error in $\rho_{\infty}$. We can therefore see that for a better estimation of the erros in our $\lambda_n$s, we should also include the effects of changing $\Delta \rho$.
 
 \section{Angular Momentum}
 
-Adding angular momentum is simple. Because the potential is spherically symmetric, the energies and locations of the bound states will only be based on the radial portion of the wave equation, so we still don't need to consider the spherical harmonics. The radial equation is now
+Adding angular momentum is simple. Writing our wavefunctions as
+\eqn{
+\psi_{n,l,m} (\rho,\theta,\phi) = \frac{1}{\rho}u_{n,l}(\rho) Y_{l,m}(\theta, \phi)
+}
+the radial and angular portions separate. We update our radial equation to take into account angular momentum:
 \eqn{
 -u'' - \left(\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}\right) u = E u
 \label{eq:angmomentum}
 }
-which can again be discretized using \eqref{f2difference}. 
+and again discretize it using \eqref{f2difference}. 
 
-We re-ran our program and obtained curves showing the critical values of $\lambda$ for $l = 1$ to $10$. These are plotted in figure \ref{fig:allthelcs} along with the $l = 0$ data from the previous section.
+Following the same procedure as before, we can obtain critical values of $\lambda$ for $l = 1$ to $10$. These are plotted in figure \ref{fig:allthelcs} along with the $l = 0$ data from the previous section.
 
 \begin{figure}[h]
 \centering
@@ -599,7 +603,7 @@ We re-ran our program and obtained curves showing the critical values of $\lambd
 \label{fig:allthelcs}
 \end{figure}
 
-Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$. $B$ and $C$ vary linearly with $l$, while $A$ varies quadratically. This is shown in figure \ref{fig:parameters}, while the data itself is in table \ref{tab:fitparams}.
+Again, all the curves neatly fit a quadratic. The constants of the quadratic are dependent on $l$ and listed in table \ref{tab:fitparams}. $B$ and $C$ appear to vary linearly with $l$, while $A$ seems to vary quadratically. This is shown in figure \ref{fig:parameters}.
 
 \begin{figure}[h]
 \centering \subfloat[][]{\label{paras:as}
@@ -633,9 +637,14 @@ Again, all the curves neatly fit a quadratic. The constants of the quadratic are
 	\end{tabular}
 \end{table}
 
-To understand why this is, we recall that when $l$ is non-zero, the quantum number $n$ becomes the \emph{radial} quantum number. The principal quantum number, meanwhile, becomes $n + l$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
+We note that when $l$ is non-zero, the quantum number $n$ becomes the \emph{radial} quantum number. Our numerical procedure finds the lowest energy state for a given value of $l$, and labels that state with $n = 1$. The next is then $n = 2$, and so on. The principal quantum number now becomes $n_p = n + l$. Thus, at principal quantum number $n_p = 1$, we require that $l = 0$. At $n_p = 2$, we can have $l = 0$ or $l = 1$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
 
-We can instead assume that $\lambda_n$ depends quadratically on the principal quantum number, not the radial quantum number, is quadratic. When we do this, we get a slightly different set of plots (figure \ref{fig:alllcs-principal}).
+We can instead assume that $\lambda_n$ depends quadratically on the principal quantum number, not the radial quantum number. This equation would look like
+\eq{
+\lambda_{n_p} &= \tilde{A} + \tilde{B} n_p + \tilde{C} n_p^2 \\
+&= \tilde{A} + \tilde{B} (n + l) + \tilde{C} (n + l)^2\mbox{.}
+}
+When we do this, we get a slightly different set of plots (figure \ref{fig:alllcs-principal}).
 
 \begin{figure}[h]
 \centering
@@ -644,7 +653,7 @@ We can instead assume that $\lambda_n$ depends quadratically on the principal qu
 \label{fig:alllcs-principal}
 \end{figure}
 
-While the plots are more stacked on top of each other, they have the same shape and the same kinds of dependence in their fit parameters $\tilde{A}$, $\tilde{B}$, and $\tilde{C}$.
+While the plots are closer together, they do still diverge, indicating $\tilde{A}$, $\tilde{B}$, and $\tilde{C}$ still have some dependence on $l$.
 
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
@@ -659,13 +668,20 @@ While the plots are more stacked on top of each other, they have the same shape 
 
 We used the Bohr model to get an approximate relationship between the number of bound states of the Yukawa potential and the value of the length scale. We then obtained the same relationship directly from the potential using the finite difference method. As with other central force potentials, the Bohr method gave a reasonable approximation, but the numerical picture was more subtle. 
 
-We found that the relationship between the number of bound states and the length scale was of the form $\lambda_n = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants dependent on the quantum number $l$. When we compared our value for $\lambda_1$ with a value obtained in \cite{PhysRevA.50.228}, we found that they differed significantly. Our value was higher than theirs by 3.3\%, a difference greater than our error bars could explain. The direction of this error seems to confirm our systematic overestimate of the values of $\lambda_n$s. The error can be reduced by looking at the errors in $\Delta \rho$ as well as those in $\rho_{\infty}$, but this was not done for all data points.
+We found that the relationship between the number of bound states $n$ and the non-dimensionalized length scale $\lambda$ was of the form $\lambda_n = a(l) + b(l)n + c(l)n^2$, where $a$, $b$, and $c$ are constants dependent on the quantum number $l$. When we compared our value for $\lambda_1$ with a value obtained in \cite{PhysRevA.50.228}, we found that they differed significantly. Our value was higher than theirs by 3.3\%, a difference greater than our error bars could explain. The direction of this error seems to confirm our systematic overestimate of the values of $\lambda_n$s. The discrepancy can be explained by looking at the errors in $\Delta \rho$ as well as those in $\rho_{\infty}$, but this was not done for all data points.
 
-While this method was intended to look at the number of bound states, not the energies, a decent energy spectrum could be obtained using the finite difference method as well. However, in order to do this, one would need a different routine for finding the eigenvalues of the Hamiltonian matrix, as the continuous eigenvalues above zero introduced a lot of noise into our data. 
+While this method was intended to look at the number of bound states, not the energies, a possible extension of this work would be to obtain an energy spectrum at some value of $\lambda$. However, in order to do this, one would need a different routine for finding the eigenvalues of the Hamiltonian matrix, as the continuous eigenvalues above zero create computational challenges.
+
+We could also extend this work to investigating the unstable bound states -- those states with $E > 0$ that are still bound. These states should primarily occur at higher values of $\lambda$, and should be distinguishable from scattering states. 
+
+
 %
 %If you feel it necessary to include an appendix, it goes here.
 \appendix
 \chapter{Numerical Methods}
+
+\section{Rootfinder}
+
 To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
 
 Here it is in \emph{Mathematica} code:
@@ -723,10 +739,62 @@ As is clear from the code, the function doing the actual work is just Mathematic
 
 Finding a single $\lambda_{n}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
 
-This is where the cluster comes in. Mathematica has easy build in parallelization methods, and once we have ranges to bisect, each $\lambda_{n}$ calculation is independent from all the others. Distributing these calculations among multiple cores speeds the process up considerably, making this thesis possible.\footnote{I put this in because it felt like it should be in here, but have really no idea what to say.}
+However, the problem is embarrassingly parallel. Each bisection to find a value of $\lambda_n$ is independent of all the others, allowing us to easily split this problem into chunks. We used Mathematica's Lightweight Grid to run the computation on a cluster of machines. Distributing these calculations among multiple cores speeds the process up by about 50\% per core added. 
+
+\section{Fits}
+\subsection{Linear}
+Our first fit was a linear least-squares fit  to a log-log plot of the data. The methods we used to compute the fit follow the ones outlined in Taylor\cite{taylor_introduction_1997}. We first compute weights for each point, based on its error, then use that to weight the least-squares calculation.
+
+Here it is in Mathematica code:
+\begin{Verbatim}
+weights = Table[1/(logerrs[[i]]^2), {i, 1, Length[logerrs]}];
+
+x[i_] := loglog[[i, 1]];
+y[i_] := loglog[[i, 2]];
+w[i_] := weights[[i]]; 
+len = Length[loglog]
+
+Delta = Sum[w[[i]], {i, len}]*Sum[w[[i]]*x[i]^2, {i, len}] -
+	(Sum[w[[i]]*x[i], {i, len}])^2;
+
+A = 1/Delta*(
+	Sum[w[i]*x[i]^2, {i, len}] *Sum[w[i]*y[i], {i, len}] - 
+	Sum[w[i]*x[i], {i, len}]*Sum[w[i]*x[i]*y[i], {i, len}])
+	
+B = 1/Delta*(
+	Sum[w[i], {i, len}]*Sum[w[i]*x[i]*y[i], {i, len}] - 
+	Sum[w[i]*x[i], {i, len}]*Sum[w[i]*y[i], {i, len}])
+\end{Verbatim}
+
+\subsection{Quadratic}
+For our quadratic fit, we decided to ignore data weights as the errors were largely on similar orders of magnitude.  Instead of calculating the coefficients of the fit independently, we did it with a matrix inversion, because the expressions for each component are incredibly complicated. More precisely, we solved the equation
+\eqn{
+\left(
+\begin{array}{ccc}
+N & \sum n_i &  \sum n_i^2 \\
+\sum n_i & \sum n_i ^2 & \sum n_i^3 \\
+\sum n_i ^2 & \sum n_i^3 & \sum n_i ^4
+\end{array}
+\right)
+\left(
+\begin{array}{c}
+A \\
+B \\
+C \\
+\end{array}
+\right)
+=
+\left(
+\begin{array}{c}
+\sum \lambda_i \\
+\sum n_i \lambda_i \\
+\sum n_i^2 \lambda_i
+\end{array}
+\right)
+}
+for $A$, $B$, and $C$. For the matrix inversion, we just used the one built into Mathematica. Code for this is not included, only because the equation above is basically all of it.
 
 \chapter{Data}
-
 \begin{table}[h]
 \centering
 	\caption{Full data table for $\lambda_n$ at $l = 0$}
