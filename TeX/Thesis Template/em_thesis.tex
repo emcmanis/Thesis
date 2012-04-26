@@ -191,7 +191,7 @@ There are an infinite number of bound states labelled by $n$, and as $n$ gets la
 
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/densityplots}
+\includegraphics[scale=0.55]{Figures/densityplots}
 \caption[Density plots of the first four spherically symmetric Coulomb wave functions]{The first four spherically symmetric wave functions. This plot shows the probability density, $\psi(\rho)^2$, in the x-y plane. Again, $\rho = r/\alpha$ is the non-dimensionalized radial coordinate.}
 \label{fig:boundstates}
 \end{figure}
@@ -289,7 +289,7 @@ For the Coulomb potential, this is perfect -- the semi-classical Bohr model give
 
 \section{Approximating the Yukawa Potential with a Cutoff}
 
-Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$ behavior to dominate, and the potential to behave similarly to the Coulomb potential. When $r >> l$, we expect the exponential term to dominate, and the potential to go to zero. As a na\"ive approximation of this behavior, we can consider cutting off the Coulomb potential at $r = l$. In keeping with the nondimensionalization earlier, we define $\lambda \equiv \frac{l}{\alpha}$. Our effective potential is now
+Returning to the the Yukawa potential, when $r \ll \ell$ we expect the $1/r$ behavior to dominate, and the potential to behave similarly to the Coulomb potential. When $r \gg \ell$, we expect the exponential term to dominate, and the potential to go to zero. As a na\"ive approximation of this behavior, we can consider cutting off the Coulomb potential at $r = \ell$. In keeping with the nondimensionalization earlier, we define $\lambda \equiv \frac{\ell}{\alpha}$. Our effective potential is now
 \eqn{
 \tilde{V}_{\mathrm{eff}}(\rho) = \left\{
 \begin{array}{lr}
@@ -300,89 +300,88 @@ Returning to the the Yukawa potential, when $r << l$ we expect the $\frac{1}{r}$
 \label{eq:naive}
 }
 
-\fig{
-\includegraphics{Figures/cutoff}}
-{
-\caption[Yukawa orbits with cutoff]{A polar plot of the first three Bohr orbits along with a cutoff at $\lambda = 2.5$. Because the $n=3$ orbit lies outside the cutoff, it would not be allowed under \eqref{eq:naive}.}
-\label{fig:cutoff}
-}
+\begin{figure}[h]
+\centering
+	\includegraphics{Figures/cutoff}
+	\caption[Yukawa orbits with cutoff]{A polar plot of the first three Bohr orbits along with a cutoff at $\lambda = 2.5$. Because the $n=3$ orbit lies outside the cutoff, it would not be allowed under \eqref{eq:naive}.}
+	\label{fig:cutoff}
+\end{figure}
 
-This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states (figure \ref{fig:cutoff}). Any bound state allowed under \eqref{eq:rho-n} for which $\rho$ exceeds $\lambda$ will not exist. If we imagine increasing $\lambda$ gradually, a new bound state will be added whenever we pass through a point $\lambda = n^2$ (for some integer $n$). We call these points the critical values of lambda, notated $\lambda_{n}$, where $n$ is a positive integer that corresponds to the number of bound states just above that critical value. Based on this treatment, we expect $\lambda_{n} = n^2$.
+This cutoff means that the relationship between $\rho$ and $n$ holds while $\rho < \lambda$, but breaks down after, limiting the number of bound states (figure \ref{fig:cutoff}). Any bound state allowed under \eqref{eq:rho-n} for which $\rho$ exceeds $\lambda$ will not exist. If we imagine increasing $\lambda$ gradually, a new bound state will be added whenever we pass through a point $\lambda = n^2$ (for some integer $n$). We call these points the critical values of $\lambda$, notated $\lambda_{n}$, where $n$ is a positive integer that corresponds to the number of bound states just above that critical value. Based on this treatment, we expect $\lambda_{n} = n^2$.
 
 \section{Application to Yukawa Potential}
 To perform a more careful analysis of the potential, we look at the graph of its effective potential (figure \ref{fig:yveff}):
 \eqn{
-\tilde{V}_{\mathrm{eff}} = \frac{n^2}{\rho^2} - \frac{2}{\rho}e^{-\rho/\lambda}
+\tilde{V}_{\mathrm{eff}} = \frac{n^2}{\rho^2} - \frac{2}{\rho}e^{-\rho/\lambda}\mbox{.}
 \label{eq:yveff}
 }
- 
-As before, we can see that bound states exist for some $n$ and $\rho$ where $V_{\mathrm{eff}}$ is less than 0, and these bound states have circular orbits at the minimum of $V_{\mathrm{eff}}$. However, there also appear to be bound states \emph{above} $E = 0$. Clasically, these are perfectly valid elliptical orbits. Quantum mechanically, a particle in one of these states can tunnel through and become a scattering state. This gives us two possible definitions for a critical value of $\lambda$.  The first is where the minimum of $V_{\mathrm{eff}}$ for some $n$ moves below zero -- that is, that value of lambda allows an additional stable bound state ($E < 0$). The other occurs where $V_{\mathrm{eff}}$ for some $n$ first starts to have a minimum at all, giving it a bound state with $E>0$. These two critical points are shown in figure \ref{fig:critpoints}
+As before, we can see that bound states exist for some $n$ and $\rho$ where $V_{\mathrm{eff}}$ is less than 0, and these bound states include circular orbits at the minimum of $V_{\mathrm{eff}}$. However, there also appear to be bound states \emph{above} $E = 0$. Classically, these are perfectly valid orbits. Quantum mechanically, a particle in one of these states can tunnel through and become a scattering state. This gives us two possible definitions for a critical value of $\lambda$.  The first is where the minimum of $V_{\mathrm{eff}}$ for some $n$ moves below zero -- that is, where the value of lambda allows an additional stable bound state ($E < 0$). The other occurs where $V_{\mathrm{eff}}$ for some $n$ first starts to have a minimum at all, giving it a bound state with $E>0$. These two critical points are shown in figure \ref{fig:critpoints}.
 
-\begin{figure}[h!]
-\center{\includegraphics[width=\textwidth]{Figures/yukawa_Veff}}
-\caption[The effective Yukawa potential]{The effective Yukawa potential. \eqref{eq:yveff} was plotted for $n = 1$ through $6$ with $\lambda = 32$. As with Coulomb, the curves get increasingly shallow as $n$ increases. The curves for $n = 1$ through $4$ all have a circular orbit with $E < 0$, that is, they have a stable bound state. The curve for $n = 5$ has a very slight minimum, but it does not go below $0$, meaning this corresponds to an unstable bound state. The $n = 6$ curve does not have a minimum at all. For all curves with a minimum, the approximate location of this minimum has been plotted on the $\rho$ axis and the value of the energy at this minimum on the $V_{\mathrm{eff}}$ axis.}
-\label{fig:yveff}
+\begin{figure}[h]
+	\center{\includegraphics[width=\textwidth]{Figures/yukawa_Veff}}
+	\caption[The effective Yukawa potential]{The effective Yukawa potential. \eqref{eq:yveff} was plotted for $n = 1$ through $6$ with $\lambda = 32$. As with Coulomb, the curves get increasingly shallow as $n$ increases. The curves for $n = 1$ through $4$ all have a circular orbit with $E < 0$, that is, they have a stable Bohr bound state. The curve for $n = 5$ has a very slight minimum, but it does not go below $0$, corresponding to an unstable Bohr bound state. The $n = 6$ curve does not have a minimum at all. For all curves with a minimum, the approximate location of this minimum has been plotted on the $\rho$ axis and the value of the energy at this minimum on the $V_{\mathrm{eff}}$ axis.}
+	\label{fig:yveff}
 \end{figure}
 \begin{figure}[h]
-\center{\includegraphics{Figures/criticalpoints}}
-\caption[The two critical values of $\lambda$]{Two curves showing $V_{\mathrm{eff}}$ at the two critical values of $\lambda$ -- one where a new stable bound state appears, and one where a new bound state with $E > 0$ appears.}
-\label{fig:critpoints}
+	\center{\includegraphics{Figures/criticalpoints}}
+	\caption[The two critical values of $\lambda$]{Two curves showing $V_{\mathrm{eff}}$ at the two critical values of $\lambda$ -- one where a new stable bound state appears, and one where a new bound state with $E > 0$ appears.}
+	\label{fig:critpoints}
 \end{figure}
 
 \subsection{Stable bound states}
 The first of these critical values occurs when the minimum of $V_{\mathrm{eff}}$ is 0. We again start by taking the derivative of \eqref{eq:yveff} and setting it to 0, obtaining
 \begin{equation}
-\frac{dV}{d\rho}\Big |_{\rho = \rho_0} =0 = -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}
+\frac{dV}{d\rho}\Big |_{\rho = \rho_0} =0 = -\frac{2n^2}{\rho_0^3} + \frac{2}{\rho_0^2}e^{-\rho_0/\lambda} + \frac{2}{\rho_0 \lambda} e^{-\rho_0/\lambda}\mbox{,}
 \label{vmin}
 \end{equation}
-where $\rho_0$ is the value of $\rho$ when $V_{\mathrm{eff}}$ is minimized. This equation holds for any $\lambda$ has no general solution, but we can find one for the specific case where $\lambda$ is some critical value $\lambda_n$ and $V_{\mathrm{eff}}(\rho_0) = 0$ by solving the equation
+where $\rho_0$ is the value of $\rho$ when $V_{\mathrm{eff}}$ is minimized. This equation holds for any $\lambda$ and has no closed form solution, but we can find one for the specific case where $\lambda$ is some critical value $\lambda_n$ and $V_{\mathrm{eff}}(\rho_0) = 0$. We solve the equation
 \begin{equation}
 V_{\mathrm{eff}}(\rho_0)=0 = n^2 - 2\rho_0 e^{-\rho_0/\lambda_n} 
 \end{equation}
 for $n^2$
-and plugging the result into \eqref{vmin}, obtaining
+and plug the result into \eqref{vmin}, obtaining
 \begin{equation}
 \rho_0 = \lambda_n \mbox{.}
 \end{equation}
 Plugging this back into the equation for $V_{\mathrm{eff}}(\rho_0)$, we find that
 \begin{equation}
-\lambda_n=\frac{e}{2}\, n^2\approx 1.36\, n^2
+\lambda_n=\frac{e}{2}\, n^2\approx 1.36\, n^2\mbox{,}
 \label{eq:stable}
 \end{equation}
-which is pretty close to the behavior $\lambda_{n} = n^2$ from the cutoff Coulomb potential above. 
+which is pretty close to the $\lambda_{n} = n^2$ behavior we obtained earlier.
 
 \subsection{Unstable bound states}
 
 Having determined a formula for the $\lambda_n$s at which new bound states with $E < 0$ appear, we turn to the appearance of classically bound states with $E > 0$. A bound state exists when $V_{\mathrm{eff}}$ has a minimum. We found the $\rho_0$ where this minimum occurs in \eqref {vmin}, which we can rewrite as
 \begin{equation}
-n^2 = \left( \rho_0 + \frac{\rho_0^2}{\lambda} \right) e^{-\rho_0/\lambda}
+n^2 = \left( \rho_0 + \frac{\rho_0^2}{\lambda} \right) e^{-\rho_0/\lambda}\mbox{.}
 \label{eq:unstablemins}
 \end{equation}
 The right side of this equation will have some maximum, which will be the last point for which the equation can be solved -- after that, the value of $n^2$ will always be greater than the right side. This is shown in figure \ref{fig:unstableveff}. For a given $n$, this gives $\lambda_n$.
 \begin{figure}[h]
-\centering
-\includegraphics{Figures/unstableveff}
-\caption[$n^2$ as a function of $\rho_0$]{This is a plot of \eqref{eq:unstablemins} with $\lambda = 2$, showing its maximum value. At this value of $\lambda$, the $n = 1$ bound state exists, because for $n = 1$ there is some $\rho_0$ that satisfies \eqref{eq:unstablemins}. This is not the case for the $n = 2$ bound state, so the $n = 2$ bound state does not exist. Increasing $\lambda$ scales the curve, increasing the number of bound states.}
-\label{fig:unstableveff}
+	\centering
+	\includegraphics{Figures/unstableveff}
+	\caption[$n^2$ as a function of $\rho_0$]{A plot of \eqref{eq:unstablemins} with $\lambda = 2$, showing its maximum value. At this value of $\lambda$, the $n = 1$ bound state exists, because for $n = 1$ there is some $\rho_0$ that satisfies \eqref{eq:unstablemins}. This is not the case for the $n = 2$ bound state, so the $n = 2$ bound state does not exist. Increasing $\lambda$ scales the curve, increasing the number of bound states.}
+	\label{fig:unstableveff}
 \end{figure}
 To find this maximum, we differentiate with respect to $\rho_0$ and set the result 0, obtaining
 \begin{equation}
 0 = (1+2 \frac{\rho_0}{\lambda_n}) - \frac{1}{\lambda_n}(\rho_0 + \frac{\rho_0^2}{\lambda_n})\mbox{.} 
 \end{equation}
-This is a quadratic in $\rho_0$ and can be solved easily.
-As $\rho_0$ is a real physical quantity that can't be negative, we can discard one solution, obtaining
+This is quadratic in $\rho_0$ and can be solved easily.
+As $\rho_0$ is a real, physical quantity that can't be negative, we can discard one solution, obtaining
 \begin{equation}
 \rho_0 = \frac{\lambda_n}{2}(1+\sqrt{5})\mbox{.}
 \end{equation}
 We can plug this in to \eqref{vmin} to find the relationship between $\lambda$ and $n$:
 \begin{equation}
-n^2 = \lambda_{n}(2 + \sqrt{5})e^{-(1+ \sqrt{5})/2} \Rightarrow \lambda_n =  1.19\, n^2
+n^2 = \lambda_{n}(2 + \sqrt{5})e^{-(1+ \sqrt{5})/2}\, \Rightarrow \, \lambda_n =  1.19\, n^2\mbox{.}
 \label{eq:unstable}
 \end{equation}
 \section{Summary}
 Using the Bohr model with various assumptions to analyze the Yukawa potential yields three different expressions for the critical values $\lambda_n$: \eqref{eq:naive}, \eqref{eq:stable}, and \eqref{eq:unstable}. Each of these has the form 
 \eqn{
-\lambda_{n} = a n^2
+\lambda_{n} = a n^2\mbox{,}
 }
 where $a$ is some constant of order one. This suggests that when performing our numerics, we will find critical values of lambda that are proportional to the square of the number of bound states. 
 
@@ -392,13 +391,13 @@ When applied to deuterium, we have $\lambda = 1.21245$. This suggests deuterium 
 
 \chapter{Numerical Methods and Results}
 
-In the previous chapter, we used semi-classical methods to analytically obtain an estimate for the number of bound states allowed by the Yukawa potential for a given $\lambda$.  We now turn our attention to the Schr\"odinger Wave Equation in order to numerically determine the critical values of $\lambda$ at which a new bound state appears. We will first focus on states with no angular momentum, which have spherically symmetric bound states. We will then generalize to states with non-zero angular momentum.
+In the previous chapter, we used semi-classical methods to analytically obtain an estimate for the number of bound states allowed by the Yukawa potential as a function of $\lambda$.  We now turn our attention to the Schr\"odinger wave equation in order to numerically determine the critical values of $\lambda$ at which new bound states appear. We will first focus on states with no angular momentum, which have spherically symmetric bound states. We will then generalize to states with non-zero angular momentum.
 
 \section{The Hamiltonian}
 
 Schr\"odinger's equation for states $\psi$ with definite energy $E$ can be written as
 \eqn{
-H \psi = E\psi
+H \psi = E\psi\mbox{,}
 \label{eq:hamiltonian}
 }
 where $H$ is the Hamiltonian operator, $H =-\frac{\hbar^2}{2m}\nabla^2 +V$.  We will begin by focusing on spherically symmetric bound states, so we will only be concerned with the $r$ component of the $\nabla$ operator. \eqref{eq:hamiltonian} then becomes
@@ -426,13 +425,13 @@ into the expression in \eqref{eq:hnondim}\cite{griffiths_introduction_2005}. Thi
 }
 
 \section{Numerics: The Finite Difference Method}
-The finite difference method transforms a differential equation into a matrix problem\cite{numerical_recipes}. It does this by approximating the first and second derivatives of a function on a discrete grid of points $\rho_n$ which are a distance $\Delta \rho$ apart. The function $u(\rho)$ then becomes a function $u(\rho_n)$. The grid runs from $\rho_1$ to some $\rho_N$. Using the concept of the derivative as the slope of the tangent line at some point, we can write
+The finite difference method transforms a differential equation into a matrix problem \cite{numerical_recipes}. It does this by approximating the first and second derivatives of a function on a discrete grid of points $\rho_n$ which are a distance $\Delta \rho$ apart. The function $u(\rho)$ then becomes a function $u(\rho_n)$. The grid runs from $\rho_1$ to some $\rho_N$. Using the concept of the derivative as the slope of the tangent line at some point, we can write
 \eqn{
-u'(\rho_n) = \frac{u(\rho_n + \Delta \rho) - u(\rho_n - \Delta \rho)}{2 \Delta \rho} - O(\Delta{\rho}^2)
+u'(\rho_n) = \frac{u(\rho_n + \Delta \rho) - u(\rho_n - \Delta \rho)}{2 \Delta \rho} - O(\Delta{\rho}^2)\mbox{,}
 \label{fdifference}
 }
 \eqn{
-u''(\rho_n) = \frac{u(\rho_n + \Delta \rho) - 2 u(\rho_n) + u(\rho_n - \Delta \rho)}{\Delta \rho^2}-O(\Delta{\rho}^2) 
+u''(\rho_n) = \frac{u(\rho_n + \Delta \rho) - 2 u(\rho_n) + u(\rho_n - \Delta \rho)}{\Delta \rho^2}-O(\Delta{\rho}^2)\mbox{.}
 \label{f2difference}
 }
 Applying \eqref{f2difference} to our differential equation in \eqref{eq:hamiltonianfinal}, we obtain
@@ -440,7 +439,7 @@ Applying \eqref{f2difference} to our differential equation in \eqref{eq:hamilton
 -u_{n-1}\frac{1}{\Delta \rho^2} - u_n\left(\frac{2} {\Delta \rho^2} -  \frac{2}{\rho_n}e^{-\rho_n/\lambda} \right) - u_{n-1}\frac{1}{\Delta \rho^2}  = E u_n\mbox{.}
 \label{eq:hamiltonian-disc}
 }
-For the interior points, there are no concerns, but at the beginning we require a $u_0$ and at the end we need a $u_{N+1}$ in order to satisfy \eqref{eq:hamiltonian-disc}. For our problem, we set $u_0 = u(0)$  and $u_{N+1} = u(\infty)$. Our substitution $u(\rho) = \rho \psi(\rho)$ ensures that $u(0) = 0$, and our assumption that we are working with a bound state implies that $u(\infty) = 0$. Because we cannot practically calculate anything infinitely far out, we define some $\rho_{\infty}$ and use $u(\rho_{\infty})$ as an approximation for $u(\infty)$. We therefore require that $u_0 = u_{N+1} = 0$.
+For the interior points there are no concerns, but at the beginning we require a $u_0$ and at the end we need a $u_{N+1}$ in order to satisfy \eqref{eq:hamiltonian-disc}. For our problem, we set $u_0 = u(0)$  and $u_{N+1} = u(\infty)$. Our substitution $u(\rho) = \rho \psi(\rho)$ ensures that $u(0) = 0$, and our assumption that we are working with a bound state implies that $u(\infty) = 0$. Because we cannot practically calculate anything infinitely far out, we define some $\rho_{\infty}$ and use $u(\rho_{\infty})$ as an approximation for $u(\infty)$. We therefore require that $u_0 = u_{N+1} = 0$.
 
 We can now construct a Hamiltonian matrix using \eqref{eq:hamiltonian-disc}. The matrix will have entries on the off diagonal and diagonal and nowhere else:
 \begin{equation*}H = \left(
@@ -454,27 +453,27 @@ We can now construct a Hamiltonian matrix using \eqref{eq:hamiltonian-disc}. The
 \end{array}
 \right)
 \end{equation*}
-The eigenvectors of this matrix will be the wave functions $u(\rho_n)$, and the eigenvalues will be the energies of those wave functions. For the calculation of these eigenvalues and eigenvectors, we rely on Mathematica's built-in Eigenvalues[ ] command. Mathematica uses the sparseness of the array to optimize the calculation, speeding it up immensely. 
+The eigenvectors of this matrix will be the wave functions $u(\rho_n)$, and the eigenvalues will be the energies of the corresponding states. For the calculation of these eigenvalues and eigenvectors, we rely on Mathematica's built-in Eigenvalues[ ] command, which uses the sparsity of the matrix to optimize the calculation. 
 
 Using this, we can now see what our wave functions actually look like. For bound states where $n^2 << \lambda$, we find that the bound states look very similar to hydrogen (figure \ref{fig:hyd-yukawa}).
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/n2hydyukawa}
-\caption[The $n = 2$ bound states for the Yukawa potential and Coulomb potential]{The $n = 2$ bound states for the Yukawa potential and Coulomb potential. The Yukawa potential was calculated using my finite difference Hamiltonian with $\lambda = 20$ and  $\rho_{\infty} = 20*20 = 400$. The Coulomb wave function is the exact $n=2$ wave function, scaled by a constant to match the Yukawa function. The plot only extends out to $\rho = 30$ in order to see the earlier behavior; the function is remains 0 further out.}
+\caption[The $n = 2$ bound states for the Yukawa potential and Coulomb potential]{The $n = 2$ bound states for the Yukawa potential and Coulomb potential. The Yukawa potential was calculated using my finite difference Hamiltonian with $\lambda = 20$ and  $\rho_{\infty} = 20*20 = 400$. The Coulomb wave function is the exact $n=2$ wave function, scaled by a constant to match the Yukawa function. The plot only extends out to $\rho = 30$ in order to see the earlier behavior; the function remains close to 0 further out.}
 \label{fig:hyd-yukawa}
 \end{figure}
 As $\lambda$ increases and more bound states are possible, the wave functions get more interesting, as in figure \ref{fig:largebound}.
 \begin{figure}[h!]
 \centering
 \includegraphics{Figures/largebound}
-\caption[The $n=14$ bound state at $\lambda = 200$]{The $n=14$ bound state at $\lambda = 200$, obtained with $\Delta \rho = 0.1$ and $\rho_{\infty} = 4000$. The $n=14$ Coulomb wave function is shown as well (scaled to match). At this value of $\lambda$, the $n=14$ state only recently became bound. This plot shows the whole range where anything interesting is going on -- again, the function has gone to 0 and will stay there.}
+\caption[The $n=14$ bound state at $\lambda = 200$]{The $n=14$ bound state at $\lambda = 200$, obtained with $\Delta \rho = 0.1$ and $\rho_{\infty} = 4000$. The $n=14$ Coulomb wave function is shown as well (scaled to match). At this value of $\lambda$, the $n=14$ state only recently became bound. This plot shows the whole range where anything interesting is going on -- again, past $\rho = 700$, the function has gone to 0 and will stay there.}
 \label{fig:largebound}
 \end{figure}
 \section{Finding Critical Values of Lambda}
-Let us define a critical value of $\lambda$ as the value of $\lambda$ where the Hamiltonian matrix gains a new negative eigenvalue. $\lambda_n$ will be the nth critical value, so that for $\lambda \geq \lambda_n$ we have at least $n$ bound states with $E < 0$. The subscript $n$ denotes the value of the principal quantum number, $n$, at this new eigenstate. This is similar to our definition in section 1.4.1, updated for the quantum mechanical case.
+Let us define a critical value of $\lambda$ as the value of $\lambda$ where the Hamiltonian matrix gains a new negative eigenvalue. $\lambda_n$ will be the $n$th critical value, so that for $\lambda \geq \lambda_n$ we have at least $n$ bound states with $E < 0$. This is similar to our definition in section 1.4.1, updated for the quantum mechanical case.
 In order to find the critical values, we calculate the number of negative eigenvalues at each value of $\lambda$ and look for a place where that number increases using a variation on rootfinding. For a further discussion of the exact methods used, see Appendix A.
 
-We are looking for wave functions $u(\rho)$ that behave like the ones in figure \ref{fig:scatt-to-bound}, where we plot the same state with varying $\lambda$ as we pass through a critical value. In \subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, that's meaningless -- the way we set up our numerics requires it.
+We are looking for wave functions $u(\rho)$ that behave like the ones in figure \ref{fig:scatt-to-bound}, where we plot the same state with varying $\lambda$ as we pass through a critical value. In \subref{scatt12-5} the state is unambiguously scattering. While it does go to 0 at $\rho_{\infty}$, this behavior is purely an artifact of the way we set up our Hamiltonian.
 The function primarily looks like that of a free particle in a box of size $\rho_{\infty}$. 
  In \subref{scatt12-9} it starts to level out, and in \subref{bound13-1} the state has become bound -- the function goes to zero before $\rho_{\infty}$ and stays there. Finally, in \subref{bound14} the state is clearly bound, going to 0 before $\rho_{\infty}$. 
 
@@ -489,20 +488,20 @@ The function primarily looks like that of a free particle in a box of size $\rho
 \subfloat[][$\lambda = 14.0$]{\label{bound14}%
 \includegraphics[width=0.5\textwidth]{Figures/14-bound}}
 \caption[The progression of an eigenstate from scattering to bound]
-{This figure shows the progression of the $n = 4$ wavefunction $u(\rho)$ from scattering to bound. All wavefunctions were calculated with $\rho_{\infty} = 40 \lambda$ and $\Delta \rho = 0.1$.} 
+{The progression of the $n = 4$ wavefunction $u(\rho)$ from scattering to bound. All wavefunctions were calculated with $\rho_{\infty} = 40 \lambda$ and $\Delta \rho = 0.1$.} 
 \label{fig:scatt-to-bound}
 \end{figure}
 
-\section{Estimating errors}
-In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to fluctuate on lengths scales of order 1 with our non-dimensionalization. At the same time, we require $\rho_{\infty}$ to be large, because what separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time. The values of $\Delta \rho$ and $\rho_\infty$ are then are our two primary sources of error. To determine the errors from each, we look at how much our calculated value for some $\lambda_{n}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$.  
+\section{Estimating Errors}
+In doing our numerical analyses, we would like to have a low $\Delta \rho$ -- after all, we expect the wave function to fluctuate on length scales of order 1 with our non-dimensionalization. At the same time, we require $\rho_{\infty}$ to be large, because what separates bound states from scattering states is their behavior at infinity. This puts us in the frustrating numerical position of not really having anything we can skimp on to save computation time. The values of $\Delta \rho$ and $\rho_\infty$ are then are our two primary sources of error. To determine the errors from each, we look at how much our calculated value for some $\lambda_{n}$ varies with changes in $\Delta \rho$ and $\rho_{\infty}$.  
 
-Consider a particular critical value $\lambda_{4}$. We calculated the value of $\lambda_{4}$ at four different points: $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.1$, $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.05$, $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.1$, and $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.05$. The results of this are in table \ref{tab:errorchanges}. 
+Consider a particular critical value $\lambda_{4}$. We calculate the value of $\lambda_{4}$ at four different points: $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.1$, $\rho_{\infty} = 40\lambda$ and $\Delta \rho = 0.05$, $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.1$, and $\rho_{\infty} = 80\lambda$ and $\Delta \rho = 0.05$. The results of this are in table \ref{tab:errorchanges}. 
 \begin{table}
 \centering
 \begin{tabular}{r|c|c|c|}
 \multicolumn{1}{r}{}
- &  \multicolumn{1}{c}{$\rho_{\infty} = 40*\lambda$}
- & \multicolumn{1}{c}{$\rho_{\infty} = 80*\lambda$}
+ &  \multicolumn{1}{c}{$\rho_{\infty} = 40\lambda$}
+ & \multicolumn{1}{c}{$\rho_{\infty} = 80\lambda$}
  & \multicolumn{1}{l}{} \\
 \cline{2-4}
 $\Delta \rho = 0.1$ & 12.8255 & 12.7543 & $\Delta \lambda_n = 0.0712$\\
@@ -518,7 +517,7 @@ $\Delta \rho = 0.05$ & 12.8233 & 12.7521& $\Delta \lambda_n = 0.0712$ \\
 \caption{Errors in $\Delta \rho$ and $\rho_{\infty}$ for $\lambda_4$.}
 \label{tab:errorchanges}
 \end{table}
-As is seen in the table, changing $\Delta \rho$ creates the same change in $\lambda_4$ regardless of the value of $\rho_{\infty}$. The reverse is also true -- changes in $\rho_{\infty}$ produce the same change in $\lambda_4$, regardless of the value of $\Delta \rho$. We therefore concluded that these errors are independent of each other. In addition, changes in $\rho_{\infty}$ produce a much bigger change in our calculated $\lambda_{n}$ than an equivalent change in $\Delta \rho$, at least in the ranges we are considering here. However, when sufficient errors in $\rho_{\infty}$ were eliminated, errors in $\Delta \rho$ became noticeable.
+As is seen in the table, changing $\Delta \rho$ creates the same change in $\lambda_4$ regardless of the value of $\rho_{\infty}$. The reverse is also true -- changes in $\rho_{\infty}$ produce the same change in $\lambda_4$, regardless of the value of $\Delta \rho$. We therefore conclude that these errors are independent of each other. In addition, changes in $\rho_{\infty}$ produce a much bigger change in our calculated $\lambda_{n}$ than an equivalent change in $\Delta \rho$, at least in the ranges we are considering here. However, when sufficient errors in $\rho_{\infty}$ are eliminated, errors in $\Delta \rho$ become noticeable.
  \begin{figure}[h]
 \centering
 \includegraphics{Figures/asymtote}
@@ -526,9 +525,9 @@ As is seen in the table, changing $\Delta \rho$ creates the same change in $\lam
 \label{fig:asymtote}
 \end{figure} 
 
-When we doubled $\rho_{\infty}$ a few more times, we found that the calculated values of $\lambda_{n}$ appeared to asymptotically decrease, approaching some true value, as shown in figure \ref{fig:asymtote}. The size of the change in $\lambda_4$ is less than half the previous change for each doubling, indicating a rapid convergence. Because each point is closer to the true value than it is to the previous point, we can estimate the error by taking the distance between the two points. Thus, for every value of $\lambda_n$, we compute it first at some value of $\rho_{\infty}$ and $\Delta \rho$, then double $\rho_{\infty}$ and halve $\Delta \rho$. We use the value computed with the larger $\rho_{\infty}$ and smaller $\Delta \rho$ as our data point, and the difference between the two as an estimate of our error.  It is worth noting that our quoted $\lambda_n$ values will all likely be too large based on this method, creating a systematic overestimate of the true value of $\lambda_n$.
+When we double $\rho_{\infty}$ a few more times, we find that the calculated values of $\lambda_{n}$ appears to asymptotically decrease, approaching some true value, as shown in figure \ref{fig:asymtote}. The size of the change in $\lambda_4$ is less than half the previous change for each doubling, indicating a rapid convergence. Because each point is closer to the true value than it is to the previous point, we can estimate the error by taking the distance between the two points. Thus, for every value of $\lambda_n$, we compute it first at some values of $\rho_{\infty}$ and $\Delta \rho$, then double $\rho_{\infty}$ and halve $\Delta \rho$. We use the value computed with the larger $\rho_{\infty}$ and smaller $\Delta \rho$ as our data point, and the difference between the two as an estimate of our error.  It is worth noting that our quoted $\lambda_n$ values will all likely be too large based on this method, creating a systematic overestimate of the true value of $\lambda_n$.
  
-\section{Results and fit}
+\section{Results and Fit}
 We ran our calculation for critical values of $\lambda$ between $0.5$ and $1000$, using a $\Delta \rho$ of 0.1 and a $\rho_{\infty}$ of $40 \lambda$ and $80 \lambda$. We found 35 critical values of $\lambda$, plotted in figures \ref{fig:loglog} and \ref{fig:quadfit}. The values of $\lambda_n$ along with errors are given in table \ref{tab:l0}. At a quick glance, our data looked pretty quadratic -- just what we expected. In order to explore this further, we attempted to fit the data to functions.
 
 \begin{table}[h]
@@ -553,59 +552,62 @@ We ran our calculation for critical values of $\lambda$ between $0.5$ and $1000$
 	\label{tab:l0}
 \end{table}
 
-Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:loglog}). Our fit gave
+Because we were looking for a relationship like $\lambda_n = a n^2$, we first tried a weighted linear fit to a log-log plot (figure \ref{fig:logfit}). Our fit gave
 \eqn{
 log(\lambda_n) = -(0.2246 \pm 0.0003) + (1.9945 \pm 0.0001) \log(n)\mbox{.}
 \label{eq:logfit}
 } 
-The coefficient of the $\log(n)$ term isn't quite 2, and while the fit looks good, it is inaccurate, especially for low values of $n$. When we checked the fit against our measured error bars, the line does not pass through many of them (figure \ref{fig:logerr}). In addition, the residuals seemed to follow a clear pattern, suggesting something systematically wrong with either the data or the fit. From this, we conclude that the dependence is not a pure power law at low $n$.
+The coefficient of the $\log(n)$ term isn't quite 2, and while the fit looks good, it is inaccurate, especially for low values of $n$. When we checked the fit against our measured error bars, the line does not pass through many of them (figure \ref{fig:logerr}). In addition, the residuals seemed to follow a clear pattern, suggesting something is systematically wrong with either the data or the fit. From this, we conclude that the dependence is not a pure power law.
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/loglog}
-\caption[Log-log fit]{Linear fit to a log-log plot of the data.}
+\subfloat[][]{\label{fig:logfit}
+\includegraphics[width=0.5\textwidth]{Figures/loglog}}
+%\hspace{8pt}% 
+\subfloat[][]{\label{fig:logerr}
+\includegraphics[width=0.5\textwidth]{Figures/logerr}}
+\caption[Log-log fit and residuals]{On the left is our linear fit to a log-log plot of the data, and on the right are the residuals of this fit. The residuals are the black dots, while the shaded region shows the error bars for the data points.}
 \label{fig:loglog}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics{Figures/logerr}
-\caption[Residuals of log-log fit]{This plot shows the residuals of the fit (black dots) compared with the error bars for the data points (shaded region). Very few of the black dots lie inside the shaded region, indicating a poor fit.}
-\label{fig:logerr}
-\end{figure}
-Based on this, we decided to try a fit to the equation $\lambda_n = A + B n + C n^2$ (figure \ref{fig:quadfit}). We find a general equation of 
+Based on this, we decided to try a fit to the equation $\lambda_n = A + B n + C n^2$ (figure \ref{fig:qfit}). We find a general equation of 
 \eqn{
 \lambda_n = (0.058 \pm 0.001) + (0.0518 \pm 0.0001) n + ( 0.785389 \pm 0.000003) n^2\mbox{,}
 }
-which matches the data much better. Residuals for this fit looked much better, with more falling inside the error bars (figure \ref{fig:quaderr}). The residuals roughly follow the lower edge of the error bars, which is consistent with the way we asymptotically approach true values.
+which matches the data much better. Residuals for this fit looked much better, with more falling inside the error bars (figure \ref{fig:quaderr}). The residuals roughly follow the lower edges of the error bars, which is consistent with the way we asymptotically approach true values.
+
 \begin{figure}[h]
 \centering
-\includegraphics{Figures/quadfit}
-\caption[Quadratic fit]{Our data again, this time fit to a quadratic.}
+\subfloat[][]{\label{fig:qfit}
+\includegraphics[width=0.5\textwidth]{Figures/quadfit}}
+%\hspace{8pt}% 
+\subfloat[][]{\label{fig:quaderr}
+\includegraphics[width=0.5\textwidth]{Figures/quaderr}}
+\caption[Quadratic fit and residuals]{This is our quadratic fit (left) with residuals (right). Again, the residuals themselves are the black dots, and the shaded region shows the error bars.}
 \label{fig:quadfit}
 \end{figure}
 
-\begin{figure}[h]
-\centering
-\includegraphics{Figures/quaderr}
-\caption[Residuals for quadratic fit]{These are the residuals (black dots) of the quadratic fit compared with the error bars of the data points (shaded region). Many more residuals lay inside the error bars. Those that did not were skewed towards the end of the curve, where the numerical data collected is less accurate.}
-\label{fig:quaderr}
-\end{figure}
+%\begin{figure}[h]
+%\centering
+%\includegraphics{Figures/quaderr}
+%\caption[Residuals for quadratic fit]{These are the residuals (black dots) of the quadratic fit compared with the error bars of the data points (shaded region). Many more residuals lay inside the error bars. Those that did not were skewed towards the end of the curve, where the numerical data collected is less accurate.}
+%\label{fig:quaderr}
+%\end{figure}
 
 %We computed the average error in $\lambda_n$ based on the fit to check the goodness of fit. The calculated $\Delta \lambda_n$ was $0.0018454$ which is much lower than even our smallest $\Delta \lambda_n$ (0.0275888 for $\lambda_1$). This indicates that the fit is good. The difference between these may suggest that our error estimations are too large, but may also be due to the likelihood that our errors are largely systematic rather than random.
 
-In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with low $\lambda$ and $n$. However, there do exist published values for $\lambda_1$. Gomes, Chacham, and Mohallem find  $\lambda_1$ to be $0.83990399 \pm 0.00000003$, obtained using a linear combination of atomic orbitals method\cite{PhysRevA.50.228}.
+In comparing to published values, we are hindered by the fact that most treatments of the Yukawa potential focus on the energy spectra of states with high $\lambda$ and low $n$. However, there do exist published values for $\lambda_1$. Gomes, Chacham, and Mohallem find  $\lambda_1$ to be $0.83990399 \pm 0.00000003$, obtained using a linear combination of atomic orbitals method \cite{PhysRevA.50.228}.
 
-This result sits just at the edge of the error bar for our results. We find $\lambda_1$ to be at least $0.841$, where they find it to be $0.840$ (rounding to the same decimal place). The difference is extremely small (0.01\%), and our estimate is larger, which is consistent with our understanding of the systematic nature of our numerical errors. 
+This result sits just at the edge of the error bar for our results. We find $\lambda_1$ to be at least $0.841$, where they find it to be at most $0.840$ (rounding to the same decimal place). However, the difference is extremely small (0.01\%), and our estimate is larger, which is consistent with our understanding of the systematic nature of our numerical errors. 
 
 \section{Angular Momentum}
 
 Considering states with nonzero angular momentum is simple. Writing our wave functions as
 \eqn{
-\psi_{n,l,m} (\rho,\theta,\phi) = \frac{1}{\rho}u_{n,l}(\rho) Y_{l,m}(\theta, \phi)
+\psi_{n,l,m} (\rho,\theta,\phi) = \frac{1}{\rho}u_{n,l}(\rho) Y_{l,m}(\theta, \phi)\mbox{,}
 }
 the radial and angular portions separate. We update our radial equation to take into account angular momentum,
 \eqn{
--u'' - \left(\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}\right) u = E u
+-u'' - \left(\frac{2}{\rho}e^{-\rho/\lambda} + \frac{l(l+1)}{\rho^2}\right) u = E u\mbox{,}
 \label{eq:angmomentum}
 }
 and again discretize it using \eqref{f2difference}. 
@@ -617,22 +619,22 @@ To obtain these curves, we chose to fix $\Delta \rho$ at $0.1$, and set $\rho_{\
 \begin{figure}[h]
 \centering
 \includegraphics{Figures/allthelcs}
-\caption[Plots of $\lambda_n$ versus $n$ for $l = 0$ to $10$]{These curves show the relationship between $\lambda_n$ and $n$ for $l = 0$ to 10. In this plot, $n$ is the radial quantum number. The principal quantum number is now $l + n$.}
+\caption[Plots of $\lambda_n$ versus $n$ for $l = 0$ to $10$]{The relationship between $\lambda_n$ and $n$ for $l = 0$ to 10. In this plot, $n$ is the radial quantum number. The principal quantum number is now $l + n$.}
 \label{fig:allthelcs}
 \end{figure}
-
-Again, all the curves neatly fit a quadratic, giving fit functions in the form $\lambda_n = A + B n + C n^2$. The constants of the quadratic are dependent on $l$ and listed in table \ref{tab:fitparams}. $B$ and $C$ appear to vary linearly with $l$, while $A$ seems to vary quadratically. This is shown in figure \ref{fig:parameters}.
-
 \begin{figure}[h]
+\captionsetup[subfigure]{font={rm,md,sc}}
 \centering \subfloat[][]{\label{paras:as}
 \includegraphics[width=0.3\textwidth]{Figures/poly-as}}
 \subfloat[][]{\label{paras:bs}
 \includegraphics[width=0.3\textwidth]{Figures/poly-bs}}  
 \subfloat[][]{\label{paras:cs}
 \includegraphics[width=0.3\textwidth]{Figures/poly-cs}}% \hspace{8pt}%
-\caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters $a$, $b$, and $c$ as a function of $l$}
+\caption[Fit parameters for $l = 0$ to 10]{Three graphs showing the changes in fit parameters $A$, $B$, and $C$ as a function of $l$}
 \label{fig:parameters}
 \end{figure}
+
+Again, all the curves neatly fit a quadratic, giving fit functions in the form $\lambda_n = A + B n + C n^2$. The constants of the quadratic are dependent on $l$ and listed in table \ref{tab:fitparams}. $B$ and $C$ appear to vary linearly with $l$, while $A$ seems to vary quadratically. This is shown in figure \ref{fig:parameters}.
 
 \begin{table}[h]
 	\centering
@@ -655,12 +657,14 @@ Again, all the curves neatly fit a quadratic, giving fit functions in the form $
 	\end{tabular}
 \end{table}
 
-We note that when $l$ is non-zero, the quantum number $n$ is actually the \emph{radial} quantum number. Our numerical procedure finds the lowest energy state for a given value of $l$, and labels that state with $n = 1$. The next is then $n = 2$, and so on. The principal quantum number then becomes $n_p = n + l$. Thus, at principal quantum number $n_p = 1$, we require that $l = 0$. At $n_p = 2$, we can have $l = 0$ or $l = 1$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
-This explains some of the dependence of $A$, $B$, and $C$ on $l$ if we assume that $\lambda$ should actually be quadratic in $n_p$. In this case we can write
+We note that when $l$ is non-zero, the quantum number $n$ is actually the \emph{radial} quantum number. Our numerical procedure finds the lowest energy state for a given value of $l$, and labels that state with $n = 1$. The next is then $n = 2$, and so on. The principal quantum number then becomes $n_p = n + l$. Thus, at principal quantum number $n_p = 1$, we require that $l = 0$. 
+
+At $n_p = 2$, we can have $l = 0$ or $l = 1$. Accordingly, the bound states at higher $l$ start further away from the origin at a higher value of $\lambda$. 
+This explains some of the dependence of $A$, $B$, and $C$ on $l$, if we assume that $\lambda$ should actually be quadratic in $n_p$. In this case we can write
 \eqn{
 \lambda_{n_p} = \tilde{A} + \tilde{B} n_p + \tilde{C} n_p^2 = \tilde{A} + \tilde{B} (n + l) + \tilde{C} (n + l)^2\mbox{.}
 }
-When we do this, we obtain the plot of $\lambda_{n_p}$s shown in figure \ref{fig:alllcs-principal}.
+When we do this, we obtain the plot of $\lambda_{n_p}$s shown in figure \ref{fig:alllcs-principal}. These parameters are closer to constant, but we can see that they still have some remaining dependence on $l$.
 
 \begin{figure}[h]
 \centering
@@ -669,26 +673,22 @@ When we do this, we obtain the plot of $\lambda_{n_p}$s shown in figure \ref{fig
 \label{fig:alllcs-principal}
 \end{figure}
 
-These parameters are closer to constant, but we can see that they still have some remaining dependence on $l$.
-
 %\clearpage %% starts a new page and stops trying to place floats such as tables and figures
 
 %
 %
-\chapter*{Conclusion}
+\chapter*{Conclusions}
          \addcontentsline{toc}{chapter}{Conclusion}
 	\chaptermark{Conclusion}
 	\markboth{Conclusion}{Conclusion}
 	\setcounter{chapter}{4}
 	\setcounter{section}{0}
 
-The Yukawa potential has only a finite number of bound states. The potential decreases to zero quickly outside of a region described by the length scale $\lambda$, a ratio between the exponential cutoff length scale $\ell$ and the ``Bohr radius'' $\alpha$. Any state sitting too far from the origin compared to this length scale cannot be bound, because there is not enough force to bind it. This implies that the number of bound states increases with increasing $\lambda$, and we can define a critical value $\lambda_n$ as the value of $\lambda$ at which the $n$th bound state appears.
+The Yukawa potential has only a finite number of bound states. The potential decreases to zero quickly outside of a region described by $\lambda$, the ratio between the exponential cutoff length scale $\ell$ and the ``Bohr radius'' $\alpha$. Any state sitting too far from the origin compared to this length scale cannot be bound, because there is not enough force to bind it. This implies that the number of bound states increases with increasing $\lambda$, and we can define a critical value $\lambda_n$ as the value of $\lambda$ at which the $n$th bound state appears.
 We first used the Bohr model to get an approximate relationship between the number of bound states of the Yukawa potential and the value of the length scale. We then obtained the same relationship directly from the potential using the finite difference method. As with other central force potentials, the Bohr method gave a reasonable approximation, but the numerical picture was more subtle. 
-
 We found that the relationship between the number of bound states $n$ and the non-dimensionalized length scale $\lambda$ was of the form $\lambda_n = A(l) + B(l)n + C(l)n^2$, where $A$, $B$, and $C$ are constants dependent on the quantum number $l$. 
 
 While this method was intended to look at the number of bound states, not the energies, a possible extension of this work would be to obtain an energy spectrum at some value of $\lambda$. However, in order to do this, one would need a different routine for finding the eigenvalues of the Hamiltonian matrix, as the continuous eigenvalues above zero create computational challenges.
-
 We could also extend this work to investigate the unstable bound states -- those states with $E > 0$ that are still partially bound. These states should primarily occur at higher values of $\lambda$, and should be distinguishable from pure scattering states. 
 
 
@@ -699,7 +699,7 @@ We could also extend this work to investigate the unstable bound states -- those
 
 \section{Rootfinder}
 
-To actually locate the critical values of lambda, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
+To actually locate the critical values of $\lambda$, we need to find the place where a new bound state appears. Numerically, this looks like a new negative eigenvalue in our list of eigenvalues, which suggests we approach the problem with rootfinding. Our function has a ``zero'' whenever the number of negative eigenvalues increases.
 
 Here it is in \emph{Mathematica} code:
 \begin{Verbatim}[commandchars=\\\{\}, codes={\catcode`$=3}]
@@ -715,9 +715,9 @@ Critical[$\lambda$_, consts_] :=  Module[\{H, res, d$\rho$, $\rho$inf, nn\},
     Return[res]
   ]
 \end{Verbatim}
-This function takes a value of lambda and returns the some number of eigenvalues (here, 25)  of the hamiltonian which have the lowest absolute value. $nn$ is the matrix size, d$\rho$ is the step size, and $\rho$inf is numerical infinity for the problem.
+This function takes a value of lambda and returns some number of eigenvalues (here, 25)  of the Hamiltonian which have the lowest absolute value. $nn$ is the matrix size, d$\rho$ is the step size, and $\rho$inf is numerical infinity for the problem.
 
-The results of this calculation are extremely sensitive to $\rho$inf, and a larger $\rho$inf makes for less error. However, for larger values of $\rho$inf, more positive eigenvalues are found near 0, because the positive eigenvalues are in a continuous spectrum. As the grid becomes a better approximation of reality, more of these are picked up. This squeezes the negative eigenvalues (whose spectrum starts near -1) out, especially at higher values of $\lambda$. In order to ensure that there are *some* negative eigenvalues, we therefore pin $\rho$inf to some constant factor times $\lambda$. 
+The results of this calculation are extremely sensitive to $\rho$inf, and a larger $\rho$inf makes for less error. However, for larger values of $\rho$inf, more positive eigenvalues are found near 0, because the positive eigenvalues are in a continuous spectrum. As the grid becomes a better approximation of reality, more of these are picked up. This squeezes the negative eigenvalues (whose spectrum starts near -1) out, especially at higher values of $\lambda$. In order to ensure that there are \emph{some} negative eigenvalues, we therefore pin $\rho$inf to some constant factor times $\lambda$. 
 
 Increasing the number of negative eigenvalues found will also ensure we don't miss negative eigenvalues, but is very expensive. When searching for initial eigenvalues, we chose to get the 100 with the lowest absolute value in order to increase accuracy, but for the main calculation, 25 was fine.
 
@@ -752,13 +752,11 @@ To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as 
 
 As is clear from the code, the function doing the actual work is just Mathematica's Eigenvalues[ ]. Because our Hamiltonian matrix only has entries on the diagonal and off-diagonals, we can define it as a SparseArray to speed up calculation. 
 
-Finding a single $\lambda_{n}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive.
-
-However, the problem is embarrassingly parallel. Each bisection to find a value of $\lambda_n$ is independent of all the others, allowing us to easily split this problem into chunks. We used Mathematica's Lightweight Grid to run the computation on a cluster of machines. Distributing these calculations among multiple cores speeds the process up by about 50\% per core added. 
+Finding a single $\lambda_{n}$ takes quite a bit of time -- it's expensive to find the eigenvalues of a large matrix, even such a sparse one as ours. We would like to study a wide range of $\lambda$s, and the computation begins to look prohibitively expensive. However, the problem is embarrassingly parallel. Each bisection to find a value of $\lambda_n$ is independent of all the others, allowing us to easily split this problem into chunks. We used Mathematica's Lightweight Grid to run the computation on a cluster of machines. Distributing these calculations among multiple cores speeds the process up by about 50\% per core added. 
 
 \section{Fits}
 \subsection{Linear}
-Our weighted linear least-squares fit was computed following the methods outlined in Taylor\cite{taylor_introduction_1997}. We first compute weights for each point, based on its error, then use that to weight the least-squares calculation.
+Our weighted linear least-squares fit was computed following the methods outlined in Taylor \cite{taylor_introduction_1997}. We first compute weights for each point, based on its error, then use that to weight the least-squares calculation.
 
 Here it is in Mathematica code:
 \begin{Verbatim}
@@ -782,7 +780,7 @@ B = 1/Delta*(
 \end{Verbatim}
 
 \subsection{Quadratic}
-For our quadratic fit, we decided to ignore data weights as the errors were largely on similar orders of magnitude.  Instead of calculating the coefficients of the fit independently, we did it with a matrix inversion, because the expressions for each component are complicated. More precisely, we solved the equation
+For our quadratic fit, we first decided to ignore data weights as the errors were largely on similar orders of magnitude.  Instead of calculating the coefficients of the fit independently, we did it with a matrix inversion, because the expressions for each component are complicated. More precisely, we solved the equation
 \eqn{
 \left(
 \begin{array}{ccc}
@@ -806,6 +804,7 @@ C \\
 \sum n_i^2 \lambda_i
 \end{array}
 \right)
+\mbox{.}
 }
 for $A$, $B$, and $C$. For the matrix inversion, we just used the one built into Mathematica. 
 
@@ -833,11 +832,13 @@ C \\
 \sum \frac{n_i^2 \lambda_i}{\Delta \lambda_i^2}
 \end{array}
 \right)
+\mbox{.}
 }
 
 
 \chapter{Data}
 \begin{table}[h]
+\scriptsize
 \begin{adjustwidth}{-0.5in}{-0.5in}
 	\caption{All the critical values $\lambda_n$ for non-zero $l$.}
 	\label{tab:alldata}
