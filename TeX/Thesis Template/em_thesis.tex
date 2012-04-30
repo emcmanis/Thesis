@@ -165,7 +165,7 @@ For convenience, we introduce a length scale,
 which is a constant with units of length. 
 In hydrogen this is the Bohr radius, and reduces to the familiar $a_o = \frac{4\pi \epsilon_0 \hbar^2}{\mu e^2} = 5.3 \times 10^{-11}$ m. 
 
-The simplest nucleus we might use the Yukawa potential for is that of deuterium. In deuterium, $C =  1.10286 \times 10^{-26}$ J m\footnote{This value was obtained by using the numerical methods described in Chapter 2 to work backward from the known value of the length scale and the mass defect of deuterium, which will be equal to the energy of the ground state of the system.} and $\mu = m_p/2$, giving an $\alpha$ of $1.20 \times 10^{-15}$\~m. This is interestingly on the same order as $\ell = 1.46 \times 10^{-15}$ m, the cutoff length scale, which we obtain from \eqref{eq:ell} using $m = m_{\pi} = 135$ MeV/c.
+The simplest nucleus we might use the Yukawa potential for is that of deuterium. In deuterium, $C =  1.10286 \times 10^{-26}$ J m\footnote{This value was obtained by using the numerical methods described in Chapter 2 to work backward from the known value of the length scale and the mass defect of deuterium, which will be equal to the energy of the ground state of the system.} and $\mu = m_p/2$, giving an $\alpha$ of $1.20 \times 10^{-15}$~m. This is interestingly on the same order as $\ell = 1.46 \times 10^{-15}$~m, the cutoff length scale, which we obtain from \eqref{eq:ell} using $m = m_{\pi} = 135$ MeV/c$^2$.
 
 We can now take $Y_{0,0} = 1/\sqrt{4 \pi}$, leaving us with
 \eqn{
@@ -359,10 +359,11 @@ n^2 = \left( \rho_0 + \frac{\rho_0^2}{\lambda} \right) e^{-\rho_0/\lambda}\mbox{
 The right side of this equation will have some maximum, which will be the last point for which the equation can be solved -- after that, the value of $n^2$ will always be greater than the right side. This is shown in figure \ref{fig:unstableveff}. For a given $n$, this gives $\lambda_n$.
 \begin{figure}[h]
 	\centering
-	\includegraphics{Figures/unstableveff}
+	\includegraphics[scale=0.95]{Figures/unstableveff}
 	\caption[$n^2$ as a function of $\rho_0$]{A plot of \eqref{eq:unstablemins} with $\lambda = 2$, showing its maximum value. At this value of $\lambda$, the $n = 1$ bound state exists, because for $n = 1$ there is some $\rho_0$ that satisfies \eqref{eq:unstablemins}. This is not the case for the $n = 2$ bound state, so the $n = 2$ bound state does not exist. Increasing $\lambda$ scales the curve, increasing the number of bound states.}
 	\label{fig:unstableveff}
 \end{figure}
+
 To find this maximum, we differentiate with respect to $\rho_0$ and set the result 0, obtaining
 \begin{equation}
 0 = (1+2 \frac{\rho_0}{\lambda_n}) - \frac{1}{\lambda_n}(\rho_0 + \frac{\rho_0^2}{\lambda_n})\mbox{.} 
@@ -718,7 +719,7 @@ Increasing the number of negative eigenvalues found will also ensure we don't mi
 
 The rootfinder actually used was a recursive bisection routine. In this rootfinder, we stopped recursing when the difference between the two endpoints was less than some $\delta$, instead of when the values of the function at the endpoints were within $\epsilon$. Because our function just looks at the number of negative eigenvalues, $f(\lambda_f) - f(\lambda_0)$ should always be equal to $1$ in a range with a zero and $\epsilon$ is meaningless. 
 
-Again, in \emph{Mathematica} code:
+In \emph{Mathematica} code:
 
 \begin{Verbatim}[commandchars=\\\{\}, codes={\catcode`$=3}]
 Bisect[F_, consts_, x0_, xf_, $\epsilon$_] := Module[\{mid, val, lnegs, vam, mnegs, vah\},
@@ -739,9 +740,9 @@ Bisect[F_, consts_, x0_, xf_, $\epsilon$_] := Module[\{mid, val, lnegs, vam, mne
 ]
 \end{Verbatim}
 
-Again, when we bisect, we are looking at the number of negative eigenvalues as a function of lambda. In this routine, we assume multiple zeroes, and keep bisecting any range with a zero in it.
+Again, when we bisect, we are looking at the number of negative eigenvalues as a function of lambda. In this routine, we assume multiple zeroes and keep bisecting any range with a zero in it.
 
-The complicated conditional for bisection is meant to deal with the problem of negative eigenvalues getting squeezed out by positive ones. Given a half of the input range, it bisects that half if either the number of negative eigenvalues increases (a regular zero), or the number of negative eigenvalues stays constant, but the value of the first negative eigenvalue jumps. This indicates that one negative eigenvalue was squeezed out, but another was added. In general, as $\lambda$ increases, the negative eigenvalues should decrease in value (coming closer and closer to the Coulomb energies). 
+The complicated conditional for bisection is meant to deal with the problem of negative eigenvalues getting squeezed out by positive ones. Given half of the input range, it bisects that half if either the number of negative eigenvalues increases (a regular zero), or the number of negative eigenvalues stays constant but the value of the first negative eigenvalue jumps. This indicates that one negative eigenvalue was squeezed out, but another was added. In general, as $\lambda$ increases, the negative eigenvalues should decrease in value (coming closer and closer to the Coulomb energies). 
 
 To find the ranges to bisect, we modify the rootfinder so it keeps bisecting as long as there is a zero in one of the ranges, and returns a list of points instead of just one. For efficiency's sake, this calculation is run at a low $\rho_{\infty}$, and a range is returned instead of a single point. That range can then be bisected more thoroughly in order to identify the most likely point. 
 
@@ -834,7 +835,7 @@ C \\
 \chapter{Data}
 \begin{table}[h]
 \scriptsize
-\begin{adjustwidth}{-0.5in}{-0.5in}
+%\begin{adjustwidth}{-0.25in}{-0.25in}
 	\caption{All the critical values $\lambda_n$ for non-zero $l$.}
 	\label{tab:alldata}
 	\begin{tabular}{c|cccccccccc}
@@ -877,7 +878,7 @@ C \\
 		35	& -	& -	& -	& -	& -	& -	& -	& -	& -	& -
 	
 	\end{tabular}
-	\end{adjustwidth}
+%	\end{adjustwidth}
 \end{table}
 
 
