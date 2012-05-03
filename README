@@ -1,1 +1,3 @@
 Welcome to my thesis. If you're interested in reading the whole thing, it's the file right here, em_thesis.pdf. TeX source code and figures can be found in the TeX directory, while the Calculations directory contains the code I ran to gather and analyze the data, the data itself, and Appendix A of my thesis, which further documents the code.
+
+If you do not have Mathematica, my data gathering and analysis notebooks have both been printed to PDFs of the same name.
